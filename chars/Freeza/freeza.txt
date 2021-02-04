@@ -1,0 +1,40 @@
+Freeza by _Vision | mugenow - www.mugenow.cjb.net |
+         | Controls |
+
+--a - Soco 1 / Punch 1
+--x - Soco 2 / Punch 2
+--b - Chute 1 / Kick 1
+--y - Chute 2 / Kick 2
+--c - Finger Fire
+
+--D - Baixo / Down
+--F - Frente / Forward
+--B - Tras / Backward
+
+       | Super Motions |
+
+---Explosion
+ D, DB, B, a
+
+---kienzan
+ D, DB, B, b
+
+---Death Ball
+ D, DF, F, a
+
+       | Special Motions |
+
+---Fire Power
+ D, DF, F, b
+
+---Spin Kick
+ D, DF, F, y
+
+---Super Punch
+ D, DF, F, x
+
+---Fire Down
+ D, DF, F, DF, D, a
+
+---Finger Fire
+ c

@@ -1,0 +1,34 @@
+;-| SHIN BUU by dragonballfury (aka mugenfury) |------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; Présentation
+Merci d'avoir téléchargé Shin Buu sur mon site, j'espère qu'il vous plaira. Il s'agit 
+comme devez vous en douter de Majin Buu sous sa forme originelle. Les sprites ont été 
+rippées depuis DBZ : Hyper Dimension sur SuperNes que j'ai ensuite édité pour ensuite
+en faire un personnage M.U.G.E.N. J'ai essayé de donné à ce personnage un Gameplay
+similaire d'une certaine manière aux jeux SNK, avec une multitude de combos différents
+possibles et où vous êtes celui qui contrôle totalement ce que fait le personnage.
+
+ENJOY !!!
+
+;---------------------------------------------------------------------------
+; Condition d'utilisation
+Copyright(C):
+Ce personnage est la propriété intellectuelle du site http://www.dragonball-fury.net et 
+http://www.mugenfury.com, vous n'avez donc en aucun cas le droit de publier ce jeu de
+quelque façon que ce soit sans l'accord de dragonballfury !
+
+;---------------------------------------------------------------------------
+; Contact
+Site: http://www.dragonball-fury.net - http://www.mugenfury.com
+Forums: http://www.majinken.com
+Email: sdragonballfury@hotmail.com
+
+;---------------------------------------------------------------------------
+; Remerciements
+Akira Toriyama
+Bandai
+Membres de Super Saiyens Fury
+Fans de Dragon Ball
+Elecbyte pour leur moteur M.U.G.E.N
+Phantom.of.the.server pour son code ""CvS2 "Get Hit" sounds""

@@ -1,0 +1,268 @@
+; Váriaveis do Custom AI Beta de Gohan 
+; Format (case insensitive):
+; [groupname]        
+; constname = "value"
+; States -3
+;------------------------------------------------------------------------------------------------
+
+
+[Statedef -3]
+
+[State -3, Fly]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = ctrl = 1
+triggerall = P2Life > 0
+triggerall = MoveType != H
+triggerall = Pos Y >= 0
+triggerall = Stateno != 1800
+triggerall = PrevStateno != 1800
+trigger1 = P2Name = "Goku-n-hd by EmuBoarding"
+trigger1 = P2StateNo = 1500
+trigger2 = P2Name = "Mystic Gohan by Zero_X"
+trigger2 = P2StateNo = 2000
+trigger3 = P2Name = "Freeza by OverMind"
+trigger3 = P2StateNo = 3001
+trigger4 = P2Name = "Kurilin by EmuBoarding"
+trigger4 = P2StateNo = 1500
+trigger5 = P2Name = "Trunks por ssonic"
+trigger5 = P2StateNo = 1900
+trigger6 = P2Name = "Vegeta Super Sayjin 4 by EB and BS"
+trigger6 = P2StateNo = 1500
+trigger7 = P2Name = "N-Trunks by EmuBoarding"
+trigger7 = P2StateNo = 1500
+trigger8 = P2Name = "Mr.Boo by OverMind"
+trigger8 = P2StateNo = 3001
+trigger9 = P2Name = "Vegeta by OverMind"
+trigger9 = P2StateNo = 3001
+trigger10 = P2Name = "Broli Remix ver1.2"
+trigger10 = P2StateNo = 2000
+trigger11 = P2Name = "Mew Two"
+trigger11 = P2StateNo = 1051
+trigger12 = P2Name = "Raditz"
+trigger12 = P2StateNo = 1510
+trigger13 = P2Name = "C-Trunks by EmuBoarding"
+trigger13 = P2StateNo = 1500
+trigger14 = P2Name = "Piccolo por Ssonic"
+trigger14 = P2StateNo = 1900
+trigger15 = P2Name = "M. Bison"
+trigger15 = P2StateNo = 89598
+trigger16 = P2Name = "Cell por Ssonic"
+trigger16 = P2StateNo = 1900
+trigger17 = P2Name = "Recoom by Lucifer"
+trigger17 = P2StateNo = 1500
+trigger18 = P2Name = "Vegetto EX by Shishi-Ryu"
+trigger18 = P2StateNo = 2000
+trigger19 = P2Name = "Saiyaman by OverMind and Lucifer"
+trigger19 = P2StateNo = 3001
+trigger20 = P2Name = "Gohan by CSFF7H"
+trigger20 = P2StateNo = 1900
+trigger21 = P2Name = "Cloud Strife by CSFF7H"
+trigger21 = P2StateNo = 1900
+trigger22 = P2StateType = S
+trigger22 = P2MoveType != H
+trigger22 = P2BodyDist Y < 0
+value = 1800
+
+[State -3,AI.Sair do Voar]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = stateno = 1900
+trigger1 = p2statetype = S
+trigger1 = p2bodydist Y > 40
+value = 1202
+
+[State -3,AI.DownKameHa]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = stateno = 1900
+triggerall = statetype = S
+triggerall = ctrl = 1
+triggerall = power >= 2000
+trigger1 = p2bodydist Y < 0
+value = 3013
+
+[State -3,AI.Homing Fireball]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = ctrl = 1
+trigger1 = p2statetype != A
+trigger1 = p2bodydist x > 200
+trigger1 = p2bodydist x < 210
+value = 1003
+
+[State -3,AI.seeker Fireball]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = ctrl = 1
+trigger1 = p2statetype != A
+trigger1 = p2bodydist x > 150
+trigger1 = p2bodydist x < 160
+value = 7025
+
+[State -3,AI.seeker Fireball]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = statetype = S
+triggerall = Stateno = 1900
+triggerall = ctrl = 1
+trigger1 = P2Name = "Goku-n-hd by EmuBoarding"
+trigger1 = P2StateNo = 1500
+trigger2 = P2Name = "Mystic Gohan by Zero_X"
+trigger2 = P2StateNo = 2000
+trigger3 = P2Name = "Freeza by OverMind"
+trigger3 = P2StateNo = 3001
+trigger4 = P2Name = "Kurilin by EmuBoarding"
+trigger4 = P2StateNo = 1500
+trigger5 = P2Name = "Trunks por ssonic"
+trigger5 = P2StateNo = 1900
+trigger6 = P2Name = "Vegeta Super Sayjin 4 by EB and BS"
+trigger6 = P2StateNo = 1500
+trigger7 = P2Name = "N-Trunks by EmuBoarding"
+trigger7 = P2StateNo = 1500
+trigger8 = P2Name = "Mr.Boo by OverMind"
+trigger8 = P2StateNo = 3001
+trigger9 = P2Name = "Vegeta by OverMind"
+trigger9 = P2StateNo = 3001
+trigger10 = P2Name = "Broli Remix ver1.2"
+trigger10 = P2StateNo = 2000
+trigger11 = P2Name = "Mew Two"
+trigger11 = P2StateNo = 1051
+trigger12 = P2Name = "Raditz"
+trigger12 = P2StateNo = 1510
+trigger13 = P2Name = "C-Trunks by EmuBoarding"
+trigger13 = P2StateNo = 1500
+trigger14 = P2Name = "Piccolo por Ssonic"
+trigger14 = P2StateNo = 1900
+trigger15 = P2Name = "M. Bison"
+trigger15 = P2StateNo = 89598
+trigger16 = P2Name = "Cell por Ssonic"
+trigger16 = P2StateNo = 1900
+trigger17 = P2Name = "Recoom by Lucifer"
+trigger17 = P2StateNo = 1500
+trigger18 = P2Name = "Vegetto EX by Shishi-Ryu"
+trigger18 = P2StateNo = 2000
+trigger19 = P2Name = "Saiyaman by OverMind and Lucifer"
+trigger19 = P2StateNo = 3001
+trigger20 = P2Name = "Gohan by CSFF7H"
+trigger20 = P2StateNo = 1900
+trigger21 = P2Name = "Cloud Strife by CSFF7H"
+trigger21 = P2StateNo = 1900
+trigger22 = P2StateType = S
+trigger22 = P2MoveType != H
+trigger22 = P2BodyDist Y < 0
+trigger1 = p2bodydist x > 150
+value = 7025
+
+[State -3,AI.sequência DBZ(2)]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = statetype = S
+triggerall = ctrl = 1
+trigger1 = p2statetype != A
+trigger1 = p2bodydist x > 50
+value = 1020
+
+[State -3,AI.Throw]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = statetype = S
+triggerall = ctrl = 1
+trigger1 = p2movetype != A
+trigger1 = p2bodydist x < 5
+value = 800
+
+[State -3,AI.Combo]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = p2life != 0
+triggerall = random 
+triggerall = statetype = S
+triggerall = ctrl = 1
+trigger1 = p2movetype != A
+trigger1 = p2bodydist x < 20
+value = 2020
+
+[State -3,Display.de.Tela]
+type = DisplayToClipboard
+trigger1 = 1
+text = "A.I. %d, VelX %f, VelY %f, P2DistX %f, P2DistY %f"
+params = var(20),Vel X,Vel Y,P2BodyDist X,P2BodyDist Y 
+
+;AI - Auto Defesa
+[State -3,AIGuard]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = statetype = S
+triggerall = ctrl = 1
+trigger1 = p2movetype = A
+value = 130
+
+[State -3,AIGuard]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = statetype = C
+triggerall = ctrl = 1
+trigger1 = p2movetype = A
+value = 131
+
+[State -3,AIGuard]
+type = ChangeState
+triggerall = var(20)= 1
+triggerall = statetype = A
+triggerall = ctrl = 1
+trigger1 = p2movetype = A
+value = 132
+
+;AI Super Moves
+[State -3,AI.SSj1 Trans (level 3)]
+type = ChangeState
+value = 29999
+triggerall = var(20)= 1
+triggerall = var(1)= 0
+triggerall = Power >= 3000
+trigger1 = statetype = S
+trigger1 = ctrl = 1
+ 
+[State -3,AI.SSj2 Trans (level 3)]
+type = ChangeState
+value = 39999
+triggerall = var(20)= 1
+triggerall = var(1)= 1
+triggerall = Power >= 3000
+trigger1 = statetype = S
+trigger1 = ctrl = 1
+
+[State -3,AI.Masenko]
+type = ChangeState
+value = 3001
+triggerall = var(20)= 1
+triggerall = p2stateno != 5150
+triggerall = Power >= 1000
+triggerall = Random 
+trigger1 = statetype = S
+trigger1 = P2bodydist X <= 10
+trigger1 = P2StateType = A
+trigger1 = ctrl = 1
+
+[State -3,AI.KameHameHa]
+type = ChangeState
+value = 3003
+triggerall = var(20)= 1
+triggerall = p2stateno != 5150
+triggerall = Power >= 2000
+triggerall = Random 
+trigger1 = statetype = S
+trigger1 = P2bodydist X <= 200
+trigger1 = ctrl = 1
+

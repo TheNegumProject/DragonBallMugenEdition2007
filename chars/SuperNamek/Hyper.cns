@@ -1,0 +1,697 @@
+;================================
+;"Piccolo", from Super Boutuden 2
+;================================
+;Hello there. :)
+
+;----------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;----------------------------------------
+;CNS file for Piccolo
+;Used for all of Piccolo's hyper attacks
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================
+
+;---------------------------------------------------------------------------
+;Makankosappo - Charge
+[Statedef 3000]
+type 			= S
+movetype		= I
+physics		= S
+anim			= 3000
+velset		= 0,0
+ctrl			= 0
+poweradd		= -2000
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 3000: 	ForceFeedBack]
+type 			= ForceFeedback
+trigger1		= (Time = 0) || (((GameTime%15) = 0) && (Random <= 499))
+waveform 		= Square
+time 			= 3
+
+[State 3000:	SuperPause]
+type			= SuperPause
+trigger1		= (Time = 0) && (Var(31) = 0)
+time			= 250  ;50   ;para dejar la pantalla en pausa
+sound			= S5,0
+pos			= -14,-64
+movetime		= 250 ;50   ;para dejar la pantalla en pausa
+
+[State 3000:	SuperPause]
+type			= SuperPause
+trigger1		= (Time = 0) && (Var(31) = 1)
+time			= 250  ;50  ;para dejar la pantalla en pausa
+sound			= S6,0
+pos			= -14,-64
+movetime		= 250 ;50  ;para dejar la pantalla en pausa
+
+[State 3000:	Helper]
+type			= Helper
+trigger1		= Floor(Time = (150/Var(53)))
+helpertype		= Normal
+name			= "MakankosappoChargeEffect"
+id			= 3000
+pos			= -14,-65
+postype		= p1
+facing		= 1
+stateno		= 9760
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3000:	Helper]
+type			= Helper
+triggerall		= NumHelper(0014) < 3
+trigger1		= (Time = 0) || (((GameTime%15) = 0) && (Random <= 499))
+helpertype		= Normal
+name			= "SonicBoom"
+id			= 0014
+pos			= -14,-65
+postype		= p1
+facing		= -1
+stateno		= 9750
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3000:	Helper]
+type			= Helper
+trigger1		= Floor(Time = (200/Var(53)))
+helpertype		= Normal
+name			= "FlameEffect"
+id			= 3000
+pos			= 0,0
+postype		= p1
+facing		= 1
+stateno		= 9730
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3000:	Helper]
+type			= Helper
+trigger1		= (Time > 200) && ((GameTime%40) = 0)
+helpertype		= Normal
+name			= "WindEffect"
+id			= 8160
+pos			= 0,0
+postype		= p1
+facing		= 1
+stateno		= 8162
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3000:	Helper]
+type			= Helper
+trigger1		= (Time > 200) && ((GameTime%40) = 0)
+helpertype		= Normal
+name			= "WindEffect"
+id			= 8160
+pos			= 0,0
+postype		= p1
+facing		= -1
+stateno		= 8162
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3000:	EnvShake]
+type			= EnvShake
+trigger1		= (Floor(Time > (200/Var(53)))) && ((GameTime%3) = 0)
+time			= 10
+freq			= 100
+ampl			= -6
+phase			= 90
+
+[State 3000:	PlaySnd]
+type			= PlaySnd
+trigger1		= Floor(Time = (200/Var(53)))
+value			= S0,5
+
+;Piccolo's "Makankosappo!" voice.
+[State 3000:	PlaySnd]
+type			= PlaySnd
+trigger1		= Floor(Time = (200/Var(53)+50))
+value			= S1,1
+channel		= 1
+
+[State 3000:	ChangeState]
+type			= ChangeState
+trigger1		= Floor(Time = (200/Var(53)+100))
+value			= 3001
+
+;---------------------------------------------------------------------------
+;Makankosappo - Release
+[Statedef 3001]
+type 			= S
+movetype		= A
+physics		= S
+anim			= 3001
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 3001:	ScreenBound]
+type			= ScreenBound
+trigger1		= WinKO
+movecamera		= 0,0
+value			= 0
+ignorehitpause	= 1
+
+[State 3001:	VelSet]
+type			= VelSet
+trigger1		= (Time = 0) && (Pos Y >= 0)
+x			= -8
+y			= 0
+
+[State 3001:	Helper]
+type			= Helper
+trigger1		= AnimElem = 1, = 7
+helpertype		= Normal
+name			= "MakankosappoShootEffect"
+id			= 3001
+pos			= 52,-61
+postype		= p1
+facing		= 1
+stateno		= 9780
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 0
+pausemovetime	= 0
+
+[State 3001:	Helper]
+type			= Helper
+trigger1		= AnimElem = 1, = 7
+helpertype		= Normal
+name			= "MakankosappoHeadEffect"
+id			= 3001
+pos			= 52,-61
+postype		= p1
+facing		= 1
+stateno		= 9770
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 0
+pausemovetime	= 0
+
+[State 3001:	Helper]
+type			= Helper
+trigger1		= Time > 125
+helpertype		= Normal
+name			= "MakankosappoScrewEffect"
+id			= 3001
+pos			= 52,-61
+postype		= p1
+facing		= 1
+stateno		= 9771
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 0
+pausemovetime	= 0
+
+;Makankosappo - Projectile Score
+[State 3001:	VarAdd]
+type			= VarAdd
+trigger1 		= ProjContactTime(3001) = 0
+v			= 40
+value			= (3+Var(54))
+ignorehitpause	= 1
+
+[State 3001:	EnvShake]
+type			= EnvShake
+trigger1		= ((GameTime%5) = 0) && (Random <= 499)
+time			= 15
+freq			= 100
+ampl			= -5
+phase			= 90
+ignorehitpause	= 1
+
+[State 3001: 	BGPalFX]
+type 			= BGPalFX
+trigger1 		= WinKO
+time 			= 75
+mul 			= 128,0,0
+invertall 		= 1
+persistent 		= 0
+ignorehitpause 	= 1
+
+[State 3001:	PlaySnd]
+type			= PlaySnd
+trigger1		= AnimElem = 1, = 7
+value			= S0,19
+
+[State 3001:	Projectile]
+type			= Projectile
+trigger1		= AnimElem = 1, = 7
+projid		= 3001
+projanim		= 907
+projhitanim		= 9750
+projremanim		= -1
+projcancelanim	= 9750
+projremove		= 1
+projremovetime	= 50
+velocity		= 8.7,0
+remvelocity		= 0,0
+accel			= 0,0
+velmul		= 1,1
+projhits		= 1
+projmisstime	= 10
+projpriority	= 1
+projsprpriority	= 3
+projedgebound	= 20
+projstagebound	= 20
+projheightbound	= -1000,1
+offset		= 52,-61
+postype		= p1
+projshadow		= 0,0,0
+supermovetime	= 0
+pausemovetime	= 0
+;------------------
+attr			= S, HP
+hitflag		= MADFP
+animtype		= Heavy
+priority		= 1, Hit
+damage		= Ceil(20+(Var(54)&&Var(17))/2),(6+(Var(54)&&Var(17))/4)
+pausetime		= Ceil(8+Var(57)),(12+Var(57))
+sparkno		= -1
+guard.sparkno	= -1
+sparkxy		= 5,-8
+hitsound		= S1,0
+guardsound		= S20,0
+ground.type		= Low
+air.type		= Low
+ground.slidetime	= 15
+ground.hittime	= 15
+air.hittime		= 15
+ground.velocity	= -2
+guard.velocity	= -2
+air.velocity	= -2,3
+airguard.velocity	= -2,3
+ground.cornerpush.veloff = 0
+guard.kill		= 0
+getpower		= 0
+givepower		= Ceil(15+Var(55)/2)
+palfx.time		= 10
+palfx.mul		= 256,256,256
+palfx.add		= 32,16,10
+palfx.sinadd 	= 64,32,20,3
+envshake.time 	= 15
+envshake.freq 	= 120
+envshake.ampl 	= -6
+ignorehitpause	= 1
+
+[State 3001:	Projectile]
+type			= Projectile
+trigger1		= Time > 7
+projid		= 3001
+projanim		= 906
+projhitanim		= -1
+projremanim		= -1
+projcancelanim	= -1
+projremove		= IfElse(P2Life > 10,1,0)
+projremovetime	= 40
+velocity		= 8.7,0
+remvelocity		= 0,0
+accel			= 0,0
+velmul		= 1,1
+projhits		= 1
+projmisstime	= 10
+projpriority	= 1
+projsprpriority	= 3
+projedgebound	= 500
+projstagebound	= 500
+projheightbound	= -1000,1
+offset		= 52,-61
+postype		= p1
+projshadow		= 0,0,0
+supermovetime	= 0
+pausemovetime	= 0
+;------------------
+attr			= S, HP
+hitflag		= MADFP
+animtype		= Heavy
+priority		= 1, Hit
+damage		= Ceil(3+(Var(54)&&Var(17))/2),(1+(Var(54)&&Var(17))/4)
+pausetime		= Ceil(8+Var(57)),(12+Var(57))
+sparkno		= -1
+guard.sparkno	= -1
+sparkxy		= 5,-8
+guardsound		= S20,0
+ground.type		= Low
+air.type		= Low
+ground.slidetime	= 15
+ground.hittime	= 15
+air.hittime		= 15
+ground.velocity	= -2
+guard.velocity	= -2
+air.velocity	= -2,3
+airguard.velocity	= -2,3
+ground.cornerpush.veloff = 0
+guard.kill		= 0
+getpower		= 0
+givepower		= Ceil(15+Var(55)/2)
+palfx.time		= 10
+palfx.mul		= 256,256,256
+palfx.add		= 32,16,10
+palfx.sinadd 	= 64,32,20,3
+envshake.time 	= 15
+envshake.freq 	= 100
+envshake.ampl 	= -4
+ignorehitpause	= 1
+
+[State 3001:	ChangeState]
+type			= ChangeState
+trigger1		= Time > 130
+value			= 0
+ctrl			= 1
+
+;---------------------------------------------------------------------------
+;Gekiretsukodan - Charge
+[Statedef 3010]
+type 			= S
+movetype		= I
+physics		= S
+anim			= 3010
+velset		= 0,0
+ctrl			= 0
+poweradd		= -3000
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 3010: 	ForceFeedBack]
+type 			= ForceFeedback
+trigger1		= (Floor(Time > (200/Var(53)))) && ((GameTime%3) = 0)
+waveform 		= Square
+time 			= 3
+
+[State 3010:	SuperPause]
+type			= SuperPause
+trigger1		= (Time = 0) && (Var(31) = 0)
+time			=  250  ;50  ;para dejar la pantalla en pausa
+sound			= S5,0
+pos			= 10,-55
+movetime		= 250  ;50 ;para dejar la pantalla en pausa
+
+[State 3010:	SuperPause]
+type			= SuperPause
+trigger1		= (Time = 0) && (Var(31) = 2)
+time			= 250  ;50 ;para dejar la pantalla en pausa
+sound			= S7,0
+pos			= 10,-55
+movetime		= 250 ;50 ;para dejar la pantalla en pausa
+
+[State 3010:	VarSet]
+type			= VarSet
+trigger1		= Time = 0
+v			= 17
+value			= 0
+
+[State 3010:	VarAdd]
+type			= VarAdd
+trigger1		= Floor(Time > (200/Var(53)+100))
+v			= 17
+value			= 5
+ 
+[State 3010:	Helper]
+type			= Helper
+trigger1		= Floor(Time = (150/Var(53)))
+helpertype		= Normal
+name			= "GekiretsukodanChargeEffect"
+id			= 3010
+pos			= 10,-55
+postype		= p1
+facing		= 1
+stateno		= 9760
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3010:	Helper]
+type			= Helper
+triggerall		= NumHelper(0014) < 3
+trigger1		= (Time = 0) || (((GameTime%15) = 0) && (Random <= 499))
+helpertype		= Normal
+name			= "SonicBoom"
+id			= 3010
+pos			= 10,-55
+postype		= p1
+facing		= -1
+stateno		= 9750
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3010:	Helper]
+type			= Helper
+trigger1		= Floor(Time = (200/Var(53)))
+helpertype		= Normal
+name			= "FlameEffect"
+id			= 3010
+pos			= 0,0
+postype		= p1
+facing		= 1
+stateno		= 9730
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3010:	Helper]
+type			= Helper
+trigger1		= (Time > 200) && ((GameTime%40) = 0)
+helpertype		= Normal
+name			= "WindEffect"
+id			= 3010
+pos			= 0,0
+postype		= p1
+facing		= 1
+stateno		= 8162
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3010:	Helper]
+type			= Helper
+trigger1		= (Time > 200) && ((GameTime%40) = 0)
+helpertype		= Normal
+name			= "WindEffect"
+id			= 3010
+pos			= 0,0
+postype		= p1
+facing		= -1
+stateno		= 8162
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3010:	EnvShake]
+type			= EnvShake
+trigger1		= (Floor(Time > (200/Var(53)))) && ((GameTime%3) = 0)
+time			= 10
+freq			= 100
+ampl			= -6
+phase			= 90
+
+[State 3010:	PlaySnd]
+type			= PlaySnd
+trigger1		= Floor(Time = (200/Var(53)))
+value			= S0,5
+
+;Piccolo's Gekiretsukodan voice. (Don't know the exact words for this move...)
+[State 3010:	PlaySnd]
+type			= PlaySnd
+trigger1		= Floor(Time = (200/Var(53)+50))
+value			= S1,2
+channel		= 1
+
+[State 3010:	ChangeState]
+type			= ChangeState
+trigger1		= (Floor(Time > (200/Var(53)+100))) && ((Command = "a") || (Command = "b") || (Command = "c"))
+value			= 3011
+
+;---------------------------------------------------------------------------
+;Gekiretsukodan - Release (Straight)
+[Statedef 3011]
+type 			= S
+movetype		= A
+physics		= S
+anim			= 3011
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 3011: 	ForceFeedBack]
+type 			= ForceFeedback
+trigger1 		= ProjContactTime(3011) = 0
+waveform 		= Square
+time 			= 3
+
+[State 3011:	VelSet]
+type			= VelSet
+trigger1		= (Time = 0) && (Pos Y >= 0)
+x			= -10
+y			= 0
+
+[State 3011:	VarSet]
+type			= VarSet
+trigger1		= AnimTime = 0
+v			= 17
+value			= 0
+
+;Gekiretsukodan - Projectile Score
+[State 3011:	VarAdd]
+type			= VarAdd
+trigger1 		= ProjContactTime(3011) = 0
+v			= 40
+value			= (250+Var(54))
+ignorehitpause	= 1
+
+[State 3011: 	BGPalFX]
+type 			= BGPalFX
+trigger1 		= WinKO
+time 			= 75
+mul 			= 128,0,0
+invertall 		= 1
+persistent 		= 0
+ignorehitpause 	= 1
+
+[State 3011:	PlaySnd]
+type			= PlaySnd
+trigger1		= AnimElem = 1
+value			= S0,19
+
+[State 3011:	Helper]
+type			= Helper
+trigger1		= AnimElem = 1, = 7
+helpertype		= Normal
+name			= "GekiretsukodanShootEffect"
+id			= 3011
+pos			= 55,-64
+postype		= p1
+facing		= 1
+stateno		= 9800
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 100
+pausemovetime	= 100
+
+[State 3011:	Projectile]
+type			= Projectile
+trigger1		= AnimElem = 1, = 7
+projid		= 3011
+projanim		= 9800
+projhitanim		= 851
+projremanim		= -1
+projcancelanim	= -1
+projremove		= 1
+projremovetime	= 100
+velocity		= 12,0
+remvelocity		= 0,0
+accel			= 0,0
+velmul		= 1,1
+projhits		= 1
+projmisstime	= 10
+projpriority	= 999999
+projsprpriority	= 3
+projedgebound	= 100
+projstagebound	= 100
+projheightbound	= -1000,1
+offset		= 55,-64
+postype		= p1
+projshadow		= 0,0,0
+supermovetime	= 0
+pausemovetime	= 0
+;------------------
+attr			= S, HP
+hitflag		= MADFP
+animtype		= Heavy
+priority		= 1, Hit
+damage		= Ceil(250+(Var(54)&&(Var(17)))),(125+(Var(54)&&(Var(17)/2)))
+pausetime		= Ceil(12+Var(57)),(12+Var(57))
+sparkno		= -1
+guard.sparkno	= -1
+sparkxy		= 5,-8
+hitsound		= S1,0
+guardsound		= S1,0
+ground.type		= Trip
+air.type		= Trip
+ground.slidetime	= 15
+ground.hittime	= 15
+air.hittime		= 15
+ground.velocity	= -10,-8
+guard.velocity	= -10
+air.velocity	= -10,-8
+airguard.velocity	= -10,-8
+ground.cornerpush.veloff = 0
+getpower		= 0
+givepower		= Ceil(15+Var(55)/2)
+palfx.time		= 10
+palfx.mul		= 256,256,256
+palfx.add		= 32,16,10
+palfx.sinadd 	= 64,32,20,3
+envshake.time 	= 15
+envshake.freq 	= 120
+envshake.ampl 	= -6
+
+[State 3011:	ChangeState]
+type			= ChangeState
+trigger1		= AnimTime = 0
+value			= 0
+ctrl			= 1
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;---------------------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;---------------------------------------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================

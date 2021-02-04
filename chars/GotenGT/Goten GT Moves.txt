@@ -1,0 +1,67 @@
+|-Goten Gt's Moves---------------------------------------------------------------
+Version - 1.3
+Character made by Goten88 http://members.lycos.co.uk/gtn88/
+Whats new in Version 1.3--> NEW Beam system which allows for more beam struggles
+Whats new in Version 1.2--> NEW SSJ Hair in sprites & 2 NEW Palletes
+|-Basics----------------------------------------------------------------------
+
+a   = Punch
+b   = Punch
+c   = Ki Blast(hold up or down for it to move in directions)
+x   = Side Kick
+y   = Kick
+z   = Uppercut
+
+|-Specials--------------------------------------------------------------------
+
+Fly                 - a+x
+Charge              - a+b
+Zanzoken            - b+c - Hold it and press any direction.
+Counter             - c+z - must be in guard state or in hit state
+Beam Counter        - b+y - After doing beam counter hold b to make beam longer
+Triple Ki Blast     - B,F,c
+Kamehameha          - D,DF,F, a (If and only if in a beam war. Hold a to make the beam go longer)
+Energyha            - D,DF,F, b (same effect as above)(Both can go up and down with up and down)
+Renzoku Energy Dan  - D,DF,F, c
+Double Ki Blast     - D,DF,F, x
+Ki Ball             - D,DF,F, y
+Energy Blast Combo  - x+y
+Elbow Dash          - D,DB,B, a
+Punch Combo         - D,DB,B, b
+Knee Combo          - D,DB,B, c
+Double Hit Combo    - D,DB,B, x
+Standard Combo      - D,DB,B, y
+TakeDown Knee       - y+z(have to be in air or flying)(Tri Hit Combo)
+
+|-Supers Moves----------------------------------------------------------------
+
+SSJ Transformation   - D, DF, F, D, DF, F, a
+Chou Kamehameha      - D, DF, F, D, DB, B, z (SSJ Mode ONLY)
+Super Combo          - D, DB, B, D, DF, F, z (SSJ Mode ONLY)
+
+ 
+Special thanks to: 
+
+Akira Toriyama - For creating Dragonball Z
+
+Bandai - For the Trunks sprites from the MegaDrive game that I edited into GotenGT
+
+Detah - For Help 
+
+Lonewolf - For Help 
+
+Majita - For the NEWEST acts 
+
+The Rellik - For help on an old act
+
+Lil J - For help 
+
+Hyperion X - For help 
+
+Cyanide - For help 
+
+RedSpider4k - For help 
+
+Roken - For the NEW act
+
+and anyone else I can't think of who helped me. 

@@ -1,0 +1,16 @@
+Piccolo supernamek:
+
+Piccolo tardaba mucho en cargar los rayos de energia por lo que se hacia muy dificil lanzarlos ya que antes de hacerlo casi siempre nos atacaban impidiendonos acabar.
+
+Hemos modificado el archivo "HYPER.CNS" aumentando el tiempo de las "superpausas"(congelar la pantalla) en las dos tecnicas afectadas.
+Cambiando:
+
+        *  time=50    por      time	= 250    ;para dejar la pantalla en pausa mas tiempo
+
+        *movetime=50                por           movetime = 250    ;para dejar la pantalla en pausa mas tiempo
+
+con esto es mas facil ( por lo menos posible) lanzar una onda de energia.
+
+
+
+                                                                16-4-2001  ......................................  JAVI H.      

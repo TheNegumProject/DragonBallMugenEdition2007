@@ -1,0 +1,225 @@
+; Sons Kamehameha (goku)
+[Statedef 5656]
+type = S
+movetype = A
+physics = S
+poweradd = -3000
+ctrl = 0
+anim = 5656
+velset = 0,0,0
+
+[State 5656, 1]
+type = Helper
+trigger1 = Time = 0
+name = "Gohan"
+helpertype = player
+id = 5757
+stateno = 5757
+postype = p1
+pos = 35,0
+keyctrl = 0
+ownpal = 1
+
+[State 5656, 2]
+type = Helper
+trigger1 = Time = 0
+name = "Goten"
+helpertype = player
+id = 5858
+stateno = 5858
+postype = p1
+pos = 60,0
+keyctrl = 0
+ownpal = 1
+
+[State 5656, 3]
+type = SuperPause
+trigger1 = AnimElem = 5
+pos = -8, -35
+time = 360
+Darken = 0
+
+[State 5656, 4]
+type = Projectile
+trigger1 = animelem = 6
+projanim = 1016
+offset = 0, 0
+velocity = 0, 0
+projremovetime = 80
+projhits = 10
+projpriority = 9999
+projmisstime = 5
+attr = S, HP
+damage    = 30,4
+animtype  = Hard
+numhits = 1
+getpower  = 5
+givepower = 31
+guardflag = MA
+pausetime = 2,15
+sparkno = -1
+hitspark = -1
+hitsound   = 5,3
+guardsound = 6,0
+guard.sparkno = -1
+ground.type = high
+ground.slidetime = 4
+ground.velocity = -50,-1
+airguard.velocity = -50,0
+air.type = Low
+air.velocity = -50,1
+air.juggle = 5
+fall.animtype = Hard
+fall = 1
+palfx.time = 15
+palfx.add = 32,0,0
+palfx.mul = 300,192,192
+
+[State 5656, 5]
+type = ChangeState
+trigger1 = animTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Sons Kamehameha (gohan)
+[Statedef 5757]
+type    = S
+movetype= A
+physics = S
+poweradd = -3000
+ctrl = 0
+anim = 5757
+sprpriority = 3
+velset = 0,0,0
+
+[State 5757]
+type = PlaySnd
+trigger1 = time = 0
+trigger2 = animTime = 0
+value = 1, 1
+
+[State 5757, 1]
+type = SuperPause
+trigger1 = AnimElem = 5
+pos = -18, -38
+time = 360
+Darken = 0
+
+[State 5757, 2]
+type = Projectile
+trigger1 = animelem = 6
+projanim = 1016
+offset = 2, 5
+velocity = 0, 0
+projremovetime = 80
+projhits = 10
+projsprpriority = 4
+projpriority = 9999
+projmisstime = 5
+attr = S, HP
+damage    = 30,4
+animtype  = Hard
+numhits = 1
+getpower  = 5
+givepower = 31
+guardflag = MA
+pausetime = 2,15
+sparkno = -1
+hitspark = -1
+hitsound   = 5,3
+guardsound = 6,0
+guard.sparkno = -1
+ground.type = high
+ground.slidetime = 4
+ground.velocity = -50,-1
+airguard.velocity = -50,0
+air.type = Low
+air.velocity = -50,1
+air.juggle = 5
+fall.animtype = Hard
+fall = 1
+palfx.time = 15
+palfx.add = 32,0,0
+palfx.mul = 300,192,192
+
+[State 5757, 6]
+type = Changeanim
+trigger1 = Win = 1
+trigger1 = time = 107
+value = 5151
+
+[State 5757, 3]
+type = DestroySelf
+trigger1 = animTime = 0
+
+;---------------------------------------------------------------------------
+; Sons Kamehameha (goten)
+[Statedef 5858]
+type    = S
+movetype= A
+physics = S
+poweradd = -3000
+ctrl = 0
+anim = 5858
+sprpriority = 4
+velset = 0,0,0
+
+[State 5858]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 4, 4
+
+[State 5858, 1]
+type = SuperPause
+trigger1 = AnimElem = 5
+pos = -8, -21
+time = 360
+Darken = 0
+
+[State 5858, 2]
+type = Projectile
+trigger1 = animelem = 6
+projanim = 1015
+offset = -23, 23
+velocity = 0, 0
+projremovetime = 80
+projhits = 10
+projsprpriority = 5
+projpriority = 9999
+projmisstime = 5
+attr = S, HP
+damage = 30,4
+animtype = Hard
+numhits = 1
+getpower  = 5
+givepower = 31
+guardflag = MA
+pausetime = 2,15
+sparkno = -1
+hitspark = -1
+hitsound   = 5,3
+guardsound = 6,0
+guard.sparkno = -1
+ground.type = high
+ground.slidetime = 4
+ground.velocity = -50,-1
+airguard.velocity = -50,0
+air.type = Low
+air.velocity = -50,1
+air.juggle = 5
+fall.animtype = Hard
+fall = 1
+palfx.time = 15
+palfx.add = 32,0,0
+palfx.mul = 300,192,192
+
+[State 5858, 6]
+type = Changeanim
+trigger1 = Win = 1
+trigger1 = time = 107
+value = 5252
+
+[State 5858, 3]
+type = DestroySelf
+trigger1 = animTime = 0

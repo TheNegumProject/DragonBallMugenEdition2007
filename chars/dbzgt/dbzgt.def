@@ -1,0 +1,27 @@
+; Dragonball z def file 
+
+[Info]
+name = "disciple's dbzchars"
+displayname = "Dragonball z/gt"
+versiondate = 22,07,2000;jan 1, 2002  
+mugenversion = 06,27,2000 
+author = "The disciple x"     
+pal.defaults = 1  
+
+[Files]
+cmd      = dbzgt.cmd     
+cns      = dbzgt.cns     
+st       = dbzgt.cns
+st2       = goku.cns
+st3       = piccolo.cns 
+st4       = misc.cns 
+st5	  = strikers.cns
+st6	  = dragball.cns
+st7	  = intros.cns
+st8       = ending.cns
+st9       = options.cns
+stcommon = common.cns   
+sprite   = dbzgt.sff      
+anim     = dbzgt.air      
+sound    = dbzgt.snd
+pal1     = newx.act

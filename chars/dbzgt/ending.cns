@@ -1,0 +1,1019 @@
+; CNS 8 Dragonballz/gt: winning
+;=-=-=-=--=-=-=--=-=-=-=-=-==--=-
+;winning decider
+;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+; WIN 
+[Statedef 180]
+type = S
+velset = 0
+
+[State 180, Win 1 Choice]
+type     = ChangeState
+triggerall = MatchOver = 0
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 0
+value    = 111
+
+[State 180, Win 1 Choice]
+type     = ChangeState
+triggerall = MatchOver = 0
+trigger1 = RoundState = 4
+trigger1 = var(9) = 1 && var(7) = 0
+value    = 112
+
+[State 181]
+type = PlaySnd
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 0
+value = 7,2
+loop = 1
+
+[State 181]
+type = PlaySnd
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 1
+value = 7,4
+loop = 1
+
+[State 181]
+type = PlaySnd
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 1 && var(7) = 0
+value = 7,3
+loop = 1
+
+[State 180, Win 1 Choice]
+type     = ChangeState
+triggerall = MatchOver = 0
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 1
+value    = 113
+
+[State 180, Win 2 Choice]
+type     = ChangeState
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(55) = 0
+trigger1 = var(9) = 0 && var(7) = 0
+value    = 114
+
+[State 180, Win 2 Choice]
+type     = ChangeState
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 0
+trigger1 = var(55) = 1
+value    = 115
+
+[State 180, Win 2 Choice]
+type     = ChangeState
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 0 && var(7) = 1
+value    = 116
+
+[State 180, Win 2 Choice]
+type     = ChangeState
+triggerall = MatchOver = 1
+trigger1 = RoundState = 4
+trigger1 = var(9) = 1 && var(7) = 0
+value    = 117
+
+; WIN1
+[Statedef 111]
+type = S
+ctrl = 0
+anim = 111
+velset = 0,0,0
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = Time >= 5
+value = SCA
+time = 1
+
+[State 181]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 2, 17
+volume = 500
+
+[State 1123, dust]
+type = Explod
+trigger1 = time = 10
+persistent = 0
+anim = 901
+pos = -10,2
+postype = p1
+sprpriority = 100
+bindtime = 1
+ignorehitpause = 1
+ownpal = 1
+
+[State 1123, dust]
+type = Explod
+trigger1 = time = 10
+persistent = 0
+anim = 901
+pos = 10,2
+facing = -1
+postype = p1
+sprpriority = 100
+bindtime = 1
+ignorehitpause = 1
+ownpal = 1
+
+[State 193, 1]
+type = Projectile
+trigger1 = time = 10
+projanim = 1034
+projhits = 1
+projremove = 0
+projpriority = 999
+projsprpriority = -3
+projscale = 1,2
+projremovetime = 30
+projid = 1034
+velocity = 0,0
+offset = 0,10
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,155]
+flag = roundnotover
+
+; WIN2
+[Statedef 112]
+type = S
+ctrl = 0
+anim = 112
+velset = 0,0,0
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = Time >= 5
+value = SCA
+time = 1
+
+[State 181]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 0
+volume = 500
+
+[State 1082, 1]
+type = Explod
+trigger1 = time = 60
+anim = 71
+pos = -15,-100
+postype = p1
+sprpriority = 99
+bindtime = 1
+removetime = -2
+ignorehitpause = 1
+ownpal = 1
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,155]
+flag = roundnotover
+persistant = 0
+
+; WIN2
+[Statedef 113]
+type = S
+ctrl = 0
+anim = 113
+velset = 0,0,0
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = Time >= 5
+value = SCA
+time = 1
+
+[State 181]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 1
+volume = 500
+
+[State 9876, Explod]
+type = Explod
+trigger1 = Time >= 20
+trigger1 = Time <= 190
+trigger1 = Random < 200
+anim = 961
+sprpriority = 3
+postype = p1
+pos = 7,-31
+random = 52,64
+bindtime = 1
+ontop = 1
+ownpal = 1
+id = 971
+
+[State 9876, Explod]
+type = Explod
+trigger1 = Time >= 20
+trigger1 = Time <= 190
+trigger1 = Random < 200
+anim = 962
+sprpriority = 3
+postype = p1
+pos = 7,-31
+random = 52,64
+bindtime = 1
+ontop = 1
+ownpal = 1
+id = 972
+
+[State 170, 1]
+type = NotHitBy
+trigger1 = Time >= 0
+value = SCA
+time = 1
+
+[State 9876, Explod]
+type = Explod
+trigger1 = Time >= 20
+trigger1 = Time <= 190
+trigger1 = Random < 200
+anim = 963
+sprpriority = 3
+postype = p1
+pos = 7,-31
+random = 52,64
+bindtime = 1
+ownpal = 1
+ontop = 1
+id = 973
+
+[State 9876, Explod]
+type = Explod
+trigger1 = Time >= 20
+trigger1 = Time <= 190
+trigger1 = Random < 200
+anim = 964
+sprpriority = 3
+postype = p1
+pos = 7,-31
+random = 52,64
+bindtime = 1
+ownpal = 1
+ontop = 1
+id = 974
+
+[State 9876, Explod]
+type = Explod
+trigger1 = Time >= 20
+trigger1 = Time <= 190
+trigger1 = Random < 200
+anim = 965
+sprpriority = 3
+postype = p1
+pos = 7,-31
+random = 52,64
+bindtime = 1
+ontop = 1
+ownpal = 1
+id = 975
+
+;yellow flash
+[State -2, 3]
+type = PalFX
+trigger1 = TimeMod = 2, 0
+trigger1 = time >= 20
+time = 1
+add = 170, 170, 0
+;mul = 0,0,0
+ignorehitpause = 1
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,235]
+flag = roundnotover
+persistant = 0
+
+; WIN2
+[Statedef 114]
+type = S
+ctrl = 0
+anim = 111
+velset = 0,0,0
+
+[State 180, helper]
+type = Helper
+triggerall = !NumHelper(2000)
+trigger1 = MatchOver
+stateno = 12001
+postype = p1
+pos = 0,0
+name = "Win Quotes"
+id = 2000
+
+; WIN sunboy's vegeta
+[Statedef 115]
+type = S
+ctrl = 0
+anim = 111
+velset = 0,0,0
+
+[State 180, helper]
+type = Helper
+triggerall = !NumHelper(2001)
+trigger1 = MatchOver
+stateno = 12002
+postype = p1
+pos = 0,0
+name = "Sunboy loses"
+id = 2001
+
+; WIN piccolo
+[Statedef 116]
+type = S
+ctrl = 0
+anim = 116
+velset = 0,0,0
+
+[State 180, helper]
+type = Helper
+triggerall = !NumHelper(2002)
+trigger1 = MatchOver
+stateno = 12003
+postype = p1
+pos = 0,0
+name = "pic win"
+id = 2002
+
+; WIN goku
+[Statedef 117]
+type = S
+ctrl = 0
+anim = 117
+velset = 0,0,0
+
+[State 192, Explod]
+type = Explod
+trigger1 = time = 5
+trigger1 = facing = 1
+facing = 1
+anim = 3002
+sprpriority = 100
+postype = p1
+pos = 0, 0
+bindtime = 1
+ownpal = 1
+id = 3002
+
+[State 192, PlaySnd]
+type = PlaySnd
+trigger1 = time = 6
+value = 5,15
+volume = 500
+
+[State 192, Explod]
+type = Explod
+trigger1 = time = 5
+trigger1 = facing = -1
+facing = -1
+anim = 3002
+sprpriority = 100
+postype = p1
+pos = 0, 0
+bindtime = 1
+ownpal = 1
+id = 3002
+
+[State 180, helper]
+type = changeanim
+trigger1 = time = 15
+value = 118
+
+[State 1123, dust]
+type = Explod
+trigger1 = time = 15
+persistent = 0
+anim = 901
+pos = -10,2
+postype = p1
+sprpriority = 100
+bindtime = 1
+ignorehitpause = 1
+ownpal = 1
+
+[State 1123, dust]
+type = Explod
+trigger1 = time = 15
+persistent = 0
+anim = 901
+pos = 10,2
+facing = -1
+postype = p1
+sprpriority = 100
+bindtime = 1
+ignorehitpause = 1
+ownpal = 1
+
+[State 180, helper]
+type = Helper
+triggerall = !NumHelper(2003)
+trigger1 = MatchOver
+stateno = 12004
+postype = p1
+pos = 0,0
+name = "pic win"
+id = 2003
+
+;Win Quote 1 vegeta
+[Statedef 12001]
+type = A
+movetype = I
+physics = N
+anim = 114
+velset = 0,0
+ctrl = 0
+
+[State 2000, BGPalFX]
+type = envcolor
+trigger1 = Time >= 0
+time = 1
+value = 0,0,0
+under = 1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 10
+anim = 9009
+pos = 0, 100
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 10
+anim = 90010
+pos = -360, 100
+postype = front
+facing = 1
+vel = 12.5,0
+;accel = -.15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 60
+anim = 9009
+pos = 0, 160
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 60
+anim = 90012
+pos = 230, 160
+postype = front
+;facing = -1
+vel = -12.5,0
+;accel = .15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State -1]
+type = Explod
+trigger1 = time = 120
+persistent = 0
+anim = 90011
+ID = 6016
+pos = 101,150
+postype = left
+sprpriority = 2
+bindtime = -1
+;scale = 2,2
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 1
+trigger1 = p2name != "Mystiq Vegeta"
+persistent = 0
+anim = 90013
+ID = 90013
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 2
+trigger1 = p2name != "Mystiq Vegeta"
+persistent = 0
+anim = 90014
+ID = 90014
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 3
+trigger1 = p2name != "Mystiq Vegeta"
+persistent = 0
+anim = 90015
+ID = 90015
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = p2name = "Mystiq Vegeta"
+persistent = 0
+anim = 90016
+ID = 90016
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State -2, VarAdd]
+type = Varrandom
+trigger1 = time = 0
+v = 0
+range = 1,3
+ignorehitpause = 1
+persistent = 0
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time >= 0
+flag = nomusic
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,560]
+flag = roundnotover
+persistant = 0
+
+;Win Quote 2: sunboy's vegeta
+[Statedef 12002]
+type = A
+movetype = I
+physics = N
+anim = 114
+velset = 0,0
+ctrl = 0
+
+[State 2000, BGPalFX]
+type = envcolor
+trigger1 = Time >= 0
+time = 1
+value = 0,0,0
+under = 1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 10
+anim = 9009
+pos = 0, 100
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 10
+anim = 90010
+pos = -360, 100
+postype = front
+facing = 1
+vel = 12.5,0
+;accel = -.15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 60
+anim = 9009
+pos = 0, 160
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 60
+anim = 90012
+pos = 260, 160
+postype = front
+;facing = -1
+vel = -12.5,0
+;accel = .15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State -1]
+type = Explod
+trigger1 = time = 120
+persistent = 0
+anim = 90011
+ID = 6016
+pos = 101,150
+postype = left
+sprpriority = 2
+bindtime = -1
+;scale = 2,2
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+persistent = 0
+anim = 90016
+ID = 90016
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time >= 0
+flag = nomusic
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,560]
+flag = roundnotover
+persistant = 0
+
+;Win Quote piccolo
+[Statedef 12003]
+type = A
+movetype = I
+physics = N
+anim = 114
+velset = 0,0
+ctrl = 0
+
+[State 2000, BGPalFX]
+type = envcolor
+trigger1 = Time >= 0
+time = 1
+value = 0,0,0
+under = 1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 10
+anim = 9009
+pos = 0, 100
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 10
+anim = 90012
+pos = -260, 100
+postype = front
+facing = 1
+vel = 12.5,0
+;accel = -.15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 60
+anim = 9009
+pos = 0, 160
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 60
+anim = 80011
+pos = 380, 160
+postype = front
+;facing = -1
+vel = -12.5,0
+;accel = .15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State -1]
+type = Explod
+trigger1 = time = 120
+persistent = 0
+anim = 90020
+ID = 6016
+pos = 215,150
+postype = left
+sprpriority = 2
+bindtime = -1
+scale = 1,.84
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 1
+persistent = 0
+anim = 90017
+ID = 90013
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 2
+persistent = 0
+anim = 90018
+ID = 90018
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 3
+persistent = 0
+anim = 90019
+ID = 90019
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State -2, VarAdd]
+type = Varrandom
+trigger1 = time = 0
+v = 0
+range = 1,3
+ignorehitpause = 1
+persistent = 0
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time >= 0
+flag = nomusic
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,560]
+flag = roundnotover
+persistant = 0
+
+;Win Quote goku
+[Statedef 12004]
+type = A
+movetype = I
+physics = N
+anim = 114
+velset = 0,0
+ctrl = 0
+
+[State 2000, BGPalFX]
+type = envcolor
+trigger1 = Time >= 0
+time = 1
+value = 0,0,0
+under = 1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time= 10
+anim = 9009
+pos = 0, 100
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time= 10
+anim = 90010
+pos = -360, 100
+postype = front
+facing = 1
+vel = 12.5,0
+;accel = -.15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State 3000, Super Bar]
+type = Explod
+trigger1 = time = 70
+anim = 9009
+pos = 0, 160
+postype = right
+removetime = 50
+supermovetime = 50
+sprpriority = 6
+ontop = 1
+shadow = -1
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 70
+anim = 80011
+pos = 380, 160
+postype = front
+;facing = -1
+vel = -12.5,0
+;accel = .15,0
+removetime = 50
+supermovetime = 50
+sprpriority = 7
+ontop = 1
+shadow = -1
+
+[State -2, VarAdd]
+type = Varrandom
+trigger1 = time = 0
+v = 0
+range = 1,3
+ignorehitpause = 1
+persistent = 0
+
+[State -1]
+type = Explod
+trigger1 = time = 120
+persistent = 0
+anim = 90024
+ID = 6016
+pos = 101,150
+postype = left
+sprpriority = 2
+bindtime = -1
+scale = .45,.45
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 1
+persistent = 0
+anim = 90021
+ID = 90021
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 2
+persistent = 0
+anim = 90022
+ID = 90022
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 901,30]
+type = Explod
+trigger1 = Time = 120
+trigger1 = var(0) = 3
+persistent = 0
+anim = 90023
+ID = 90023
+pos = 190,210
+ownpal = 1
+postype = left
+sprpriority = -3
+supermove = 1
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time >= 0
+flag = nomusic
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,560]
+flag = roundnotover
+persistant = 0

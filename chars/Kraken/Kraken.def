@@ -1,0 +1,33 @@
+; _________________________________
+;| Kraken by Phantom.of.the.Server |
+; ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+;====================<DEFINITION>====================
+[Info]
+name        = "Shining Force 2 Kraken"
+displayname = "Kraken"
+versiondate = 01,17,2007
+mugenversion= 06,14,2003
+author      = "Phantom.of.the.Server"
+pal.defaults= 1,2,3,4,5,6
+
+[Files]
+cmd     = Command.cmd
+cns     = Constants.cns
+st      = States.st
+stcommon= common1.cns
+sprite  = Sprite.sff
+anim    = Anim.air
+sound   = Sound.snd
+pal1    = Palettes/Default.act
+pal2    = Palettes/Yellow.act
+pal3    = Palettes/Purple.act
+pal4    = Palettes/Red.act
+pal5    = Palettes/Green.act
+pal6    = Palettes/Blue.act
+pal7    = Palettes/Oil.act
+pal8    = Palettes/Toxic.act
+pal9    = Palettes/Blood.act
+
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard= ending.def

@@ -1,0 +1,87 @@
+===============================================================================
+Android 17 - Version 1.1 - 100% - Released in July [latest character]
+===============================================================================
+Thanks to Lonewolf for providing me the sprites. 
+
+www.hyperionx.net
+
+NOTE: Make sure you READ THIS before e-mailing me about ANYTHING ...
+
+NOTE2: Feel free to e-mail me about bugs found, or how you liked it. BUT DO NOT, AND I MEAN NOT, GIVE ME SUGGESTIONS ON WHAT TO IMPROVE ON... yet. But this can be discussed in the ZGTEAM FORUMS, because I don't want my e-mail box blowing up! And the bugs that I already know of is already found mentioned below, don't mention it to me again.
+-----------
+Version 1.1 new stuff:
+-----------
+Nothing :P - but a crap load of bug fixes ^__^
+
+-----------
+What's in:
+-----------
+- Fly
+- KI Barrier
+- A newly developed beam attack [1st time using a helper to do it ^__^]
+- Combos
+- 3 Realistic Sounds from the Anime [No not voices] 
+- Armor Mode [a little buggy tho]
+- Teleport
+- Custom edited sprites from the Android 17 
+- Cancel Combos to chain more combos in
+- 1 Pallete [bah, I hate having lots!]
+- A fireball that does massive damage and a massive explosion
+- 1 Little [and also my 1st] Meteor Attack ^__^ [not very impressive but...]
+
+------------
+Known Bugs:
+------------
+- Some moves repeat themselves when you do them, because of the armor code. DO NOT E-MAIL ME ABOUT IT, I AM AWARE OF SUCH A BUG!!!
+- Altho the sprites ARE aligned properly, some seem out of place. I'm searching for why still.
+- Oddly, Android 17 duplicates himself ONCE in a while ... I haven't discovered why yet.
+
+---------------------------------------------
+To the people that download this character:
+---------------------------------------------
+Ok, this may be my latest release in a long while, but just because I did NOT announce a NEW WIP after Android 17 has been release doesn't mean you can e-mail me with suggestions on what to work on next. Should any1 do such a request for a new WIP, i will simply delete the mail or ignore you on the IM Programs. + I also intend to upgrade my current ones maybe... MAYBE, I cam liable to change my mind ANYTIME! And no one can take charge of what I wanna work on anyway, unless they pay me ^__^. AND DO NOT USE THE SPRITES, if anyone does there would be a serious attack on the web on which ever site that the "stolen sprites used to make another character" was put on. Not just from me, but from the whole ZGTEAM!
+
+---------------
+Future Updates:
+---------------
+- Bug Fixes, especially on the Armor Code
+- More moves
+- Improved Meteor
+- Aritifical Intelligence once I learn it
+- Re-edit my Super 17 then make a transform/fusion character, 17 - Super 17 [and don't e-mail me about this either, gotta find the time to edit a newly improved Super 17]
+- A crouch kick needed to be added :P 
+
+---------------
+How to install:
+---------------
+
+- Unzip all the files to your chars/Android 17 directory
+- Add the character to your select.def file [add in line, Android 17]
+
+------
+Moves:
+------
+C - Fireball Attack Little [Rapid tap C for rapid fireballs]
+Z - Fireball Attack
+ABXY - Basic Punch & Kick attacks
+D, F , b - Kick Combo
+D, B , b - Kick combo
+D, B , y - Dash Forward Punch Combo ending with Uppercut.
+y+z - Teleport/Zanzoken
+y+b - KI Barrier
+x+y - Fly
+a+b [when falling in air or something] - Recover [by default, all characters have this]
+D, F , a - Rising Knee - Press b while doing the knee [while you're in the air] to do a additonal Kick!
+D, B , a - Kick Forward
+D, B , x - Episode 149 [Japanese]/Piccolo vs Android 17 - The punch Android 17 done really fast vs Piccolo, punching him in the stomach. This is a similiar attack.
+
+
+-----------
+Credits:
+-----------
+
+-Necromancer's Code Archive - I planted the armor code from that site in the Android 17
+-Necromancer's old Brolli, which he had the KI BARRIER code, I based mine off his but it doesn't work as well :*(
+-Lonewolf - For the sprites , without him a Android 17 is not possible :)
+
+"Mr Random" - HyperionX

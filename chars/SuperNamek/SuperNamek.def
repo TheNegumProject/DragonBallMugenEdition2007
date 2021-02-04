@@ -1,0 +1,80 @@
+;================================
+;"Piccolo", from Super Boutuden 2
+;================================
+;Easiest file to learn from! =D
+
+;----------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;----------------------------------------
+;DEF file for Piccolo
+;Used to load all the files required for this character.
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================
+
+;---------------------
+;Character Information
+;---------------------
+[Info]
+name 			= "[Necromancer's] Piccolo"	;Name of character
+displayname 	= "SuperPiccolo"            ;"Piccolo" 			;Name of character to display
+versiondate 	= 04,01,2001    			;Version date of character
+mugenversion 	= 11,29,2001 			;Version of M.U.G.E.N character works on
+author 		= "The Necromancer"     	;Character author name
+pal.defaults 	= 1,2,3,4,5,6    			;Default palettes in order of preference
+
+;---------------
+;Character Files 
+;---------------
+[Files]
+cmd     		= PiccoloCMD.cmd 			;Command Set
+cns     		= Constants.cns  			;Constants
+st      		= Constants.cns  			;States
+st1			= Misc.cns				;-2/-3 States
+st2			= Basic.cns				;Basic Attacks
+st3			= Special.cns			;Special Attacks
+st4			= Hyper.cns				;Hyper/Super Attacks
+st5			= Feature.cns			;Features
+st6			= MiscHelper.cns			;MiscHelper's States
+stcommon 		= Common.cns 			;Common States
+sprite  		= Piccolo.sff   			;Sprite
+anim    		= PiccoloAIR.air 			;Animation
+sound   		= Piccolo.snd 			;Sound
+
+pal1    		= Piccolo01.act  			;Day (Light Colours)
+pal2    		= Piccolo02.act			;Dawn (Light Colours)
+pal3    		= Piccolo03.act			;Dusk (Light Colours)
+pal4    		= Piccolo04.act			;Day (Dark Colours)
+pal5    		= Piccolo05.act			;Dawn (Dark Colours)
+pal6    		= Piccolo06.act			;Dusk (Dark Colours)
+pal7    		= Piccolo01.act  			;Day (Light Colours)
+pal8    		= Piccolo02.act			;Dawn (Light Colours)
+pal9    		= Piccolo03.act			;Dusk (Light Colours)
+pal10    		= Piccolo04.act			;Day (Dark Colours)
+pal11    		= Piccolo05.act			;Dawn (Dark Colours)
+pal12    		= Piccolo06.act			;Dusk (Dark Colours)
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;---------------------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;---------------------------------------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================

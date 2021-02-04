@@ -1,0 +1,692 @@
+=====================================
+Necromancer's Personal Notes: Piccolo
+=====================================
+
+---------------------------------------------------
+Author:	The Necromancer
+	necromancer@zipmail.com
+---------------------------------------------------
+
+Best viewed at:
+Font: Comic Sans MS
+Font Style: Regular
+Size: 8
+
+---------------------------------------
+Date Started: December 30, 2000
+Date Finished:
+---------------------------------------
+
+This file is used to note what my thoughts are while working on this character. They may not be 
+directly related to my progress, but are some explanations and history notes as what I did. This 
+file also contains any bug reports and move ideas sent to me by various people and beta testers.
+
+-----------
+12/30/00
+-----------
+-The log I've made is used to show you everything what I've done for this character.
+Originally, I was already working on another project, but because there was a great number of 
+requests to work on one more DBZ character, I'll do it to prevent my e-mail account from 
+getting spammed again. =)
+
+-----------
+01/01/01
+-----------
+-The Battle Experience System is nearly complete. There are many things to take into 
+consideration, and I'm running out of variables. =) (I may need to start using Float Vars...)
+
+-I changed the rounding in the math from using "Floor", to using "Ceil". Character damage 
+will now round up.
+
+-Notes from Y2Krillen: (Move ideas)
+
+1.Mystic attack while coming down from air like. Like the air fireball
+
+2. Use the getting up sprites for a knee ramming move
+
+3. Mtstic attacks to replace all the regular standing moves(these moves should push the
+opponent back great distances)
+
+4. Ultra mass smasher. Picollo gains muscles and does several hard punches and uppercuts to the opponet.
+(Sprites will be based off Brolis upper torso)
+
+5. Multi for makanksappo- Super pause occurs and a Picollo clone
+appears opposite of the opponent and with you on the other side of the
+opponent. Which leaves the opponent caught in between two Picollos who will
+both fire mankanksappos.
+
+6.Two more ultra combos-These really add to the whole flash fighting concept
+of DBZ. It would be could if the punches/kicks would random variables. What I mean
+is that the combo wouldnt be preset with say 200, 210 220. It would be much better
+if the moves were either random or controlled by the player at the last moment.
+I think it would be interesting if the more buttons the player spontaeneously pushes
+the more attacks would be iniated. The combos shouldnt last more than 25 seconds or so.
+They should also be able to be broken with other hyper combos, supers, ki dishcharge ect..
+
+7. Clones should deplete Picollos health by about 5%. And take away a level
+two amount of energy.
+
+8.<<TAKEN FROM ULTIMATER DBZ INFORMATION SITE>>
+Kakusan Yuudou Kikou Ha- This is one of Piccolo's coolest attacks. He sends
+hundreds of energy balls into the air and surrounds his opponent with them.
+The energy balls hang in mid-air for a second, and then he lets fly. He forces
+all of the energy balls to converge on his victim at once causing a large
+explosion. This would be a great finisher super. We could hype it up by adding
+multiple smoke clouds. My idea for it is a super pause and then Picollo does the
+the move, about 30 seconds later the bombs home in on the opponent.
+
+9. A preset combo where you execute the button command and picollo dashes toward opponent uppercuts 
+them in air and then zanzokens where they would apppear in air, then smashes them into ground with a 
+air kick. Then releases a continous stream of ki blasts. Variations on this move could be replacing 
+the multiple fireballs with the mankanksappo or giant fireball.
+
+10. Bigger, and better smoke clouds. I'm thinking half the size of the screen.
+
+-----------
+01/04/01
+-----------
+-Notes from Daeyrat: (Ideas for Piccolo)
+
+-Broli and Goku-N-HD큦 sounds for KikouHa
+-Broli큦 Throwing Blaster Sound for Super Fireballs
+-Pioupiou큦 Piccolo Souns = Makankousappo
+-Charging Blast Sound (From Goku-N-HD)
+-DBZ Hyper Dimension Teleport Sound for Zanzoken
+-Broli큦 Zanzoken Sound for Fast Movement
+-Ki from UB22, but white
+-DBZ RPG Makankousappo Effect (Green Screen) for Makankousappo
+-VegetaHD/N-Trunks큦 Ki Charge Sounds
+-Picco큦 Hit Sounds
+-Power Bar : 6000 (6 Levels)
+
+.Ki Charge : UB22 Ki. After charging too much. The screen turns dark, rocks
+start to fly, shockwaves, Energy Sparks....
+.Ki Burn : Pioupiou큦 Picco has one...
+.Dash Kick : From DBZ2. Only one.
+.Double Dash Kick : Like in DBZ2
+.Throw : From DBZ2
+.Fast Movement : Zanzoken from EmuBoarding큦 Normal Trunks, but faster
+.Kikou Ha : Normal Blast
+.Yudoh Energy Dan : Seeker Blast
+.Renzoku Energy Dan : 3 Fireballs
+.Eye Laser : From DBZ2
+.Mouth Beam : Edited ( he used this against a Saibaman ) - Sprite Edit
+.Mystic Attack : He will stretch his arm causing damage. The enemy falls
+.Mystic Combo : He pulls the enemy and does a sequence
+.Mystic Throw : After pulling the enemy he will throw the enemy
+.Combo : Kicks and Punches
+.Bukuu Kyaku : Aerial Kick Sequence from DBZ2, DBZHD....
+.Shock Stunner : From DBZ2
+.Zanzoken : When you큥e Dashing, Jumping or doing anything else, Piccolo
+will leave disappear leaving a transparent image(last sprite - like
+Overmind큦 SSJ4 Vegeta). Piccolo appears behind the enemy attacking with a
+Dash Kick
+.Regenerate Counter Attack : Like in DBZ Hyper Dimension
+.Slide Kick : DBZ2큦 Low Kick Sprites - Piccolo slides as he does the low
+kick
+.Custom AI : A Really Hard One
+.DBZ2 Meteor Attack 1 : Piccolo does this Meteor Attack everywhere (DBZ2)
+.DBZ2 Meteor Attack 2 : He does this one when he큦 fighting at a Tenkaichi
+Budoukai Arena (DBZ2)
+
+Level 1 Supers
+
+*Super Kikou Ha : Piccolo shoots a Longer and More Powerful Fireball (Blast
+Sprites = Trunks큦 burning attack sprites)
+*Bakurihama : He shoots a Ki Blast from one hand. The other hand holds his
+wrist. - Sprite Edit
+
+Level 1.5 Supers
+
+*Makosen : Piccolo charges his Ki in both arms then he shoots blasts like a
+Renzoku Energy Dan (He shoots one from the left arm, then he shoots from the
+right.....) - Edited or Genkiretsukodan큦. This Attack is like Broli큦 Super
+Renzoku Energy Dan :
+Press Buttons for more shots
+*Super Renzoku Energy Dan : Just Like EmuBoarding큦 Characters
+
+Level 2 Supers
+
+*Makankousappo : DBZ2 Level 1 Super Fireball
+*Super Combo : Old Piccolo has a cool one
+
+Level 2.5 Supers
+
+*Multi Piccolo Attack : He separates into 4 Piccolos and they attack from
+everywhere, then they attack the enemy at the same time with kick and
+punches. Then they jump and become 1 Piccolo again. He finishes with a
+Bakurihama
+
+Level 4 Supers
+
+*Kakusanyudokodan : Piccolo shoots many fireballs around the enemy then,
+with a move (Genkiretsukondan sprite)
+they hit the enemy - He used this move against Android No17.
+*Gekiretsukodan : DBZ2 Level 2 Super Fireball. Anime style : He charges a
+lot. His Ki shows up.
+*Giant Piccolo Attack : Piccolo큦 size increases. Super Armor. This can be a
+Mode or a Move.... If it큦 going to be a move, he does a Poweful Combo and
+returns to normal size. If this is going to be a mode. He also becomes more
+powerful and slower.
+
+-----------
+01/05/01
+-----------
+-Announced my project on MugeNow. (Thanks to Ribeiro for translating my post into 
+Portuguese.)
+
+-The Battle Experience System is now completed. I'll have to double check the explanation I've made 
+before teaching MugeNow how it is done. (This system is still under testing.)
+
+-I now have Mattasaur's authorization in using his MOTW hit sounds, just in case. =)
+
+-----------
+01/06/01
+-----------
+-Getting some errors in using the equation:
+S(Ceil(Var(34)),0))
+
+Where Var(34) had a value of 5. I cannot override the group with an equation.
+
+Now changed to:
+Ceil(Var(34)),0)
+
+Where Var(34) now has a value of 15. (Group 5 goes under the "Fight.SND" default sounds group.)
+
+-Changed the sound equation again. Ceil is not required in setting sound values. (I forgot to remove it.) 
+
+It is now:
+S(Var(34)),0
+
+The sounds now work great. =)
+
+-----------
+01/07/01
+-----------
+-The Number System is now implemented, and working quite well. =) I'll have to come up with a different 
+way of gaining experience more efficiently. 
+
+-The trigger, "MoveHit" does not register until a the hit pause for the opponent has ended. During 
+combos, the experience gained is not added from the combined hits, but will register only the last attack.
+
+-----------
+01/08/01
+-----------
+-Heh, I just remembered about the "ignorehitpause" option. This solved my MoveHit problem. =)
+
+-Notes from Y2Krillen: (Piccolo's Story)
+
+Piccolo (Ma Jyunia "Demon Junior")- Piccolo is the reincarnation of his father Piccolo Daimaou. 
+Many people think it's a plot hole that Kami is still alive after Daimaou is killed. Well it's not 
+because Daimaou lives on in Piccolo. Piccolo retains all of his father's memories and abilities, 
+however, he does have something that his father didn't. A conscience. When Piccolo first appears 
+during the 23rd Tenkaichi Budoukai, he's severely brutal and seriously has it in for Gokou.
+
+Raditz Saga/Sayain Saga
+The next time he shows up to assist Gokou in defeating Raditzu, he still has no feelings for Gokou 
+and would kill him just as soon as he'd kill Raditzu.....which....uh...he does. But that's besides 
+the point. The point is, he still leads his own evil path which is being obstructed by the Saiya-jin, 
+so he's forced to train Gokou's child to be a warrior. As the one year of training progresses, 
+Piccolo becomes attached to the child, but never ONCE hints to it. (As opposed to the English 
+version where he practically pampers the kid). Piccolo finally becomes reformed when he sacrafices 
+his life to save Gohan's. From that moment, he loses his desire to conquer the Earth. While dead, 
+Picollo is allowed to train with Kiaosama on his tiny planet. Here Picollo doesnt really train 
+with Kaiosama, but does his own training. After being wished back to life and onto the Planet 
+Namek, Piccolo merges with the dying Nail increasing his power level over 1,000,000 allowing him to 
+go one-on-one with Stage 2 Freeza. After freeza transforms into 4th and final form, Picollo is 
+overpowered and it was up to Goku to finish the fight.
+
+Andriod Saga (beginning of the Cell Saga)
+Picollo trains with Gohan and Goku in preparation for a battle that will happen three years in the 
+future with two killer andriods. So until that day came he was training with Gohan and Goku.
+
+3 years later when the Andriods finally surfaced, the Z fighters were all stronger than ever. Vegeta 
+destroys Andriod #19. And Picollo defeats Android #20( aka Dr.Gero ) easily. He would have finished 
+off the android, but #20 fled for his life.
+
+And in the middle of the Android Saga, he merges with his other half, Kami, to fight off Imperfect Cell. 
+From this fusion he is stronger than any Super Sayain and has great knowledge. His battle with Imperfect 
+Cell comes to an end after Cell retreats, fearing that Picollo was too powerful for him. Very soon after 
+he faces off against Andriod #17. The purpose of this fight is to keep the three Andriods ( Andriod 18, 
+17, and 16) from finding Goku and Gohan who are on Kami뭩 look out. The two are very close in power 
+levels and the battle is even all the way through. This battle is ended when Imperfect Cell returns, 
+fully charged up from absorbing  hundreds of people. He tries to absorb Andriod 17 but is stopped by 
+Picollo and his new attack, (Giant fireball/beam he shoots from his chest). Cell Survives the attack 
+and blasts Picollo into a  near by ocean. At this point everyone thought Picollo was dead but Goku 
+teleports down and saves him.
+
+Picollo's next time of training is in the room of spirit of time. In this room one day equals one hour. 
+He trains here for one fully day and becomes much stronger. But not quite as strong as Perfect Cell.
+
+A few days later he and other Z fighters are at Cell Games. Gohan is just about to finish off Cell of 
+with his kamehameha. And Picollo tries to aid Gohan but is swatted away repeatedly.
+
+Misc...
+His various mergings do not change him physically, but internally he retains the memories of both Kami 
+and Nail. After merging with Kami, Piccolo becomes even more philosophical than he normally is, and 
+takes actions that put him in danger for the sake of the Earth, (such as sealing himself, Gotenks and 
+Buu in the Room of Spirit and Time). After fusing with Kami, Piccolo makes Kami's Palace his home, and 
+he always has a special place for Gohan in his heart through all of Dragon Ball.
+
+-----------
+01/10/01
+-----------
+-Notes from Daeyrat: (Piccolo's Battle History)
+
+VS Enemy - Who was watching
+Budoukai means an MANY people because it큦 a tournament...............
+
+Dragonball and Dragonball Z only ( I don큧 know about his Dragonball GT
+Battles)
+
+Battle List
+
+VS Kuririn - Budoukai
+VS Shen (Kamisama) - Budoukai
+VS Goku - Budoukai
+VS Goku - None
+VS Raditz - Goku
+VS Gohan - None
+VS Saibaman - Chaoz, Kuririn, Tenshinhan
+VS Nappa - Kuririn, Gohan
+VS Chaoz,Tenshinhan and Yamcha - North Kaiosama
+VS Freeza 2nd Form - Kuririn,Gohan,Vegeta
+VS Freeza 3rd Form - Kuririn, Gohan, Vegeta
+VS Freeza 4th Form - Kuririn, Gohan, Goku charging Genkidama
+VS Goku - Gohan
+VS Android 20 - Kuririn, Gohan, SSJ Vegeta, Tenshinhan
+VS Android 18/17 - Kuririn (SSJ Trunks and Vegeta, Tenshinhan, Yamcha were
+defeated)
+VS Cell 1st Form - None
+VS Android 17 - Android 18, Android 16
+VS Cell 1st Form - Android 17 was helping him - Android 16, Android 18
+VS Cell Jrs. (3 copies) - SSJ Goku, Yamcha, Tenshinhan, Kuririn, SSJ Vegeta, 
+SSJ Trunks were fighting them too, Cell and SSJ1 Gohan were watching
+VS Kaioshin - Budoukai (Piccolo ran out because Kaioshin큦 Ki was too big
+for him)
+VS Babidi - None
+VS Boo - They didn큧 fight. Boo ate him before.... Mystic Gohan was watching
+
+-Notes from Daeyrat: (Ideas for Piccolo)
+
+-Kakusan Energy Dan - Piccolo shoots many fireballs at the same time
+-Fly Mode : Overmind and Ssonic큦 style ( He falls when he큦 hit with some
+types of attacks
+-ShogekiHa
+-Normal Counter Attack - After Blocking (Ground or Fly)
+-Counter Hit/Combo Breaker - After receiving an attack
+-Air Counter Attack - After Blocking an air attack
+-Air Counter Hit - After being hit in the jump
+-Fly Counter Hit - After Being Hit in Fly Mode
+-Return Attack - After being launched into the air, Piccolo does a diving
+kick
+-Air/Ground Recover
+-Zanzoken Recover - When Piccolo touches the ground after receiving a
+powerful attack, press a button (Right, Left Up, Down). Piccolo will leave a
+Transparent Image (When he큦 stunned on the ground/ lay down) and appear
+standing
+-Escape - Piccolo does a Zanzoken after receiving an attack/ blocking
+-Super Attack - Piccolo does a physical attack (Gekiretsukodan Sprites).
+It큦 effect is the similar to Broli큦 Smash Lariat EX
+No damage
+-Counter Super Attack - Piccolo does an "Invisible Ki Burn" after blocking
+an attack. The attack is invisible (like Kiai Ho).
+Piccolo Sprites - Ki Charge
+Effect similar to Super Attack
+No Damage
+It has an unlimited range
+
+New Super Level
+
+Level 1
+
+*Super Kikou Ha : Piccolo shoots a Longer and More Powerful Fireball (Blast
+Sprites = Trunks큦 burning attack sprites)
+
+Level 1.25
+
+*Makosen : Piccolo charges his Ki in both arms then he shoots blasts like a
+Renzoku Energy Dan (He shoots one from the left arm, then he shoots from the
+right.....) - Edited or Genkiretsukodan큦. This Attack is like Broli큦 Super
+Renzoku Energy Dan :
+Press Buttons for more shots
+*Super Renzoku Energy Dan : Just Like EmuBoarding큦 Characters
+
+Level 1.5
+
+*Bakurihama : He shoots a Ki Blast from one hand. The other hand holds his
+wrist.Sparks from Piccolo큦 hand before shooting the blast - Sprite Edit
+
+Level 2
+
+*Makankousappo : DBZ2 Level 1 Super Fireball
+
+Level 2.5
+
+*Multi Piccolo Attack + Super Combo: He separates into 4 Piccolos and they
+attack from everywhere, then they attack the enemy at the same time with
+kicks and punches. Then they start a Renzoku Energy Dan at the same time and
+finish with a Super KikouHa.
+
+*Super Combo - Old Piccolo큦 Level 3 Combo...
+
+Level 3
+
+*Giant Piccolo Attack : Piccolo큦 size increases. Super Armor. This can be a
+Mode or a Move.... If it큦 going to be a move, he does a Poweful Combo and
+returns to normal size. If this is going to be a mode. He also becomes more
+powerful and slower.
+
+*Kakusanyudokodan : Piccolo shoots many fireballs around the enemy then,
+with a move (Genkiretsukondan sprite)
+they hit the enemy - He used this move against Android No17.
+
+*Gekiretsukodan : DBZ2 Level 2 Super Fireball. Anime style : He charges a
+lot. His Ki shows up.
+
+Piccolo learn these moves in Dragonball Z
+It큦 useful for Battle Experience
+
+-He knew these moves when he fought against Goku
+
+Kyodaika
+Mystic Attack
+Regeneration
+Separation
+Eye Laser
+Shock
+Mouth Beam
+Gekitotsu Buu Volleyball
+KikouHa
+Bukujutsu
+Renzoku Energy Dan
+Makosen
+Bakurihama
+
+-Learned Moves
+
+Makankousappo - Against Raditz
+Kakusanyudokodan - Against Android 17 ( After Kamisama Fusion and Cell 1st
+Form큦 1st Battle)
+Gekiretsukodan - Against Cell 1st Form (2nd Battle)
+
+-----------
+01/12/01
+-----------
+-SorrowEdge gives me his authorization on using his SFA number fonts. They're the 
+only small enough fonts to use anyhow. =D
+
+-I definitely need to find a better hit/guard sound set for Piccolo's Variable Mode. 
+The sounds from SFA sound too weak. =P
+
+-----------
+01/16/01
+-----------
+-I received an e-mail from SSJ x4 Goku, who volunteered to make some edited 
+sprites of Piccolo. (Adds in cape and turban) As of now, a few sprites were sent 
+to me. These included colour alterations.
+
+-Made a post on the DB3K, showing my WIP. I also made a post a few days earlier, 
+in Mugen DEV. However, a flame war started, about "Preference" issues...
+
+-----------
+01/17/01
+-----------
+-The Constants Index is getting too large to put in the CNS file. I made a separate 
+text file for this, for easier reference.
+
+-----------
+01/22/01
+-----------
+-Notes from Kakaroto: (Piccolo Test 002)
+	Piccolo is too slow!
+	Offered to make the ending sequence
+	
+-Did a bit of research. =P
+
+I'll be using all of the Meteor Smash combos of DBZ2 and add them to Piccolo. Because 
+they are simply devastating combos, it'll still suit him. =) As for DBZ3, I have no 
+idea how the Meteor Smash combos are done. (Or they don't exist...)
+
+Meteor Smash Description: (Slightly edited to suit Piccolo's sprites.) 
+
+All commands for these Meteor Smash moves are: B, F, D, U, punch/kick. However, because 
+this command is too difficult to execute, most of these commands will be in a double motion 
+format. (Eg. D, DF, F, D, DF, F)
+
+Gohan/Goku:
+	MK
+	SK (Knock opponent up diagonal)
+	Appear over opponent
+	Falling 1 sprite
+	SK (Upside down)/AP (Knock opponent down diagonal)
+	Stay flying
+
+Vegeta:
+	WP (No AnimElem 3)
+	CSP (Knock opponent up)
+	Appear over opponent
+	AK (Knock opponent down diagonal)
+	Appear on ground near opponent
+	WK (Knock opponent straight)
+
+Trunks:
+	WK (Knock opponent straight)
+	Dash (Until hits opponent)
+	SK (VelSet of 2/3, for sliding)
+	WK (Knock opponent straight)
+
+Cell:
+	None (That I found...)
+
+Cell Jr:
+	(Same as Cell)
+
+Zangya:
+	MK
+	CSP/SK (Knock opponent up, then fall)
+	CSP (Knock opponent up diagonal, then fall)
+
+Bojack:
+	CK
+	SK/CSP (Knock opponent up)
+	Appear over opponent
+	AK (Knock opponent down diagonal)
+	Stay flying
+
+Broli:	(I will definitely not add this to Piccolo. This is one of Broli's signature moves.)
+	SK (Knock opponent up)
+	Jump up
+	Grab opponent's head, then fall to the ground with opponent held
+	Smashes the opponent head into the ground
+
+-----------
+01/24/01
+-----------
+-Chinese New Year! =)
+
+-Notes from Y2Krillen: (Piccolo Test 003)
+	Meteor Smash 2 Bug: Opponent is able to escape before the last hit, after the throw.
+	Sent a Piccolo edited sprite of Kami Sama. (Looking great!)
+	Gave a link for sound samples of Piccolo: 
+
+-Added in my e-mail notes from various people. (Piccolo moves, ideas, etc...)
+
+-----------
+02/03/01
+-----------
+-During the time 0f Jan 29 to Feb 2, I took a bit of a break in character making, and started
+my new web site. =)
+
+-----------
+02/05/01
+-----------
+-Piccolo [Ver 02/05/01] is now released. I can now work on Freeman a bit more, but I'll 
+continue on Piccolo as well...
+
+-----------
+02/11/01
+-----------
+-Piccolo [Ver 02/11/01] is now released. Enough moves and changes have been made to make such a quick update. =)
+
+-----------
+02/12/01
+-----------
+-Very strange: State 9000 cannot be used for some odd reason. The engine doesn't seem to detect it. I had to change this to
+9001...
+
+-----------
+02/20/01
+-----------
+-Received some edited Piccolo sprites from SSJx4 Goku. (Very well made...)
+
+-----------
+02/23/01
+-----------
+-WBJ discovered an idea about custom state animations: Use a -2 state, ChangeAnim parameter when in these custom
+states. (Fixes the animation problems.)
+
+-----------
+02/25/01
+-----------
+-BlackShinobi reported a bug in Piccolo. Quote:
+
+E-mail: Piccolo/Bug
+
+To The Necromancer,
+
+    Hey, great work on piccolo. The new moves are perfect. While playing, I noticed a small bug. It is in [Statedef 8225]. 
+When the returning projectile hits, the oponent moves forward instead of back. I fixed it already, but I just wanted you
+to know about it.
+
+You just needed the (-) for the x value.
+
+ground.velocity = -5
+guard.velocity = -2.5
+air.velocity = -5,-1
+airguard.velocity = -2.5
+
+-----------
+02/27/01
+-----------
+-WBJ's feedback:
+	More physical moves, and less projectile types needed.
+	Meteor Smash 5: Does not hit all opponents.
+	Extending Arm recommended: Billy Kane style attacks.
+	Head Pos too high for Piccolo. (Since Piccolo IS a DBZ character, he's too short. =P)
+
+-----------
+03/11/01
+-----------
+-KenmastersX sent an e-mail, giving me a ZSNES movie of Cell's meteor combo. (Since I could never do it.)
+He also suggested that I try to make some meteos from DBZ3, since they look much more impressive. =)
+
+-Ribeiro finally got back in Mugen. (Computer crash.) With that in mind, I can now get my ReadMe file translated. =P
+
+-WBJ's new version of Goku is awesome! Goku has a pretty neat intro. I made Piccolo interact with this. (One of the first characters
+in Mugen to have a "true" intro interaction!)
+
+-----------
+03/15/01
+-----------
+-The Flash Battle and Grappling Modes can be very buggy for some characters. These will be fixed in the future...
+
+-----------
+03/17/01
+-----------
+-Piccolo's signature move, the Makankosapppo, is now completed. (Highly graphical too!) This is very different from most
+multi-hit projectiles, as it actually extends from Piccolo. The projectile cuts through the opponent if the opponent dies.
+
+-BlackShinobi sent me some alternate animations for Piccolo's Grappling Mode. That feedback was sure fast!
+
+-Daeyrat's feedback:
+	Add Team Battle moves
+	Increase Piccolo's speed
+	Adjust the Exp System
+
+-----------
+03/31/01
+-----------
+-I was being lazy for the last number of days... =P
+
+I finally gotten back in working with Piccolo though, but not by much.
+
+-Notes from Daeyrat:
+
+E-mail: Test
+
+Genki Dama ? You mean Gekiretsukodan or Chou Bakuretsuhama...
+Here큦 an idea for it: If Piccolo keeps charging for ??? secs after saiying
+GEKIRETSUKODAN the blast will be more powerful and will have different
+sprites
+In the Anime, Ki Blast can be charged and Piccolo큦 Gekiretsukodan was a
+Giant Ki BEAM
+If he charges for:
+3 secs : Blast + Sparks, 2x Faster
+6 secs : Beam
+9 Secs : Beam + Sparks
+12 secs : Shinkuu Hadouken
+15 Secs : Capcom Games Giant Beam
+
+The time needed will decrease when Piccolo gets more powerful (Exp.)
+Also, it큦 hard to do, but... Piccolo would be FASTER too if Exp. Number
+Increase... Fast Move = Faster Zanzoken Too
+
+Knee Counter is too weak
+Capcom still doesn큧 have Gekiretsukodan
+
+-2nd e-mail from Daeyrat:
+
+E-mail: More
+
+-Diagonal Makakousappo and Gekiretsukodan (And other Hyper Moves ater)
+ 
+-New Moves (Based on Piccolo.txt)
+ 
+-Chyou Kyosjin Jyutsu >Piccolo's special ability to increase his body size to the height of an apartment 
+ 
+-Kizuato no Chiyu
+ 
+-Mystic Punch - Another Variation of Extending Arm Move. It큦 like DBZ Hyper Dimension큦 attack but the enemy falls
+ 
+-Psychokinesis > Psy Grab (Levitate). In mugen , this works like Cell ( Hyper Dimension) 큦 Psy Attack but Piccolo only throws the enemy , no psi attacks,  only throw
+ 
+-Telepathy - The ability to communicate others by speaking to them through their mind.In mugen, he calls someone . This person will shoot a beam ( VS Games Helper System). Helpers : Goku or Gohan
+ 
+-Bakuriki Demon Blast :Original Piccolo Attack
+ 
+-Exploding Demon Cannon : Original Piccolo Attack
+ 
+-Tamago o Omu - shoot egg and give birth to another namekian (can be a "Special Death". This happens when a Goku (ribeiro or wbj) kills him, so he shoots an egg )
+ 
+-Toomi no Jyutsu-The psychic ability to sense what's going on in a different part of the world : In mugen it can be a special move like this:
+When he큦 flying really high you do a command , then hold the button, as long as you hold it, The enemy will be shown instead of you (It큦 useful to see the enemy when you큥e flying high)
+ 
+-Makankousappo Fatality : When the Beam goes through the enemy, blood effects...
+ 
+-Higher Flying Limits
+ 
+-DBZ Extras : Mini Jump is also included in DBZ . It큦 also in DBZ HD
+
+-----------
+04/01/01
+-----------
+-I received another e-mail from Daeyrat:
+
+E-mail: More
+
+Gekiretsukodan : 4 Levels ( Not 6)
+Each higher level needs more Energy and gives more experience
+1 - Fireball - level 2
+2 - Vegeta Final Flash Sprites  Beam - 3
+3 - Goku Chou Kamehame Ha Sprites Beam - 4
+4 - Giant Beam (Capcom) - 5
+ 
+Kakikesu - Change the command because it큦 hard to do the Meteor (I suggest F,D+Punch).
+Also, Decrease it큦 dispersion range to half screen and Piccolo큦 Ki hurts (Ki Burn)
+ 
+-Broli큦 Autoturn System (Piccolo큦 always looking at the enemy) - Mystic Mode
+ 
+-Ki Charge - when he charges TOO much (when there큦 time enough to fill a 6 level bar) , shockwaves, dark screen, some rocks start to lift, Sparks... 
+ 
+.DBZ MODE Extra : Energy Auto Refill

@@ -1,0 +1,439 @@
+[Statedef - 3]
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1 
+triggerall = power < 3000 
+triggerall = StateType = S
+triggerall = Pos Y >= 0
+triggerall = P2BodyDist Y <= 0
+triggerall = P2BodyDist Y >= -50 
+triggerall = P2StateType != C
+triggerall = P2MoveType = A
+trigger1 = Random <= 209 && Var(9) = 0
+trigger1 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = SC, NA && P2BodyDist X <= 50)
+trigger3 = StateNo = 2000
+value = 130
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = StateType = S
+triggerall = Pos Y >= 0
+triggerall = power < 3000
+triggerall = P2BodyDist Y <= 0
+triggerall = P2BodyDist Y >= -50
+triggerall = P2BodyDist X <= 120 
+triggerall = P2StateType != S && P2StateType != A
+triggerall = P2MoveType = A
+trigger1 = Random <= 217 && Var(9) = 0
+trigger1 = Ctrl || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = SC, NA && P2BodyDist X <= 50)
+value = 131
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = StateType = A
+triggerall = Pos Y < 0
+triggerall = power < 3000
+triggerall = P2BodyDist X <= 120
+triggerall = P2BodyDist Y >= -120
+triggerall = P2MoveType = A
+triggerall = StateType = A
+trigger1 = Random <= 500 && Var(9) = 0
+trigger1 = Ctrl || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = A, NA && P2BodyDist X <= 50)
+value = 132
+
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1 
+triggerall = power >=3000 
+triggerall = StateType = S
+triggerall = Pos Y >= 0
+triggerall = P2BodyDist Y <= 0
+triggerall = P2BodyDist Y >= -120 
+triggerall = P2StateType != C
+triggerall = P2MoveType = A
+trigger1 = Random >= 503
+trigger1 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = SC, NA && P2BodyDist X <= 50)
+trigger3 = StateNo = 2000
+value = 130
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = StateType = S
+triggerall = Pos Y >= 0
+triggerall = power >= 3000
+triggerall = P2BodyDist Y <= 0
+triggerall = P2BodyDist Y >= -50
+triggerall = P2BodyDist X <= 120 
+triggerall = P2StateType != S && P2StateType != A
+triggerall = P2MoveType = A
+trigger1 = Random >= 503 
+trigger1 = Ctrl || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = SC, NA && P2BodyDist X <= 50)
+value = 131
+
+[State -3]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = StateType = A
+triggerall = Pos Y < 0
+triggerall = power >= 3000
+triggerall = P2BodyDist X <= 120
+triggerall = P2BodyDist Y >= -120
+triggerall = P2MoveType = A
+triggerall = StateType = A
+trigger1 = Random >= 503
+trigger1 = Ctrl || (StateNo = [140, 155])
+trigger2 = Var(9) > 0
+trigger2 = (P2BodyDist X <= 120 && Ctrl) || (StateNo = [140, 155]) || (HitDefAttr = A, NA && P2BodyDist X <= 50)
+value = 132
+
+;========= AI FASE 2
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+triggerall = P2BodyDist X > 40
+trigger1 = random < 207
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 220
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 221
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 400
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 237
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 238
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 239
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 1000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 506
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 2000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 507
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 0
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 700
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 1
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 701
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 2
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = A
+trigger1 = P2StateType != A
+value = 702
+
+;==================================
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+triggerall = P2BodyDist X > 40
+trigger1 = random < 207
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 220
+
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 221
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 400
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 237
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 238
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 239
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 1000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 506
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 2000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 40
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 507
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 0
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 80
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 700
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 1
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 80
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 701
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 2
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+trigger1 = power > 3000
+trigger1 = random < 207
+triggerall = P2BodyDist X > 80
+trigger1 = P2Movetype = I
+trigger1 = P2StateType != A
+value = 702
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 2
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+triggerall = P2BodyDist X > 80
+trigger1 = random = [509,510]
+value = 510
+
+[State -2]
+type = ChangeState
+triggerall = Var(9) = 2
+triggerall = Var(0) = 1
+triggerall = roundstate = 2
+triggerall = Ctrl
+triggerall = P2BodyDist X > 10
+trigger1 = random = [215,400]
+value = 400
+
+[State -2]
+type = ChangeState
+triggerall = Var(0) = 1
+triggerall = alive = 1
+trigger1 = stateno >= 150        
+trigger2 = Stateno <= 153
+trigger3 = stateno = 5000       
+trigger4 = stateno = 5001
+trigger5 = stateno = 5002
+trigger6 = stateno = 5010
+trigger7 = stateno = 5011
+trigger8 = stateno = 5012
+trigger9 = stateno = 5020
+trigger10 = stateno = 5021
+trigger11 = stateno = 5022
+trigger12 = stateno = 5110
+trigger13 = stateno = 5120
+trigger14 = stateno = 5110
+trigger15 = stateno = 5035
+trigger16 = stateno = 5030
+trigger17 = stateno = 5050
+trigger18 = stateno = 5040
+trigger19 = stateno = 5071
+value = 508
+
+[State -2, D-Hit]
+type = explod
+triggerall = Hitcount > 2
+triggerall = Hitcount < 10
+trigger1=stateno=200
+trigger2=stateno=201
+trigger3=stateno=202
+trigger4=stateno=300
+trigger5=stateno=301
+trigger6=stateno=302
+trigger7=stateno=220
+trigger8=stateno=221
+trigger9=stateno=222
+trigger10=stateno=320
+trigger11=stateno=321
+trigger12=stateno=322
+trigger13=stateno=210
+trigger14=stateno=211
+trigger15=stateno=212
+trigger16=stateno=310
+trigger17=stateno=311
+trigger18=stateno=312
+trigger19=stateno= [200,5300]
+anim = 3010
+pos = 80,67
+postype = left
+sprpriority = 1
+removetime = 900

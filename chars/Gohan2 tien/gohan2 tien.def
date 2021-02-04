@@ -1,0 +1,27 @@
+; gohan mistico by tenshin-han
+
+
+; Player information
+[Info]
+name = "Gohan"        
+displayname = "Gohan2 tien" 
+versiondate = 04,14,2001    
+mugenversion = 04,14,2001   
+author = "Tenshin-han"         
+pal.defaults = 6,3,4,2      
+
+; Files for the player
+[Files]
+cmd     = gohan.cmd   
+cns     = gohan.cns   
+st      = gohan.cns   
+stcommon = common1.cns 
+sprite  = gohan.sff   
+anim    = gohan.air   
+sound   = gohan.snd   
+pal6    = gohan.act
+
+; Arcade mode
+[Arcade]
+intro.storyboard = intro.def
+ending.storyboard = ending.def

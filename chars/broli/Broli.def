@@ -1,0 +1,49 @@
+;================================
+;"Broli", from Super Boutuden 2
+;================================
+
+;----------------------------------------
+;Author:	FlowaGirl
+;		flowergirl@cutey.com
+;		http://blargh.i-xcell.com
+;----------------------------------------
+
+;---------------------
+;Character Information
+;---------------------
+[Info]
+name			= "[FlowaGirl's] Broli" 	;Name of character
+displayname		= "Brolly"				;Name of character to display
+versiondate		= 01,08,2004			;Version date of character
+mugenversion	= 11,14,2002			;Version of M.U.G.E.N character works on
+author		= "FlowaGirl"			;Character author name
+pal.defaults	= 8,9,10,11,12,7			;Default palettes in order of preference
+
+;---------------
+;Character Files 
+;---------------
+[Files]
+cmd			= BroliCMD.cmd			;Command Set
+cns			= BroliCNS.cns			;Data
+st			= BroliCNS.cns			;States
+stcommon		= BroliCNS.cns			;Common States
+sprite		= BroliSFF.sff			;Sprite
+anim			= BroliAIR.air			;Animation
+sound			= BroliSND.snd			;Sound
+
+pal1			= Broli01.act			;Red/White: Default
+pal2			= Broli02.act			;Black
+pal3			= Broli03.act			;Blue
+pal4			= Broli04.act			;Green
+pal5			= Broli05.act			;Purple
+pal6			= Broli06.act			;Yellow
+pal7			= Broli01.act			;Red/White: God Broli
+pal8			= Broli02.act			;Black
+pal9			= Broli03.act			;Blue
+pal10			= Broli04.act			;Green
+pal11			= Broli05.act			;Purple
+pal12			= Broli06.act			;Yellow
+
+;[Arcade]
+;intro.storyboard = BroliIntro.def
+;ending.storyboard = BroliEnding.def

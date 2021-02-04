@@ -1,0 +1,39 @@
+
+;---------------------------------------------------------------------------
+; Goku NEX def file by Slayer (rossisambrana@yahoo.com.br)
+;	come to "http://www.mugenable.f2s.com"
+;              http://mugen4all.fws1.com
+;---------------------------------------------------------------------------
+
+                         Goku NEX 100%beta BY SLAYER
+
+; Player information
+[Info]
+name    = "Goku NEX"
+displayname = "Goku NEX"
+versiondate = 04,09,2001    ;Version date of character
+mugenversion = 11,29,2000   ;Version of M.U.G.E.N character works on
+author = "Slayer"     ;Character author name
+pal.defaults = 1,2,3,4      ;Default palettes in order of preference
+
+
+; Files for the player
+[Files]
+cmd     = goku-NEX.cmd
+cns     = goku-NEX.nex
+st      = goku-NEX.nex
+st1     = goku-NEX-1.nex
+st2     = Piccolo.nex
+st3     = Mistyc-Gohan.nex
+st4     = AI.nex
+stcommon = common.cns
+sprite  = goku-NEX.sff
+anim    = goku-NEX.air
+sound   = goku-NEX.snd
+pal1    = goku-NEX.act
+pal2    = red.act
+
+; Arcade mode
+[Arcade]
+ending.storyboard = final.def
+

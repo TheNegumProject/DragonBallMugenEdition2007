@@ -1,0 +1,703 @@
+
+;---------------------------------------------------------------------------
+; Piccolo helper file by Slayer (rossisambrana@yahoo.com.br)
+;	come to "http://www.mugenable.f2s.com"
+;              "http://www.rpgen.f2s.com"
+;---------------------------------------------------------------------------
+
+
+;======================= Piccolo STRIKER CALL ==================================================
+[Statedef 6000]
+type    = S
+movetype= I
+physics = S
+ctrl = 0
+velset = 0
+
+
+[State 6000, var(7) Piccolo Signal]
+type = varset
+trigger1 = time = 0
+v = 29
+value = 1
+
+[State 6000, 0]
+type = ChangeAnim
+trigger1 = time = 0
+value = ifelse(numhelper(2222)>0,195,259)
+
+[State 6000, var(7) Piccolo Signal]
+type = varset
+trigger1 = time = 1
+v = 7
+value = ifelse(anim=195,1,0)
+
+[State 6000, 1]
+type = VarRandom
+trigger1 = time = 0
+v = 1
+range = 0,100
+
+[State 6000, 6]
+type = Helper
+triggerall = power >= 1000
+trigger1 = time = 1
+trigger1 = NumHelper(2222) < 1
+id = 2222
+name = "Piccolo"
+pos = -50,0
+postype = Back
+stateno = 6010
+helpertype = player
+keyctrl = 0
+ownpal = 1
+
+[State 6000, 9]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;================= Piccolo's Central State =========================================================
+[Statedef 6001]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 20000
+sprpriority = 0
+ctrl = 0
+
+[State 6001, Win Pose]
+type = ChangeState
+triggerall = win
+trigger1 = parent, stateno = [180,189]
+trigger1 = time >= 0 && anim = 20000
+value = 6950
+
+[State 6001, Turn]
+type = ChangeState
+triggerall = !win && !lose
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+trigger1 = time >= 0
+trigger1 = p2dist x < 1
+value = 6003
+
+[State 6001, Var(7)Reset]
+type = ParentVarSet
+triggerall = !win && !lose
+trigger1 = parent, power < 1000 && time >= 0
+v = 7
+value = 0
+
+[State saindo]
+type = ChangeState
+triggerall = !win
+trigger1 = parent, power = 0
+trigger2 = parent, alive = 0
+value = 7921
+
+[State 6001, Rush Forward]
+type = ChangeState
+triggerall = !win && !lose
+trigger1 = anim = 20000 && time >= 7
+trigger1 = p2dist x >= 150
+value = 6010
+
+[State 6001, Overhead or Rush Fierce]
+type = changestate
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+trigger1 = anim = 20000 && time >= 7
+trigger1 = p2dist x < 50
+value = ifelse(random>500,6300,6350)
+;value = ifelse((parent,statetype=C) || p2statetype=C,6300,6350)
+
+[State 6001, Overhead or Rush Fierce]
+type = changestate
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+trigger1 = anim = 20000 && time >= 7 && power >=1000
+trigger1 = p2dist x < 90
+value = 20152
+
+[State 6001, Overhead or Rush Fierce]
+type = changestate
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+trigger1 = anim = 20000 && time >= 7
+trigger1 = p2dist x < 80
+value = 6300
+
+[State 6001, Standing RoundHouse]
+type = changestate
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+triggerall = anim = 20000 && time >= 7
+trigger1 = p2dist x < 40 && (p2statetype = S || p2statetype = C)
+trigger2 = p2dist x < 70 && p2statetype = A
+value = 6400
+
+[State 6001, Standing RoundHouse]
+type = changestate
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+triggerall = anim = 20000 && time >= 7
+trigger1 = p2dist x > 80 && (p2statetype = S || p2statetype = C)
+value = ifelse(random>500,6410,6010)
+
+[State 6001, Walk]
+type = ChangeState
+triggerall = !win && !lose
+triggerall = p2stateno != 5100 && p2stateno != 5101 && p2stateno != 5110 && p2stateno != 5120
+triggerall = (parent, stateno != 920) && (parent, stateno != 930)
+triggerall = anim = 20000 && time >= 8
+trigger1 = p2dist x < 150
+trigger2 = p2dist x > 91
+value = 6002
+
+; ================= Piccolo's Walking State ========================================================
+[Statedef 6002]
+type    = S
+movetype = I
+physics = S
+sprpriority = 0
+anim = 20020
+
+[State 6002, 1]
+type = Velset
+trigger1 = anim = 20020
+x = 2.1
+
+[State 6001, Rush Forward]
+type = ChangeState
+triggerall = !win && !lose
+trigger1 = anim = 20020
+trigger1 = p2dist x >= 150
+value = 6010
+
+[State 6002, 9]
+type = ChangeState
+trigger1 = win || lose
+trigger2 = p2dist x < 60
+value = 6001
+
+;================= Piccolo's Turning State =========================================================
+[Statedef 6003]
+type = S
+movetype = I
+physics = S
+sprpriority = 0
+anim = 20005
+velset = 0,0
+ctrl = 0
+
+[State 6002, 1]
+type = turn
+trigger1 = time = 0
+
+[State 6002, 9]
+type = ChangeState
+trigger1 = animtime = 0
+value = 6001
+
+;================= Piccolo's Rushing In State ======================================================
+[Statedef 6010]
+type = S
+movetype = I
+physics = S
+anim = 21000
+poweradd = 0
+velset = 0
+ctrl = 0
+
+[State 3700, Shadows]
+type = Afterimage
+trigger1 = time = 0
+time = 30
+length = 18
+PalBright   =   0,  0,  0
+PalContrast = 200,200,200
+PalAdd      =   0,  0,  0
+PalMul      =  1,1,1
+FrameGap = 5
+Trans = Add1
+
+
+[State 6010, HitO]
+type = HitOverride
+trigger1 = time = 0
+time = -1
+attr = SCA, AA, AT, AP
+slot = 0
+stateno = 6178
+
+[State 1350, 1]
+type = VelSet
+trigger1 = Time >= 3
+x = 8
+
+[State 1350, 5]
+type = ChangeState
+trigger1 = P2BodyDist X <= 10
+trigger1 = P2statetype != A
+trigger1 = Time > 4
+value = 6001
+
+
+;=========================== Piccolo's Crouching Forward State ==============================
+[Statedef 6230]
+type = C
+movetype = A
+physics = C
+anim = 20400
+poweradd = 0
+velset = 0
+ctrl = 0
+
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 20000,20
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 1
+value = 20000,23
+
+
+[State 400, 5]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = C, NA
+damage = 25
+animtype = light
+guardflag = MA
+sparkno = 3
+guard.sparkno = S9975
+sparkxy = -10,-40
+hitsound = S200,3
+guardsound = S200,4
+pausetime = 12,12
+ground.hittime = 13
+ground.type = low
+ground.slidetime = 9
+ground.velocity = -5
+air.velocity = -3,-3
+
+[State 400, 6]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = Var(3) = [1,3]
+attr = C, NA
+damage = 30
+animtype = light
+guardflag = MA
+sparkno = 3
+guard.sparkno = S9975
+sparkxy = -10,-40
+hitsound = S200,3
+guardsound = S200,4
+pausetime = 12,12
+ground.hittime = 13
+ground.type = low
+ground.slidetime = 9
+ground.velocity = -5
+air.velocity = -3,-3
+
+[State 6230, 9]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 6001
+
+;=========================== Piccolo's Overhead Punch State =================================
+[Statedef 6300]
+type = S
+movetype = A
+physics = S
+anim = 20200
+poweradd = 0
+velset = 0
+ctrl = 0
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 777,0
+
+[State 220, 5]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = 45
+animtype = light
+guardflag = MA
+sparkno = 3
+sparkxy = -10,-35
+hitsound = S220,3
+guardsound = S200,4
+pausetime = 12,12
+ground.hittime = 13
+ground.type = high
+ground.slidetime = 9
+ground.velocity = -5
+air.velocity = -3,-3
+guard.sparkno = S9975
+
+[State 6300, 9]
+type = ChangeState
+trigger1 = animtime = 0
+value = 6001
+
+;=========================== Piccolo's Fierce Rushing Punch State ===========================
+[Statedef 6350]
+type = S
+movetype = A
+physics = S
+anim = 20201
+poweradd = 0
+velset = 0
+ctrl = 0
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 777,0
+
+[State 200, 5]
+type = HitDef
+trigger1 = AnimElem = 2
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 4
+trigger4= AnimElem = 5
+trigger5 = AnimElem = 6
+trigger6 = AnimElem = 7
+attr = S, NA
+damage = 15
+animtype = light
+guardflag = MA
+sparkno = 3
+sparkxy = -10,-70
+hitsound = S200,3
+guardsound = S200,4
+pausetime = 12,12
+ground.hittime = 13
+ground.type = high
+ground.slidetime = 9
+ground.velocity = -5
+air.velocity = -3,-3
+guard.sparkno = S9975
+
+[State 6350, 9]
+type = ChangeState
+trigger1 = animtime = 0
+value = ifelse(random>500,6410,6001)
+
+; ========================== Piccolo's Standing Roundhouse ==================================
+[Statedef 6400]
+type = S
+movetype = A
+physics = S
+anim = 20202
+poweradd = 0
+velset = 0
+ctrl = 0
+
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 777,1
+
+
+[State 240, 5]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = 55
+animtype = hard
+guardflag = MA
+sparkno = 3
+guard.sparkno = S9975
+sparkxy = -10,-50
+hitsound = S240,3
+guardsound = S240,4
+pausetime = 12,12
+ground.hittime = 19
+ground.type = high
+ground.slidetime = 19
+ground.velocity = -8
+air.velocity = -4,-3
+
+
+[State 6400, 9]
+type = ChangeState
+trigger1 = animtime = 0
+value = 6001
+
+;=========================== Piccolo's Get Hit State ========================================
+[Statedef 6178]
+type = A
+movetype = H
+physics = N
+anim = 11512
+ctrl = 0
+
+[State 6178, StopChannel3]
+type = StopSnd
+trigger1 = time = 0
+channel = 3
+
+[State 6178, PiccoloPainSnd]
+type = PlaySnd
+trigger1 = hitshakeover = 1 && time > 10
+value = 5,9
+volume = 255
+channel = 0
+
+[State 6178,0]
+type = posfreeze
+trigger1 = hitshakeover = 0
+
+[State 6178,1]
+type = velset
+trigger1 = hitshakeover = 1
+x = hitvel x
+y = ifelse(hitvel y > -2, -6, 1.2*hitvel y)
+persistent = 0
+
+[State 8900,4]
+type = gravity
+trigger1 = anim = 11512
+
+[State 6178,9]
+type = Changestate
+trigger1 = pos y >= 10 && vel y > 0
+value = 6179
+
+; Hit Ground and Bounce
+[Statedef 6179]
+type = L
+movetype = H
+physics = N
+anim = 21236
+velset = 0,0
+
+[State 6179, 0]
+type = PosSet
+trigger1 = time = 0
+y = 0
+
+[State 6179, 1]
+type = PlaySnd
+trigger1 = time = 0
+value = 0,6
+volume = -50
+
+[State 6179, 2]
+type = posfreeze
+trigger1 = 1
+
+[State 6179, 3]
+type = ChangeState
+trigger1 = animtime = 0
+value = 6189
+
+; Bouncing in air
+[Statedef 6189]
+type = A
+movetype = H
+physics = N
+anim = 15501
+
+[State 6189, 0]
+type = velset
+trigger1 = time = 0
+x = ifelse(hitvel x < 0, -2, 2)
+y = -2
+
+[State 6189, 1]
+type = VelAdd
+trigger1 = time > 0
+y = 0.27
+
+[State 6189, 2]
+type = ChangeState
+trigger1 = pos y >= 5 && vel y > 0
+value = 6971
+
+; Hit Ground from Tripped
+[Statedef 6971]
+type = L
+movetype = H
+physics = S
+anim = 17985
+velset = 0,0
+
+[State 6971, 0]
+type = PlaySnd
+trigger1 = time = 0
+value = 0,6
+volume = -50
+
+[State 6971, 1]
+type = posset
+trigger1 = time = 0
+y = 0
+
+[State 6971, 8]
+type = ChangeState
+trigger1 = animtime = 0
+value = 6001
+
+
+;================= Piccolo's Win Pose - Jab =============================================================
+[Statedef 6950]
+anim = 20182
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 777,3
+
+[State 182, 1]
+type = AssertSpecial
+trigger1 = Time = [0,150]
+flag = RoundNotOver
+
+
+;---------------------------------------------------------------------------
+;Kamehameha fraco
+[Statedef 6410]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0,0
+anim = 20203
+
+[State 210 , 3]
+type = Playsnd
+trigger1 = Time = 1
+value = 777,1
+
+[State 210 , 2]
+type = Projectile
+trigger1 = AnimElem = 2
+projanim = 1102
+projhitanim = 1009
+projremanim = 1102
+offset = 44, -44
+velocity = 4
+attr = S, NA
+animtype  = Medium
+damage    = 15, 2
+guardflag = MA
+pausetime = 20,20
+sparkxy = -3,-13
+sparkno = -1
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -5
+air.velocity = -2.2,-3.2
+
+[State 210 , 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 6001
+
+
+;---------------------------------------------------------------------------
+[Statedef 20152]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= -600
+ctrl = 0
+velset = 0,0,0
+anim = 20152
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Time = 0
+value = 0,26
+
+[State 2041, 1a]
+type = PlaySnd
+trigger1 = Animelem = 6
+value = 777,1
+volume = 255
+
+[State 8000]
+type = Projectile
+trigger1 = AnimElem = 6
+Projanim = 8502
+ProjRemanim = 8502
+offset = 40, -50
+attr = S, SP
+PROJHITS = 70
+ID = 20152
+damage = 5
+Animtype = HARD
+guardflag = MA
+pausetime = 0,12
+sparkno = -1
+hitsound = 5,2
+guardsound = 6,0
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 15
+ground.hittime = 20
+ground.velocity = -8
+airguard.velocity = -3.5,-2.75
+air.type = Low
+air.velocity = -2.5,-5.5
+air.juggle = 3
+
+
+[State 210 , 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 6001
+
+;======================= saindo===================================
+[Statedef 7921]
+type = S
+movetype = I
+physics = N
+sprpriority = 0
+velset = 0,0
+anim = 7921
+ctrl = 0
+
+[State 100, 1]
+type = Posadd
+trigger1 = Time > 5
+x = -6
+
+[State 7920, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 0
+
+[State 7920, ScreenBound]
+type = ScreenBound
+trigger1 = 1
+value = 0
+movecamera = 0,0
+
+[State 0]
+type = DestroySelf
+trigger1 = p2bodydist x>= 400
+

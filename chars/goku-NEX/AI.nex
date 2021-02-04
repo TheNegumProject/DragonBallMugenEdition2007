@@ -1,0 +1,102 @@
+
+
+----------------------AI---------------------------------------------
+
+[Statedef -3]
+
+[State -3, defesa]
+type = changestate
+triggerall = p2movetype = A && Var(59) = 1 && Var(9) = 0
+triggerall = p2bodydist x = [5, 60]
+triggerall = p2statetype = C
+triggerall = statetype = S
+trigger1 = time = 0
+value = 130
+
+[State -3, defesa]
+type = changestate
+triggerall = p2movetype = A && Var(59) = 1 && Var(9) = 0
+triggerall = p2bodydist x = [5, 60]
+triggerall = p2statetype != C
+triggerall = statetype = C
+trigger1 = time = 0
+value = 131
+
+
+[State -3, Defend]
+type = changestate
+triggerall = p2movetype = A && Var(59) = 1 && Var(9) = 0
+triggerall = p2bodydist x = [5, 60]
+triggerall = p2statetype != C
+triggerall = statetype = A
+trigger1 = time = 0
+value = 132
+
+
+[State -3, VOAR]
+type = ChangeState
+triggerall = (Var(59) = 1) && (StateType = A && ctrl) && (Pos Y < 0) && Var(9) = 0 
+trigger1 = (P2Name = "Goku-n-hd by EmuBoarding" && P2StateNo = 1500) || (P2Name = "Mystic Gohan by Zero_X" && P2StateNo = 2000) || (P2Name = "Freeza by OverMind" && P2StateNo = 3001) || (P2Name = "Kurilin by EmuBoarding" && P2StateNo = 1500)
+trigger2 = (P2Name = "Vegeta Super Sayjin 4 by EB and BS" && P2StateNo = 1500) || (P2Name = "N-Trunks by EmuBoarding" && P2StateNo = 1500) || (P2Name = "Mr.Boo by OverMind" && P2StateNo = 3001) || (P2Name = "Vegeta by OverMind" && P2StateNo = 3001)
+trigger3 = (P2Name = "Mew Two" && P2StateNo = 1051) || (P2Name = "Raditz" && P2StateNo = 1510) || (P2Name = "C-Trunks by EmuBoarding" && P2StateNo = 1500) || (P2Name = "Piccolo por Ssonic" && P2StateNo = 1900) || (P2Name = "M. Bison" && P2StateNo = 89598)
+trigger4 = (P2Name = "Cell por Ssonic" && P2StateNo = 1900) || (P2Name = "Recoom by Lucifer" && P2StateNo = 1500) || (P2Name = "Vegetto EX by Shishi-Ryu" && P2StateNo = 2000) || (P2Name = "Goku Super Sayajin 2 by Ribeiro" && P2StateNo = 2000)
+trigger5 = (P2Name = "The Necromancer" && P2StateNo = 2000) || (P2Name = "Son Gohan by EmuBoarding" && P2StateNo = 1500) || (P2Name = "Dr. Doom By {_Carnificina_}" && P2StateNo = 89599) || (P2StateType = S && P2MoveType != H && P2BodyDist Y < 0)
+trigger6 = (P2Name = "Trunks por ssonic" && P2StateNo = 1900) || (P2Name = "Broli Remix ver1.2" && P2StateNo = 2000) || (P2Name = "Pan Dragonball GT por Ssonic" && P2StateNo = 1900)
+trigger7 = (P2Name = "Goku NEX" && P2StateNo = 1900) || (P2Name = "Broli Remix ver1.2" && P2StateNo = 2000) || (P2Name = "Pan Dragonball GT por Ssonic" && P2StateNo = 1900)
+value = 1900
+
+[State -3]
+type = ChangeState
+triggerall = Var(59)= 1 && Stateno = 1900
+trigger1 = (p2StateType != A && p2bodydist Y > 40)
+value = 50
+
+[State -3]
+type = ChangeState
+value = 6500
+trigger1 = (Var(59) = 1) && (P2MoveType = A) && (P2Dist X <= 120) && (Random <= 400) && (StateType = S) && Var(9) = 0 && (ctrl) && (Pos Y = 0) && (- p2bodydist Y < 15)
+trigger1 = power >=2000
+
+[State -3]
+type = ChangeState
+value = 5798
+trigger1 = (Var(59) = 1) && (power >= 1000) && (Stateno = [150, 153]) && (p2bodydist X < 5) && Var(9) = 0
+
+[State -3]
+type = ChangeState
+value = 5788
+triggerall = (Var(59) = 1 && p2dist x <= 70 && p2dist y <= -40 && p2dist y >= -70) && Var(9) = 0
+trigger1 = (StateType = S && ctrl) || (Stateno = 4500)
+
+[State -3]
+type = ChangeState
+value = 3400
+triggerall = Var(59) = 1 && Var(9) = 0 && power >=3000 && Life <=800
+trigger1 = (StateType != A && ctrl) || (StateType != A && hitdefattr = SC, NA, SA && prevstateno != 1900)
+
+[State -3]
+type = ChangeState
+value = 6900
+triggerall = (Var(59) = 1 && p2dist y > 20 && p2dist x > 20) && Var(9) = 0
+trigger1 = (StateType != A && ctrl) || (Stateno = 2000)
+
+[State -3,AI18]
+type = ChangeState 
+triggerall = (var (59) = 1) && ctrl && statetype  != A  && Var(9) = 0
+trigger1 = P2BodyDist X > 30 && prevstateno = 910
+value = 1401
+
+
+[State -3,]
+type = ChangeState
+triggerall = Var(59)= 1 && Life != 0 && P2Life != 0 && Pos Y = 0 && Var(9) = 0
+trigger1 = statetype != A && ctrl = 1 && p2bodydist y < 0 && p2bodydist x < 150 && p2stateno = 100
+value = 900
+
+
+[State -3,]
+type = ChangeState
+triggerall = Var(59)= 1 && Life != 0 && P2Life != 0 && Pos Y = 0 && Var(9) = 0
+trigger1 = statetype != A && ctrl = 1 && p2bodydist y < 0 && p2bodydist x < 150 && p2stateno = 105
+value = 910
+

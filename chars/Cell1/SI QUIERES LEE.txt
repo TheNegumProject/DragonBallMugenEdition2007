@@ -1,0 +1,151 @@
+CELL IMPERFECTO VERSION 1.5 BY SAWWEN 
+
+ACLARANDO: NO SOY UN PROGRAMADOR PERO ESTOY APRENDIENDO, MUCHOS CODES FUERON 
+COPIADOS DE DIFERENTES CHARS Y MODIFICADOS PARA MI CELL. POR ESO GRACIAS A TODOS
+LOS PROGRAMADORES QUE HACEN DEL MUGEN UNA REALIDAD!!!
+
+/////////////////////////////////////////////////////////////////////////////
+
+HISTORIA DE CELL:
+
+Se trata de un bioandroide creado por el Dr. Gero con la intención de vengarse
+de Son Goku por haber acabado con el Ejército Red Ribbon. Está fabricado a partir
+de células de todos los luchadores del universo y una computadora registró los
+movimientos de estos luchadores haciendo que Cell sepa usar todos sus ataques.
+Cell puede absorber la energía de sus enemigos con la aguja al final de la cola,
+y para alcanzar la perfección de su cuerpo debe absorber a los androides 17 y 18.
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+Programación      : Varios edit by SaWWeN
+Sprites Ripeados  : Chrono Strife
+Sprites Nuevos    : Chrono Strife 35%, Vieja del Agua 30%, Ryudo 20%, SaWWeN 15%
+Dialogos Latino   : SaWWeN
+Fx                : Chrono Strife 30 %, Majita 30 %, Mugen Fan 10%, Alienssj 5%,
+                    MSSJ and Kratos 5%, Blaze 5%, Bardock 5%, Otros 10% =)
+Version           : 1.5
+
+MI correo: fa77out@hotmail.com
+
+////////////////////////////////////////////////////////////////////////////
+
+
+CAMBIOS DE VERSION 1.0 A 1.5:
+
+1) Dos Nuevas Intros. (Cell larva, Dr.Slump tributo :p)
+2) Nuevo Hyper Combo. (Con la programacion que ya tenia)
+3) Nuevos ataques. (Ataque de la cola que se alarga, ataque rapido)
+4) Mejorado el super salto. (Para que puedar ir a los costados)
+5) Nueva teletransportacion. (Le agregue una teletransportacion)
+6) Nuevos combos manuales simples. (Se va aprendiendo, es bien basico)
+7) Cambio de algunos Fx antiguos. (Muchos que consegui y pedi permiso)
+8) Agregados algunos nuevos Sprites y sonidos. (Carga de ki, Run, etc)
+9) Habilitados todos los especiales en el aire. (Por que algunos no se podian)
+10) Optimizados todos los golpes y especiales.  (mmm me suena a verso)
+11) Creadas nuevas paletas para el Cell. (Un par y nada mas, prueben la de aquaman :D) 
+
+////////////////////////////////////////////////////////////////////////////
+
+GOLPES NORMALES:
+
+A boton      : puño debil
+B boton      : zarpaso
+C boton      : garra
+X boton      : patada
+Y boton      : patada alta
+Z boton      : colazo
+
+adelante      : caminar adelante
+atras         : caminar adelante
+arriba        : saltar
+abajo         : agacharse
+
+Start button  : jajaja :P
+
+
+////////////////////////////////////////////////////////////////////////////
+
+-------|Basicos|---------------------------------------------------
+
+Correr hacia adelante: adelante x2
+Salto hacia atras:     atras x2
+Cargar Ki:             a+x
+Vuelo:                 b+y 
+Teletransportacion:    c+z
+Agarre:                Adelante + z
+Super Salto:           D, U
+
+-------|Especiales|------------------------------------------------
+
+Rafaga de viento:      D, DB, B, b
+
+kiensan:               D, DF, F, b
+
+Taioken:               F, B, x
+
+Rayo Alto              D, DF, F, z
+
+Rayo Bajo              D, DF, F, y
+
+Rayo Medio             D, DF, F, x
+
+Bola de energia        D, DB, B, z
+
+Rafagas de Energia     D, DB, B, x
+
+Rafagas de Energia     D, DB, B, y
+
+
+-------| Supers |--------------------------------------------------
+
+Absorcion              D, DB, B, F, x
+
+Makankosapo            D, DB, B, F, y
+
+Kame Hame ha           D, DB, B, F, z  
+
+Hyper Combo            D, DB, B, F, b
+
+
+------| Hypers |---------------------------------------------------
+
+Cell 2 Kame Hame Ha    D, DF, F, D, DF, F, b+c
+
+Hyper Oculto           F, _, D_, B, D, D_, F, _  - (Direccionado)
+
+
+------| Combos y Golpes |------------------------------------------
+
+Tele+Golpe             D, DB, c
+
+Combo 1                D, DB, a
+
+Super Combo            D, DF, c
+
+Colazo Especial        D, DF, a
+
+Ataque Rapido          y+z
+
+-------------------------------------------------------------------
+
+
+Agradecimientos:
+
+1) A mi por darme el tiempo de hacer este char.
+2) Vieja del Agua por crear los sprites que yo no pude hacer.
+3) Ryudo por ayudarme con algunos fx y sprites.
+4) A todos aquellos que brindan sus FX como Opensource (Majita, Chrono, MugenFan, etc)
+5) Stike por ayudarme con algunas efectos y lo basico en programación del Cell. 
+6) Majin_vegetto Y Blackshinobi por algunos sonidos.
+7) A17 Sprites todo el credito para Neocide.
+
+Agradecimientos Especiales:
+
+1) Akira Toriyama por desarrollar semejante serie de anime.
+2) Goku por salvar la tierra tantas veces.
+3) Arale por ser tan simpatica y a Dr Slump.
+
+Fuck you:
+
+1) Todos aquellos egoistas que dicen no al open source y si a la muerte del mugen.

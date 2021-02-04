@@ -1,0 +1,548 @@
+===================================
+Necromancer's Progress Log: Piccolo
+===================================
+
+---------------------------------------------------
+Author:	The Necromancer
+	necromancer@zipmail.com
+---------------------------------------------------
+
+Best viewed at:
+Font: Comic Sans MS
+Font Style: Regular
+Size: 8
+
+--------------------------------------------------
+Date Started: December 30, 2000
+Date Finished:
+--------------------------------------------------
+
+Dec 30
+-Decided to re-make Piccolo, (And about time too. =D )
+-Created all of Piccolo's required files:
+	-Basic.CNS
+	-Common.CNS
+	-Constants.CNS
+	-Feature.CNS
+	-Hyper.CNS
+	-Misc.CNS
+	-Special.CNS
+	-Piccolo.AIR
+	-Piccolo.CMD
+	-Piccolo.DEF
+	
+-Re-making Piccolo/Nail's pallette. Piccolo's default pallette is his "Day (Light Colours)".
+-SFF file:
+	All required sprites
+
+Dec 31
+-CNS file:
+	All basic actions
+	Made Variable Index (Now about 30 Vars)
+-AIR file:
+	All required actions
+
+Jan 1
+-CNS file:
+	Added more Intros. (Highly graphical)
+
+Jan 2
+-AIR file:
+	Adding Clsn boxes for basic actions
+-Redid Piccolo's pallette, adding much more colours. Makes 
+room for other character sprites.
+	Old pallette: 41 colours
+	New pallette: 254 colours 
+(Supports pallettes for: Nail, Goku, Gohan, And16, And18, Perfect Cell, Cell Jr., Vegeta)
+-Re-cleaning sprites. (Only about 90)
+
+Jan 3
+-CNS file:
+	Started adding in basic attacks for Piccolo
+	Added in 8 more variables (38 Vars)
+
+Jan 4
+-None
+
+Jan 5
+-AIR file:
+	Adding Clsn boxes for basic actions (Con't)
+-CNS file:
+	Added in 1 FVar (Used for velocity calculations.)
+-Made Piccolo's SND file. List of sound groups are:
+
+Universal
+Group 0, 1 - All
+
+Misc:
+Group2 - Balance
+Group3 - Variable
+Group4 - Combination
+
+Hit:
+Group15 - Balance
+Group16 - Variable
+Group17 - Combination
+
+Guard:
+Group18 - Balance
+Group19 - Variable
+Group20 - Combination
+
+-SND file:
+	Added in 35 sound effects. (Taken from my own sound collection.)	
+
+Jan 6
+-AIR file:
+	Adding Clsn boxes for the rest of the file.
+-Battle Experience System now completed. It is ready for testing. 
+
+Jan 7
+-SFF file:
+	Added number fonts for Number System.
+-AIR file:
+	Adding Clsn boxes for the rest of the file. (Completed file up to date.)
+-Battle Experience System:
+	Number System now implemented.
+-Test 0001 was sent to Y2Krillen.
+
+Jan 8
+General:
+	Added all of Piccolo's standing/crouching attacks.
+
+Jan 9
+General:
+	Added in Variable and Balanced Modes
+	Added some basic attacks for the new modes
+
+Jan 10
+General:
+	Added basic attacks for Variable and Balanced Modes
+	Added in dodge, for Balanced Mode
+	Tweaked basic attacks
+
+Jan 11
+General:
+	Added in hit/guard sparks, from SB2.
+	Started Piccolo's AI script. (In the CMD file.)
+SND file:
+	Added in more sounds for Variable and Balanced Modes
+
+Jan 12
+-None
+
+Jan 13
+General:
+	Added in new intro - Powering Up
+	Added in throw
+
+Jan 14
+General:
+	Added in Meteor Smash 1
+	Added in Split Form - Currently disabled for the time being
+	Added in Ground Assault
+	Removed Sound, Velocity, Time, and Pause variables
+-Test 0002 was sent to Y2Krillen, WBJ, and FallenAngel.
+
+Jan 15
+Reference:
+	Re-made Constants Index
+
+Jan 16
+-Re-making the SFF file again. (To suit the new Constants Index)
+General:
+	Fixed a huge bug in Piccolo's Meteor Smash.
+
+Jan 17
+-None
+
+Jan 18
+-Re-organized the Constants file. All states now match their correponding 
+animations and sprites. 
+SFF file:
+	Intro sprites now match to their corresponding animations. 
+(Copies of the same sprites, but file size not increased by much.)
+SND file:
+	Added in 4 new sounds. Sound count now 43. (913kb)
+
+-Re-named the "Constants Index" file to "Reference".
+
+Jan 19
+General:
+	Re-organization of the Constants file.
+	Created a "ProjHitAdd" feature in Piccolo. (A secret feature in the 
+Super Boutuden games.)
+	Added in Kikou Ha
+	Added in Kousengan
+
+Jan 20
+-Made Piccolo's "Dawn (Light Colours)" pallette.
+General:
+	Tweaked Kikou Ha and Piccolo's 2nd Meteor Smash.
+SND file:
+	Added in 2 new sounds, for Kikou Ha. Sound count now 45 (940kb)
+-Test 0003 was sent to Y2Krillen.
+
+Jan 21
+-None
+
+Jan 22
+General:
+	The "Straight Wins" var, now changed to "Perfect Wins" var. (Less cheap)
+	Changed the variable, "Stage Marker", to "Special Intro Marker".
+	Made Piccolo's "Day (Dark Colours)" pallette.
+	Made combo timings (2-in-1's) in Combination Mode more strict, to slightly 
+increase balance.
+
+Jan 23
+General:
+	All command entries are specific to their corresponding modes. (It will 
+increase the average CMD file by almost 4 times, but it does not affect gameplay much.)
+	Removed Piccolo's AI script. (Re-make it later.)
+
+Jan 24
+SND file:
+	Added in a sound sample, from Piccolo in the series. (Japanese Version)
+	Quote: "I thought you were going to be a worthy opponent. I don't want to play around."
+-General:
+	Added in Meteor Smash 3. (Vegeta's style of Super Boutuden 2.)
+
+Jan 25
+SND file:
+	Added in Piccolo's Entrance Theme from Movie 8. (Thanks to Y2Krillen for 
+for telling me about StreamBox Ripper.)
+	Edited Piccolo's "Makankosappo", and "GenkiDama" sound samples, adding echo effects.
+	Ripped and edited Broli's Theme song. (May be used for a special intro against him.)
+
+Jan 26
+SND file:
+	Edited Piccolo's voice sound samples, increasing volume.
+CMD file:
+	Tweaked all moves, making Piccolo's Combination mode more balanced.
+	Re-organized command triggers. (Ordered by move attribute.)
+	The Long Jump can no longer be done as a 2-in-1, after crouching attacks. (Infinite combos were too easy to do.)
+General:
+	Changed the AfterImage colour values: Originally, they were taken from another character, and I don't want to 
+use other people's work.. (Don't remember who though...)
+
+Jan 27
+General:
+	Made Piccolo's "Dawn (Dark Colours)" pallette.	
+	Tweaked all Meteor Smash moves, adding explosions and sound effects.
+
+Jan 28
+General:
+	Added the ProjHitAdd feature in Piccolo's Kousengan move.
+	Tweaked Piccolo's "Fighting With Clone" Intro, adding the correct sound effects.
+SND file:
+	Added sound effects to Piccolo's "Fusing with Nail" intro.
+
+Jan 29
+-None
+
+Jan 30
+-None
+
+Jan 31
+-None
+
+Feb 1
+-None
+
+Feb 2
+-None
+
+Feb 3
+General:
+	Added in Charge (Power Up) move.
+
+Feb 4
+-None
+
+Feb 5
+General:
+	Added in Meteor Smash 3's Dash option. (When power is over 750)
+	Increased the Charge's Power increase rate from 4, to 10. (Occurs when flame is on.)
+
+Feb 6
+-None
+
+Feb 7
+General:
+	Added in Tsu No Beam move.
+
+Feb 8
+General:
+	Added in Buku Jyutsu
+	Added in Zanzouken: Not controllable version
+	Added in Meteor Smash 4. (Original, similar to Goku's style of Super Boutuden 2.)
+
+Feb 9
+General:
+	Tweaked Zanzouken move. Made a controllable option.
+	Added Clsn boxes I've missed from various moves.
+	Tweaked meteor smash moves again. =) Explosions now display correctly.
+-Test 0004 was sent to Y2Krillen.
+	
+Feb 10
+General:
+	Added in Wind Effect for Piccolo's Charge move.
+
+Feb 11
+CMD file:
+	Added the ability to throw when in Variable or Balanced modes. (Z for Variable mode, Y for Balanced mode.)
+Reference:
+	Added in explanations for the basic attacks. (Basic.CNS)
+General:
+	Added in Zanzouken Escape. (Activated when lying on the ground.)
+	Made Piccolo's "Dust (Light Colours)" pallette.
+	Changed the Tsu No Beam's HitFlag from "M" to "-MA".
+
+Feb 12
+CMD file:
+	Fixed the High Jump command. Now much easier to execute.
+AIR file:
+	Change animation time for basic attacks. (Increase attack speed.)
+General:
+	Added in Dizzy feature. (Based on Ragnarok's codes.)
+
+Feb 13
+General:
+	Made Piccolo's "Dusk (Dark Colours)" pallette.
+Reference:
+	Added in explanations for the basic attacks. (Basic.CNS)
+
+Feb 14:
+CMD file:
+	Added in "Alternate Command" support, for Variable mode. (The MvsC2 chain combo system.)
+General:
+	Changed the Ground Assault 1 move. (Dash now hits the opponent.)	
+
+Feb 15:
+CMD file:
+	Completed the attack properties of all of Piccolo's modes.
+	Completed the "Alternate Command" support.
+General:
+	Fixed the pause time bug in Piccolo's Tsu No Beam move.
+
+Feb 16:
+General:
+	Added in Meteor Smash 5 for Piccolo's SNK mode. (Random combo)
+
+Feb 17
+General:
+	Tweaked Meteor Smash 5. (Fixing some bugs.)
+	Added in Energy Guard, from the Super Boutuden games.
+	Removed the "Alternate Command" support. (It's not very good to mix 2 systems.)
+	Added in Advanced Guard.
+
+Feb 18:
+General:
+	Added in Hajiku, from the Super Boutuden games.
+	Fixed the Kikou Ha dust bug. (When in the air.)
+	Fixed some bugs for the Charge move. (When in the air.)
+	Adjusted damage values for all of Piccolo's Meteor Attacks.
+
+Feb 19
+General:
+	"Merged" the Energy Guard and Hajiku moves. The move can simply be done 
+with b+c, and repels any projectile. (With tapping.)
+	Completed the Hajiku move. Projectile reflected will equal in damage as the 
+opponent's original projectile.
+
+
+Feb 20
+SND file:
+	Added in large blast sound effect.
+General:
+	Corrected some bugs in the Hajiku move.
+
+Feb 21
+-None
+
+Feb 22
+-None
+
+Feb 23
+General:
+	Added in sliding sound effects for Piccolo when he is in a get hit state.
+	Fixed the throwing command bug in Balanced mode.
+
+Feb 24
+General:
+	Changed the charge rate from, 10 to 8.
+	Added in Nobiru Ude. (Extending Arm)
+
+Feb 25
+General:
+	Added in "Projectile Recovery" feature.
+	Added in Fierce punch and kick. (Fwd z/c)
+	Changed Meteor Smash 6's ending sequence. Piccolo now teleports beside
+the opponent, rather than fall to the ground.
+	Fixed a projectile velocity bug. (Thanks to BlackShinobi for reporting it!)
+	Adjusted the guarding ability during flight. (Closer distance required.)
+	Added in "Blue Kikou Ha" sound effect.
+
+Feb 26
+General:
+	Added in "Jumping in" intro.
+
+Feb 27
+General:
+	Removed special intro against Broli. Now a random normal intro. (Now a total
+of 8, special intro will be added in the future.)
+	Changed the Nobiru Ude move's attack in Balanced mode when opponent is grabbed. (Temporary, until new move is created.)
+	Fighting modes are now kept between rounds and fights. (Does not reset.)
+Reference:
+	Added reference notes to throw move.
+
+Feb 28
+General:
+	Added in Kick Combo sequence in the Ude Nobiru move. (Balanced mode, 10 hit combo)
+	Made move differences in the Ude Nobiru mode, between the fighting styles.
+
+Feb 29
+General:
+	Changed the Kick Combo sequence to a 3 hit combo.
+	Started on Piccolo's AI script.
+	
+Mar 1
+General:
+	Added in "Custom Music" feature.
+
+Mar 2
+SND file:
+	Resampled all 16-bit, stereo, and 44000hz wavs into 8-bit, mono, and 22000hz wavs. (Not very noticible to the ear though.)
+	Changed Broli's theme song, to the USSJ version.
+	Added Broli's theme song to the Custom Music feature. (Song plays when fighting against him.)
+CNS file:
+	Added in FVar's 0-3 (Rotation effects) and Var's 34-39. (AI Behaviour Vars) All Vars are now used up! =)
+General:
+	Added in Dr. M's SFZ2 V-Ism Custom Combo Feature.
+
+Mar 3
+-None
+
+Mar 4
+General:
+	Added in "Dragonball Z: Hyper Dimension"'s air combat system.
+
+Mar 5
+General:
+	Started the Kakikesu move. (Projectile Disperse)
+
+Mar 6
+General:
+	Completed the Kakikesu move.
+CMD file:
+	Fixed some command errors, between the SSP/SSK, and the SSPFwd/SSKFwd.
+
+Mar 7
+General:
+	Worked on Piccolo's Split Form move. (Currently disabled)
+	Decreased animation time for the mode changes.
+
+Mar 8
+General:
+	Added in Sonic boom effects.
+	Added in Kikou Ha AfterImage effects.
+	Removed SparkXY Randomization Vars, added in Life Persistency Var in place of Var(10). (Var(11) unused for now.)
+	All IntVariables, except for Vars 0-2, are persistent.
+
+Mar 9
+General:
+	Worked on Flash Battle feature. (Var(11) is used for this feature.)
+
+Mar 10
+General:
+	Completed the Flash Battle feature.
+
+Mar 11
+General:
+	Added in a special intro against WBJ's Goku.
+	Tweaked the flash battle feature. (Adding a button jamming feature.)
+
+Mar 12
+General:
+	Began optimizing Piccolo's coding, using Ragnarok's "Nested IfElse's" method.
+	Tweaked Flash Battle feature, adding movement support.
+
+Mar 13
+General:
+	Added in Grappling Mode, from Super Boutuden 3.
+
+Mar 14
+General:
+	Worked on the Flash Battle feature. (Very buggy)
+
+Mar 15
+General:
+	Worked on the Grappling Mode feature.
+	Currently in the process of replacing all Explod effects with helpers.
+
+Mar 16
+General:
+	Added in the Makankosappo! (About time Piccolo had a hyper move.)
+
+Mar 17
+General:
+	Tweaked the Makankosappo. (Highly graphical)
+	Fixed some bugs in the Flash Battle.
+	Changed the animations for the Grappling Mode. (Thanks to BlackShinobi for the new sprites.)
+
+Mar 18
+General:
+	Added in Double Horizontal Kick.
+	Tweaked Makankosappo. (Fixing some errors.)
+	Added in diagonal support for the Zanzouken move.
+
+Mar 19
+-None
+
+Mar 20
+General:
+	Started the Genki Dama move.
+
+Mar 21
+-None
+
+Mar 22
+-None
+
+Mar 23
+General:
+	Added in Ground Assault 2.
+	
+Mar 24
+General:
+	Added in "ForceFeedBack" parameters in various moves. (For those who use Joysticks.)
+	Added in Knee Smash Counter
+	Added in Recovery options in the meteor attacks. (From Super Boutuden 2.)
+
+Mar 25
+General:
+	Worked on the Genki Dama move.
+
+Mar 26
+-None
+
+Mar 27
+-None
+
+Mar 28
+-None
+
+Mar 29
+-None
+
+Mar 30
+-None
+
+Mar 31
+General:
+	Replaced the old small portrait of Piccolo, (Which was from DBZ: Legend Of The Super Saiyan)
+with a pic of Piccolo in Super Boutuden 2. (Story mode large portrait.)
+	Added in Guard Counter. (Taken from Dragonball Z: Hyper Dimension)
+	Thanks to Daeyrat, I got the correct name of the fireball hyper move. (Called "Gekiretsukodan", NOT "Genki Dama")
+	Added in "Toomi no Jyutsu".
+

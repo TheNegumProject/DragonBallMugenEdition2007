@@ -1,0 +1,28 @@
+[Info]
+name ="Goku Super Sayajin 2 by bprulez"
+displayname ="Goku SSJ2"
+versiondate = 10,04,2006
+mugenversion =11,01,2001
+author ="bpruleZ"
+pal.defaults =1
+
+[Files]
+cmd      =gokussj2.cmd
+cns      =gokussj2.cns
+st       =gokussj2.cns
+st2      =specjalne.cns
+st3      =superki.cns
+st4      =ki.cns
+st5      =pomocnicy.cns
+st6      =wstep.cns
+st7      =genki.cns
+st8      =genkiabs.cns
+st9      =genkiabs.cns
+stcommon =common.cns
+sprite   =gokussj2.sff
+anim     =gokussj2.air
+sound    =gokussj2.snd
+st1=Basic.cns
+;[Arcade]
+;intro.storyboard=
+;ending.storyboard=

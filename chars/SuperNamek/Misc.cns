@@ -1,0 +1,843 @@
+;================================
+;"Piccolo", from Super Boutuden 2
+;================================
+;Some random stuff...
+
+;----------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;----------------------------------------
+;CNS file for Piccolo
+;Contains all of Piccolo's -2/-3 states
+;Used for required various purposes
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================
+
+;---------------------------------------------------------------------------
+[Statedef -2]
+
+;---------------------------------------------------------------------------
+;Misc
+
+;Used for De-bug Mode in Mugen
+[State -2: 		DisplayToClipBoard]
+type 			= DisplayToClipboard
+trigger1 		= 1
+text 			= "FlashVar = %d HajikuVar1 = %d HajikuVar2 = %d \n GuardCrush = %d Stun = %d"
+params 		= Var(11), Var(19), Var(21), Var(12), Var(6)
+
+;Adds Power to Piccolo - Indefinite
+[State -2:		PowerAdd]
+type			= PowerAdd
+trigger1		= (GameTime%3) = 0
+value			= (var(53))
+
+;Adds Life to Piccolo - Indefinite
+[State -2:		LifeAdd]
+type			= LifeAdd
+triggerall		= ((GameTime%20) = 0) && (Life > (Const(Data.Life)/4))
+trigger1		= MoveType = I
+value			= (var(53))
+
+;Dizzy State Var - Makes sure that Var(6) does not go under 0.
+[State -2:		VarSet]
+type			= VarSet
+trigger1		= Var(6) < 0
+var(6)		= 0
+
+;Guard Crush Recovery - Indefinite
+[State -2:		VarAdd]
+type			= VarAdd
+trigger1		= (Var(12) > 0) && ((MoveType != H) || (StateNo != [130,160])) && (GameTime%5) = 0
+var(12)		= -1
+
+;ProjHitAdd Feature - Makes the screen flash if the "ProjHitAdd" feature has made contact.
+[State -2:		EnvColor]
+type			= EnvColor
+trigger1 		= ProjContactTime(903) = 1
+value			= 255,255,255
+time			= 7
+under			= 0
+ignorehitpause	= 1
+
+;ScreenBound Effect - Occurs if Piccolo is beyond the screen boundaries. 
+[State -2:		ScreenBound]
+type			= ScreenBound
+trigger1		= (BackEdgeBodyDist <= -10) && (PrevStateNo != 8270)
+value			= 0
+movecamera		= 0,1
+
+;Projectile Recovery - Indefinite
+[State -2:		VarAdd]
+type			= VarAdd
+trigger1		= (Var(22) > 0) && (StateNo != [1000,1001])
+v			= 22
+value			= -1
+ignorehitpause	= 1
+
+;Custom music creator
+[State -2:		Helper]
+type			= Helper
+trigger1		= NumHelper(99) = 0
+helpertype		= Normal
+name			= "CustomBGMusic"
+id			= 99
+pos			= 0,0
+postype		= p1
+facing		= -1
+stateno		= 9700
+keyctrl		= 0
+ownpal		= 1
+supermovetime	= 999999999
+pausemovetime	= 999999999
+
+;Life Persistency between rounds.
+[State -2:		VarSet]
+type			= VarSet
+trigger1		= RoundState = 3
+v			= 10
+value			= IfElse(Win,Life,0)
+
+;Haste - During Flash Battles
+[State -2: 		ChangeAnim]
+type 			= ChangeAnim
+trigger1		= StateNo = [8250,8255]
+trigger1 		= AnimElemTime(AnimElemNo(0) + 1) < 0
+trigger1 		= AnimElemTime(AnimElemNo(0)) > floor ((AnimElemTime(AnimElemNo(0)) - AnimElemTime(AnimElemNo(0) + 1))/4)
+ignorehitpause 	= 1
+value 		= Anim
+elem 			= AnimElemNo(0) + 1
+
+;Special KO Effect Switch OFF
+[State -2:		VarSet]
+type			= VarSet
+trigger1		= !WinKO
+v			= 15
+value			= 0
+ignorehitpause	= 1
+
+;Special KO Effect Switch ON
+[State -2:		VarSet]
+type			= VarSet
+trigger1		= (WinKO) && (Var(15) = 0)
+v			= 15
+value			= 1
+ignorehitpause	= 1
+
+;Special KO Effects
+[State -2:		AssertSpecial]
+type			= AssertSpecial
+trigger1		= Var(15) = 1
+flag			= NoBarDisplay
+flag2			= NoFG
+ignorehitpause	= 1
+
+;Turn off the music. (Custom BG Music)
+[State -2:	AssertSpecial]
+type			= AssertSpecial
+triggerall		= Var(14) = 1
+trigger1		= (P2Name = "Kung Fu Man") || (P2Name = "[Necromancer's] Freeman")
+trigger2		= (P2Name = "Piccolo") || (P2Name = "[Necromancer's] Piccolo") || (P2Name = "[Necromancer's] Nail")
+trigger3		= (P2Name = "Goku") || (P2Name = "Willoughby Jackson's Son-Goku") || (P2Name = "Goku Super Sayajin 2 by ribeiro")
+trigger4		= (P2Name = "SON GOKU") || (P2Name = "Goku-n-hd by EmuBoarding")
+trigger5		= (P2Name = "[Necromancer's] The Necromancer") || (P2Name = "[Necromancer's] Intangir")
+trigger6		= (P2Name = "Broli") || (P2Name = "Broli Remix ver1.2") || (P2Name = "Broli ver1.2")
+flag			= NoMusic
+ignorehitpause	= 1
+
+;---------------------------------------------------------------------------
+;Getting Hit Sounds:
+
+;Weak/Medium Attacks - Ground
+[State -2: 		PlaySnd]
+type 			= PlaySnd
+triggerall 		= (Random < 250) && (Time = 1) && (StateNo = 5000) && (Alive)
+trigger1 		= (Anim = 5000) || (Anim = 5001) || (Anim = 5010) || (Anim = 5011)
+value 		= S8,0
+
+;Weak/Medium Attacks - Air
+[State -2: 		PlaySnd]
+type 			= PlaySnd
+triggerall 		= (Random < 250) && (Time = 1) && (StateNo = 5010) && (Alive)
+trigger1 		= (Anim = 5020) || (Anim = 5021)
+value 		= S8,0
+
+;Strong Attacks - Ground
+[State -2: 		PlaySnd]
+type 			= PlaySnd
+triggerall 		= (Random < 250) && (Time = 1) && (StateNo = 5000) && (Alive)
+trigger1 		= (Anim = 5002) || (Anim = 5012)
+value 		= S2,3
+
+;Strong Attacks - Air
+[State -2: 		PlaySnd]
+type 			= PlaySnd
+trigger1 		= (Random < 250) && (Time = 1) && (StateNo = 5010) && (Alive) && (Anim = 5022)
+value 		= S2,3
+
+;Falling
+[State -2: 		PlaySnd]
+type 			= PlaySnd
+trigger1 		= (Random < 250) && (Time = 1) && (StateNo = 5100) && (Alive)
+value 		= S2,3
+
+;---------------------------------------------------------------------------
+;ProjHitAdd Feature:
+
+;ProjHitAdd - Special Projectiles
+[State -2:		Projectile]
+type			= Projectile
+triggerall		= ((ProjContactTime(901) != -1) && (ProjContactTime(901) < 5)) || ((ProjContactTime(904) != -1) && (ProjContactTime(904) < 5)) || (StateNo = 3001) && (P2MoveType = H)
+trigger1		= (command = "x") || (command = "y") || (command = "z") || (command = "xy") || (command = "yz") || (command = "xz")
+projid		= 903
+projanim		= 903
+projhitanim		= -1
+projremanim		= -1
+projcancelanim	= -1
+projremove		= 1
+projremovetime	= -1
+velocity		= 0,0
+remvelocity		= 0,0
+accel			= 0,0
+velmul		= 1,1
+projhits		= 1
+projmisstime	= 0
+projpriority	= 1
+projsprpriority	= 3
+projedgebound	= 1000
+projstagebound	= 1000
+projheightbound	= -1000,1
+offset		= 0,-20
+postype		= p2
+projshadow		= 0,0,0
+supermovetime	= 0
+pausemovetime	= 0
+;------------------
+attr			= S, SP
+hitflag		= MAF
+guardflag		= MA
+animtype		= Light
+priority		= 4, Hit
+damage		= Ceil(20+Var(54)),(6+Var(54)/2)
+pausetime		= 0,0
+sparkno		= -1
+guard.sparkno	= -1
+sparkxy		= 10,-15
+;hitsound		= S17,2
+;guardsound		= S20,0
+ground.type		= Low
+air.type		= Low
+ground.slidetime	= 15
+ground.hittime	= 15
+air.hittime		= 15
+ground.velocity	= -2
+guard.velocity	= -2
+air.velocity	= -2,3
+airguard.velocity	= -2,3
+ground.cornerpush.veloff = 0
+guard.kill		= 0
+getpower		= Ceil(15+Var(55))
+givepower		= Ceil(15+Var(55)/2)
+envshake.time 	= 5
+envshake.freq 	= 100
+envshake.ampl 	= -4
+ignorehitpause	= 1
+persistent		= 0
+ignorehitpause	= 1
+
+;---------------------------------------------------------------------------
+;Zanzouken - AfterImage effect when moving
+
+[State -2:		AssertSpecial]
+type			= AssertSpecial
+trigger1		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time < 16)
+flag			= Invisible
+
+[State -2:		PalFX]
+type			= PalFX
+trigger1		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 16)
+time			= 10
+add			= 100,100,100
+mul			= 256,256,256
+sinadd 		= 50,50,50,20
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 0)
+time 			= 5
+framegap 		= 2
+length 		= 1
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 1)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 10, 10, 10
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 2)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 20, 20, 20
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 3)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 30, 30, 30
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 4)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 40, 40, 40
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 5)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 40, 40, 40
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 6)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 50, 50, 50
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 7)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 60, 60, 60
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 8)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 70, 70, 70
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 9)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 80, 80, 80
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 10)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 90, 90, 90
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 11)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100,100,100
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 12)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 110,110,110
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 13)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 120, 120, 120
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 14)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 130, 130, 130
+trans 		= add
+
+[State -2: 		AfterImage]
+type 			= AfterImage
+trigger1 		= (PrevStateNo = 8180) && (StateNo != 0) && (StateNo != 8171) && (Time = 15)
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 140, 140, 140
+trans 		= add
+
+;---------------------------------------------------------------------------
+;Battle Experience System - Equation
+
+;1st Digit of Number System - Units
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(41) 		= floor(var(40)/1000000000)
+
+;2nd Digit of Number System - Tens
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(42) 		= floor(var(40)/100000000 - var(41) * 10) 
+
+;3rd Digit of Number System - Hundreds
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(43) 		= floor(var(40)/10000000 - var(41) * 100 - var(42) * 10)
+
+;4th Digit of Number System - Thousands
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(44) 		= floor(var(40)/1000000 - var(41) * 1000 - var(42) * 100 - var(43) * 10)
+
+;5th Digit of Number System - Ten Thousands
+[State -2:		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(45) 		= floor(var(40)/100000 - var(41) * 10000 - var(42) * 1000 - var(43) * 100  - var(44) * 10)
+
+;6th Digit of Number System - Hundred Thousands
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(46) 		= floor(var(40)/10000 - var(41) * 100000 - var(42) * 10000 - var(43) * 1000 - var(44) * 100 - var(45) * 10)
+
+;7th Digit of Number System - Millions
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(47) 		= floor(var(40)/1000 - var(41) * 1000000 - var(42) * 100000 - var(43) * 10000 - var(44) * 1000 - var(45) * 100 - var(46) * 10)
+
+;8th Digit of Number System - Ten Millions
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(48) 		= floor(var(40)/100 - var(41) * 10000000 - var(42) * 1000000 - var(43) * 100000 - var(44) * 10000 - var(45) * 1000 - var(46) * 100 - var(47) * 10)
+
+;9th Digit of Number System - Hundred Millions
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(49) 		= floor(var(40)/10 - var(41) * 100000000 - var(42) * 10000000 - var(43) * 1000000 - var(44) * 100000 - var(45) * 10000 - var(46) * 1000 - var(47) * 100 - var(48) * 10)
+
+;10th Digit of Number System - Billions
+[State -2: 		VarSet]
+type 			= VarSet
+trigger1 		= TimeMod = 5,0 
+var(50) 		= floor(var(40) - var(41) * 1000000000 - var(42) * 100000000 - var(43) * 10000000 - var(44) * 1000000 - var(45) * 100000 - var(46) * 10000 - var(47) * 1000 - var(48) * 100 - var(49) * 10)
+
+;---------------------------------------------------------------------------
+;Battle Experience System - Animation
+
+;1st Digit of Number System - Units
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(41)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 10, 220),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;2nd Digit of Number System - Tens
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(42)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 20, 230),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;3rd Digit of Number System - Hundreds
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(43)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 30, 240),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;4th Digit of Number System - Thousands
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(44)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 40, 250),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;5th Digit of Number System - Ten Thousands
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(45)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 50, 260),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;6th Digit of Number System - Hundred Thousands
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(46)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 60, 270),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;7th Digit of Number System - Millions
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(47)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 70, 280),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal 		= 1
+
+;8th Digit of Number System - Ten Millions
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(48)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 80, 290),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal		= 1
+
+;9th Digit of Number System - Hundred Millions
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(49)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 90, 300),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal		= 1
+
+;10th Digit of Number System - Billions
+[State -2: 		Explod]
+type 			= Explod
+trigger1 		= 1
+anim 			= 8000 + var(50)
+postype 		= left
+pos 			= ifelse(var(14) = 1, 100, 310),200
+ignorehitpause 	= 1
+supermovetime	= 100
+pausemovetime	= 100
+sprpriority 	= 13
+ownpal		= 1
+
+;---------------------------------------------------------------------------
+;Battle Experience System - Projectile Score
+
+;ProjHitAdd Feature - Projectile Score
+[State -2:		VarAdd]
+type			= VarAdd
+trigger1 		= ProjContactTime(903) = 1
+v			= 40
+value			= (20+Var(54)/2)
+ignorehitpause	= 1
+
+;---------------------------------------------------------------------------
+[Statedef -3]
+
+;---------------------------------------------------------------------------
+;Misc
+
+;Haste - Increases character's speed
+[State -3: 		ChangeAnim]
+type 			= ChangeAnim
+triggerall 		= (RoundState = 2) && (MoveType != H)
+triggerall		= (StateNo = 2003) || (StateNo = 2011) || ((StateNo = 40) && (Pos Y < 0))
+trigger1 		= AnimElemTime(AnimElemNo(0) + 1) < 0
+trigger1 		= AnimElemTime(AnimElemNo(0)) > floor ((AnimElemTime(AnimElemNo(0)) - AnimElemTime(AnimElemNo(0) + 1))/2)
+ignorehitpause 	= 1
+value 		= Anim
+elem 			= AnimElemNo(0) + 1
+
+;---------------------------------------------------------------------------
+;Guard Crush System
+
+;Weak Guard
+[State -3: 		VarAdd]
+type 			= VarAdd
+trigger1 		= (GetHitVar(HitShakeTime) = 5) && (StateNo = 150 || StateNo = 152)
+var(12) 		= 1
+
+;Medium Guard
+[State -3: 		VarAdd]
+type 			= VarAdd
+trigger1 		= (GetHitVar(HitShakeTime) = 10) && (StateNo = 150 || StateNo = 152)
+var(12) 		= 2
+
+;Strong Guard
+[State -3: 		VarAdd]
+type 			= VarAdd
+trigger1 		= (GetHitVar(HitShakeTime) = 15) && (StateNo = 150 || StateNo = 152)
+var(12) 		= 3
+
+;Weak/Medium Attacks - Ground
+[State -3: 		VarAdd]
+type 			= VarAdd
+triggerall		= Var(12) >= 2
+trigger1 		= ((Time = 1) && (StateNo = 5000) && (Alive)) && ((Anim = 5000) || (Anim = 5001) || (Anim = 5010) || (Anim = 5011))
+trigger2 		= ((Time = 1) && (StateNo = 5010) && (Alive)) && ((Anim = 5020) || (Anim = 5021))
+var(12) 		= -2
+
+;Strong Attacks
+[State -3: 		VarAdd]
+type 			= VarAdd
+triggerall		= Var(12) >= 3
+trigger1 		= ((Time = 1) && (StateNo = 5000) && (Alive)) && ((Anim = 5002) || (Anim = 5012))
+trigger2 		= (Time = 1) && (StateNo = 5010) && (Alive) && (Anim = 5022)
+var(12) 		= -3
+
+;Falling
+[State -3: 		VarAdd]
+type 			= VarAdd
+trigger1		= (Var(12) >= 10) && (Time = 1) && (StateNo = 5100) && (Alive)
+var(12) 		= -10
+
+;Guard Crush State
+[State -3: 		ChangeState]
+type 			= ChangeState
+trigger1 		= (Var(12) > 100) && (StateNo = [130,160])
+value 		= 8140
+ignorehitpause 	= 1
+
+;---------------------------------------------------------------------------
+;Dizzy Feature
+
+;Weak Attacks
+[State -3: 		VarAdd]
+type 			= VarAdd
+triggerall 		= Time = 2
+trigger1 		= ((StateNo = 5001) && (Anim = 5000)) || ((StateNo = 5001) && (Anim = 5010)) || ((StateNo = 5011) && (Anim = 5020))
+v 			= 6
+value 		= 10
+persistent 		= 0
+ignorehitpause 	= 1
+
+;Medium Attacks
+[State -3: 		VarAdd]
+type 			= VarAdd
+triggerall 		= Time = 4
+trigger1 		= ((StateNo = 5001) && (Anim = 5001)) || ((StateNo = 5001) && (Anim = 5011)) || ((StateNo = 5011) && (Anim = 5021))
+v 			= 6
+value 		= 40
+persistent = 0
+ignorehitpause = 1
+
+;Strong Attacks
+[State -3: 		VarAdd]
+type 			= VarAdd
+triggerall 		= Time = 6
+trigger1 		= ((StateNo = 5001) && (Anim = 5002)) || ((StateNo = 5001) && (Anim = 5012)) || ((StateNo = 5011) && (Anim = 5022))
+v 			= 6
+value 		= 100
+persistent = 0
+ignorehitpause = 1
+
+;Reduce Stun
+[State -3: 		VarAdd]
+type 			= VarAdd
+trigger1 		= Var(6) > 0
+v 			= 6
+value 		= -1
+ignorehitpause 	= 1
+
+;Go to dizzy state if limit has reached.
+[State -3: 		ChangeState]
+type 			= ChangeState
+trigger1 		= (Var(6) >= 400) && (StateNo = [5000,5100])
+value 		= 8200
+ignorehitpause 	= 1
+
+;---------------------------------------------------------------------------
+;SFZ2 V-Ism Custom Combo Feature (By Dr.M)
+
+[State -3: 		VarAdd] 
+type 			= VarAdd
+trigger1 		= Var(9) > 0
+v 			= 9
+value 		= -1
+ignorehitpause	= 1
+
+;Cancel CC Mode if you get hit or win the round
+[State -3: 		VarSet]
+type 			= VarSet
+trigger1 		= (MoveType = H) || (Roundstate = 3) || (Var(31) != 1)
+v 			= 9
+value 		= 0
+
+;Sorrowedge's Haste Code (tm)
+;Modified for faster anims
+[State -3: 		ChangeAnim] 
+type 			= ChangeAnim
+triggerall 		= (Var(9) > 0) && (RoundState = 2) && (MoveType != H)
+trigger1 		= AnimElemTime(AnimElemNo(0) + 1) < 0
+trigger1 		= AnimElemTime(AnimElemNo(0)) > floor ((AnimElemTime(AnimElemNo(0)) - AnimElemTime(AnimElemNo(0) + 1))/3)
+value 		= anim
+elem 			= AnimElemNo(0) + 1
+ignorehitpause 	= 1
+
+[State -3: 		PalFX]
+type 			= PalFX
+trigger1 		= (Var(9) > 0) && (TimeMod = 3,0)
+time 			= 2
+add 			= 0,16,132
+sinadd 		= 5,32,164,2
+ignorehitpause	= 1
+
+;This ensures that afterimages are displaying during mode.
+[State -3: 		AfterImageTime]
+type 			= AfterImageTime
+trigger1 		= Var(9) > 0
+time 			= 2
+
+;Infinnite juggle points!
+[State -3: 		AssertSpecial]
+type 			= AssertSpecial
+trigger1 		= Var(9) > 0
+flag 			= NoJuggleCheck
+ignorehitpause	= 1
+
+;Tone down the damage
+[State -3: 		AttackMulSet]
+type 			= AttackMulSet
+trigger1 		= Var(9) > 0
+value 		= 0.25
+
+;Back to normal
+[State -3: 		AttackMulSet]
+type 			= AttackMulSet
+trigger1 		= (Var(9) = 0) && (Var(31) = 1)
+value 		= 0.8
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;---------------------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;---------------------------------------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================

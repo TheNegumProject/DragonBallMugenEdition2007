@@ -1,0 +1,233 @@
+; CNS 9 Dragonballz/gt:options and movelist helpers
+;=-=-=-=--=-=-=--=-=-=-=-=-==--=-
+;options
+;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+;hidden options helper
+[Statedef 12321]
+ctrl = 0
+anim = 114
+
+[State 0]
+type = Turn
+trigger1 = facing != parent, facing
+
+[State 0]
+type = ChangeState
+trigger1 = (command = "menu1") && (parent, command = "menu1") && (time > 2) && (RoundState != 0)
+value = 9003
+
+;option: flying
+[Statedef 9003]
+ctrl = 0
+
+[State 0]
+type = Pause
+trigger1 = 1
+time = 2
+movetime = 2
+
+[state -2]
+type = removeexplod
+trigger1 = command = "a"
+trigger2 = command = "b"
+trigger3 = command = "down"
+id = 9767
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 0
+anim = 90030
+pos = 140, 100
+postype = left
+facing = 1
+;removetime = 1
+pausemovetime = 99999
+sprpriority = 7
+ontop = 1
+shadow = -1
+id = 9767
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "a"
+v = 3
+value = 1
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "b"
+v = 3
+value = 0
+
+[state 7767]
+type = changestate
+trigger1 = time > 5 && command = "down"
+value = 2322
+
+[State 0]
+type = ChangeState
+trigger1 = (time > 5 && command = "a")
+trigger2 = (time > 5 && command = "b")
+value = 12321
+
+;options: dbsys
+[Statedef 2322]
+ctrl = 0
+
+[State 0]
+type = Pause
+trigger1 = 1
+time = 2
+movetime = 2
+
+[state -2]
+type = removeexplod
+trigger1 = command = "a"
+trigger2 = command = "b"
+trigger3 = command = "down"
+id = 9767
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 0
+anim = 90031
+pos = 140, 100
+postype = left
+facing = 1
+pausemovetime = 99999
+sprpriority = 7
+ontop = 1
+id = 9767
+
+[state -2]
+type = parentVarSet
+trigger1 = command = "a"
+v = 58
+value = 1
+
+[state -2]
+type = parentVarSet
+trigger1 = command = "b"
+v = 58
+value = 0
+
+[state 7767]
+type = changestate
+trigger1 = time > 5 && command = "down"
+value = 2323
+
+[State 0]
+type = ChangeState
+trigger1 = (time > 5 && command = "a")
+trigger2 = (time > 5 && command = "b")
+value = 12321
+
+;option: teleport
+[Statedef 2323]
+ctrl = 0
+
+[State 0]
+type = Pause
+trigger1 = 1
+time = 2
+movetime = 2
+
+[state -2]
+type = removeexplod
+trigger1 = command = "a"
+trigger2 = command = "b"
+trigger3 = command = "down"
+id = 9767
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 0
+anim = 90033
+pos = 140, 100
+postype = left
+facing = 1
+;removetime = 1
+pausemovetime = 99999
+sprpriority = 7
+ontop = 1
+shadow = -1
+id = 9767
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "a"
+v = 4
+value = 1
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "b"
+v = 4
+value = 0
+
+[state 7767]
+type = changestate
+trigger1 = time > 5 && command = "down"
+value = 2324
+
+
+
+[State 0]
+type = ChangeState
+trigger1 = (time > 5 && command = "a")
+trigger2 = (time > 5 && command = "b")
+value = 12321
+
+;option: power up
+[Statedef 2324]
+ctrl = 0
+
+[State 0]
+type = Pause
+trigger1 = 1
+time = 2
+movetime = 2
+
+[state -2]
+type = removeexplod
+trigger1 = command = "a"
+trigger2 = command = "b"
+trigger3 = command = "down"
+id = 9767
+
+[State 3000, Super Face Left]
+type = Explod
+trigger1 = time = 0
+anim = 90032
+pos = 140, 100
+postype = left
+facing = 1
+;removetime = 1
+pausemovetime = 99999
+sprpriority = 7
+ontop = 1
+shadow = -1
+id = 9767
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "a"
+v = 12
+value = 1
+
+[state 3000]
+type = parentVarSet
+trigger1 = command = "b"
+v = 12
+value = 0
+
+[state 7767]
+type = changestate
+trigger1 = time > 5 && command = "down"
+value = 12321
+
+[State 0]
+type = ChangeState
+trigger1 = (time > 5 && command = "a")
+trigger2 = (time > 5 && command = "b")
+value = 12321

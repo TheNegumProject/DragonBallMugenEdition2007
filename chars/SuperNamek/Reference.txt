@@ -1,0 +1,293 @@
+==========================
+Reference File for Piccolo
+==========================
+
+---------------------------------------------------
+Author:	The Necromancer
+	necromancer@zipmail.com
+---------------------------------------------------
+
+Best viewed at:
+Font: Comic Sans MS
+Font Style: Regular
+Size: 8
+
+Note: This is not yet complete, nor does Piccolo use all of these variables. (Piccolo [Ver 04/01/01])
+
+If you are searching for a particular move or feature in Piccolo, this file can be used to guide you.
+You are free to use any piece of code, just don't copy everything. It's basically doing no work at all... =)
+
+=========
+Contents:
+=========
+
+---------------------------------------------------------------------------
+-Constants Index:
+	IntVariable Index
+	FloatVariable Index
+
+-State Number Index
+	Reserved States
+	Standing Attacks
+	Crouch Attacks
+	Throws
+	Air Attacks
+	Air Throws
+	Special Effects
+	Special Attacks
+	Special EX Attacks
+	Hyper Attacks
+	Hyper EX Attacks
+	Required States
+	Reserved States (Extra)
+	Piccolo: Cape and Turban Anim
+	Number System Anim		
+	Character Fonts
+	Features
+	Portraits
+	Helper Anim & ID Number
+
+-State Reference
+
+---------------------------------------------------------------------------
+================
+Constants Index:
+================
+
+==================
+IntVariable Index:
+==================
+---------------------------------------------------------------------------
+Misc
+Var(0):	Win State Decider			- Chooses win pose at random
+Var(1):	Intro State Decider			- Chooses intro at random
+Var(2):	Lose State Decider			- Chooses lose pose at random
+Var(3):					- Unused
+Var(4):	Fly Velocity Var			- Creates a flying effect
+Var(5):	Armor Mode Var			- Returns previous state when hit
+Var(6):	Stun Var				- Go into Dizzy state.
+Var(7):	Grappling Mode Var			- Determines the winner of the grappling mode.
+Var(8):	Special Recovery Var			- Go into special recovery state when activated
+Var(9):	V-ism CountDown Timer		- Used for the SFZ2 V-Ism Custom Combo Feature
+Var(10):	Life Persistency Var			- Keep life values between rounds.
+Var(11):	Flash Battle Var			- Determines the winner of the flash battle. Also used for the opponent to go into flash battle.
+Var(12): 	Guard Crush Var			- Gauge used for Guard Crush System
+Var(13): 	Special Intro Marker			- Marks if Piccolo did a special intro
+Var(14): 	Character Facing Check		- Check if your character is facing left or right
+Var(15): 	Special KO Effect			- Creates a KOed effect if opponent was finished by a special/hyper move.
+Var(16): 	Long Jump Var			- Used in Balanced Mode, to jump at a greater distance
+Var(17): 	Projectile Charge Var			- Used to define damage for projectiles
+Var(18):	Dizzy State Var			- Used to recover from dizzy
+Var(19):	Hajiku Cancel Var 1			- Used to cancel out projectiles: # of taps made
+Var(20):	Hajiku Damage Var			- Take opponent's projectile damage if Hajiku failed.
+Var(21):	Hajiku Cancel Var 2			-  Used to cancel out projectiles: # of taps required for success
+Var(22):	Projectile Drain Var			- Go to dizzy state if you use projectiles frequently
+Var(23):	Randomization Var			- Used for various purposes
+
+Var(24) & Var(25)				- Unused
+
+---------------------------------------------------------------------------
+Move Interrupt System (Un-used)
+Var(26):	Move Interrupt			- Used for Counter Bonus
+Var(27):	P2PrevMoveType			- Used to detect opponent's last move type (ON)
+Var(28):	P2PrevMoveType			- Used to detect opponent's last move type (OFF)
+Var(29):	Counter Display			- Displays counter message
+
+---------------------------------------------------------------------------
+Modes
+Var(30):	Mode Var				- Switches to one of Piccolo's forms
+Var(31):	Sub-Mode Var			- Switches to one of Piccolo's fighting styles
+Var(32):	Tag Team				- Switch characters during play
+Var(33):	Expert Mode			- Used for practice
+
+---------------------------------------------------------------------------
+Piccolo's AI Behaviour, unused
+
+Var(34):	"Take your best shot!"		- Piccolo will not fight until he feels the opponent has been given enough time to attack.
+Var(35):	"Your pretty tough..."			- Piccolo will adjust his fighting style according to the opponent's skill.
+Var(36):	Learn: Distance Attacks		- Learns how your character's long ranged attacks work. (Attack or Projectile?)
+Var(37):	Learn: Move Record			- Learns how the opponent's previous attack works. (No cheap repetitiveness!)
+Var(38):	Random Fighting Behaviour Var		- Piccolo will use a random fighting behaviour at the beginning of the round.
+Var(39):	
+
+---------------------------------------------------------------------------
+Battle Experience System
+Var(40):	Experience Counter			- Gain experience as you fight
+Var(41):	1st Digit of Number System		- Units
+Var(42):	2nd Digit of Number System		- Tens 
+Var(43):	3rd Digit of Number System		- Hundreds
+Var(44):	4th Digit of Number System		- Thousands
+Var(45):	5th Digit of Number System		- Ten Thousands
+Var(46):	6th Digit of Number System		- Hundred Thousands
+Var(47):	7th Digit of Number System		- Millions
+Var(48):	8th Digit of Number System		- Ten Millions
+Var(49):	9th Digit of Number System		- Hundred Millions
+Var(50):	10th Digit of Number System		- Billions
+
+---------------------------------------------------------------------------
+Misc
+Var(51):	AI Var				- AI initialization
+Var(52):	Special Intro Marker			- Checks if a special intro has been done
+Var(53):	Power Level Var			- Used to gain new levels
+Var(54):	Damage Addition			- Adds in more damage as you gain experience
+Var(55):	Power Addition			- Adds in more power as you gain experience
+Var(56):	HitTime/HitSlide Var			- Calculates hit time/slide values
+Var(57):	Pause Var				- Calculates hit pauses according to various purposes
+Var(58):	Perfect Wins Counter		- Counts how many Pefect Wins you've made during your game.
+Var(59):	Continue Marker			- Counts how many continues used during the game
+
+=====================================
+FloatVariable Index: (Non-persistent)
+=====================================
+---------------------------------------------------------------------------
+Rotator Effect, unused
+FVar(0):	Helper Location Var			- Indicates helper's current location relative to it's parent
+FVar(1):	Rotation Speed			- Acceleration/Deceleration of the helper
+FVar(2):	Y Stretch				- The Y stretch of the rotation. (Oval rotation effect)
+FVar(3):	X Stetch				- The X stretch of the rotation. (Oval rotation effect)
+
+=================================
+FloatVariable Index: (Persistent)
+=================================
+---------------------------------------------------------------------------
+Misc
+FVar(20):	Velocity Var			- Calculates velocity according to various purposes
+
+---------------------------------------------------------------------------
+
+===================
+State Number Index:
+===================
+0-199:	Reserved States
+
+200-399:	Standing Attacks
+	200-299:	Universal
+	300-339:	Combination
+	340-369:	Variable
+	370-399:	Balanced
+
+400-499:	Crouch Attacks
+	400-449:	Basic 
+	450-499:	Custom 
+
+500-599:	Throws
+	500-549:	Basic 
+	550-599:	Custom 
+
+600-699:	Air Attacks
+	600-649:	Basic 
+	650-699:	Custom 
+
+700-799:	Air Throws
+	700-749:	Basic 
+	750-799:	Custom 
+
+800-999:	Special Effects
+	800-849:	Intro/Win/Lose Effects
+	850-899:	Character Effects 
+	900-949:	Projectiles/Sparks
+	950-999:	Super/Misc Effects
+
+1000-1999: 	Special Attacks
+	1000-1099:	Universal
+	1100-1199:	Universal (EX)
+	1200-1299:	Combination
+	1300-1399:	Combination (EX)
+	1400-1499:	Variable
+	1500-1599:	Variable (EX)
+	1600-1699:	Balanced
+	1700-1799:	Balanced (EX)
+	1800-1899:	Mystic
+	1900-1999:	Mystic (EX)
+
+2000-2999: 	Special EX Attacks
+	2000-2099:	Universal
+	2100-2199:	Universal (EX)
+	2200-2299:	Combination
+	2300-2399:	Combination (EX)
+	2400-2499:	Variable
+	2500-2599:	Variable (EX)
+	2600-2699:	Balanced
+	2700-2799:	Balanced (EX)
+	2800-2899:	Mystic
+	2900-2999:	Mystic (EX)
+
+3000-3999:	Hyper Attacks
+	3000-3099:	Universal
+	3100-3199:	Universal (EX)
+	3200-3299:	Combination
+	3300-3399:	Combination (EX)
+	3400-3499:	Variable
+	3500-3599:	Variable (EX)
+	3600-3699:	Balanced
+	3700-3799:	Balanced (EX)
+	3800-3899:	Mystic
+	3900-3999:	Mystic (EX)
+
+4000-4999: 	Hyper EX Attacks
+	4000-4099:	Universal
+	4100-4199:	Universal (EX)
+	4200-4299:	Combination
+	4300-4399:	Combination (EX)
+	4400-4499:	Variable
+	4500-4599:	Variable (EX)
+	4600-4699:	Balanced
+	4700-4799:	Balanced (EX)
+	4800-4899:	Mystic
+	4900-4999:	Mystic (EX)
+
+5000-5999:	Required States
+
+6000-6999:	Reserved States (Extra): Intro, Win, Lose
+	6000-6199:	Universal
+		6000-6099:	Intro
+		6100-6149:	Win
+		6150-6159:	Lose
+	6200-6399:	Combination
+		6200-6299:	Intro
+		6300-6349:	Win
+		6350-6359:	Lose
+	6400-6599:	Variable
+		6400-6499:	Intro
+		6500-6549:	Win
+		6550-6559:	Lose
+	6600-6799:	Balanced
+		6600-6699:	Intro
+		6700-6749:	Win
+		6750-6759:	Lose
+	6800-6999:	Mystic
+		6800-6899:	Intro
+		6900-6949:	Win
+		6950-6959:	Lose
+
+7000-7999:	Piccolo: Cape and Turban Anim
+
+8000-8019: 	Number System Anim
+
+8020-8099:	Character Fonts
+
+8100-8999: 	Features
+	8100-8299:	Universal
+	8300-8499:	Combination
+	8500-8799:	Variable
+	8800-8999:	Balanced
+
+9000:		Portraits
+	9000,0:	Small Portrait
+	9000,1:	Large Portrait
+
+9000-9999: 	Helper Anim & ID Number
+	9000-9099:	Nail & Kami		0001 & 0002
+	9100-9199:	Goku			0003
+	9200-9299:	Vegeta			0004
+	9300-9399:	Gohan			0005
+	9400-9499:	And 16 & And 18		0006 & 0007
+	9500-9599:	Cell & Cell Jr.		0008 & 0009
+	9600-9699:	Piccolo Clone		0010
+	9700-9799:	Misc Helpers		0011 +
+
+????-????:		Misc Helper Anim & ID Number
+	901:	Kikou Ha				0011
+	8161:	Wind Effect			0012
+	8240:	KakikesuBarrier			0013
+

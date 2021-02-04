@@ -1,0 +1,37 @@
+; ..:: Vegeta (USSJ) ::.. | Ver 1.0
+; ***From SB2 ~ Sprites modified by Zantesuken***
+; 
+;----------------------------------------
+;By	: LadyKiKi 	: http://hyperionx.net
+;	: Zantensuken	: http://bleh.hyperionx.net
+;			: http://forum.hyperionx.net
+;----------------------------------------
+
+;---------------------
+;Character Information
+;---------------------
+[Info]
+name			= "KiKi's Vegeta"	;Name of character
+displayname		= "Vegeta USSJ"		;Name of character to display
+versiondate		= 1.0			;Version date of character
+mugenversion		= 04,14,2002		;Version of M.U.G.E.N character works on
+author			= "KiKi, Zan"		;Character author name
+pal.defaults		= 1			;Default palettes in order of preference
+
+;---------------
+;Character Files 
+;---------------
+[Files]
+cmd			= vgCMD.cmd			;Command Set
+cns			= vgCNS.cns			;Data
+st			= vgCNS.cns			;States
+stcommon		= vgCNS.cns			;Common States
+sprite			= vgSFF.sff			;Sprite
+anim			= vgAIR.air			;Animation
+sound			= vgSND.snd			;Sound
+
+pal1			= vg01.act			;Orange 
+
+;[Arcade]
+;intro.storyboard = GokuIntro.def
+;ending.storyboard = GokuEnding.def

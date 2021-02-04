@@ -1,0 +1,31 @@
+[Info]
+name ="Goku Super Sayajin 2 by Z-figt"
+displayname ="Goku SSJ2"
+versiondate =26,03,2005
+mugenversion =11,01,2001
+author ="Z-fight(bprulez)"
+pal.defaults =1
+
+[Files]
+cmd      =gokussj2.cmd
+cns      =gokussj2.cns
+st       =gokussj2.cns
+st2      =especiais.cns
+st3      =magias.cns
+st4      =supers.cns
+st5      =helpers.cns
+st6      =story.cns
+st7      =genki.cns
+st8      =genkiabs.cns
+st9      =genkiabs.cns
+stcommon =common.cns
+sprite   =gokussj2.sff
+anim     =gokussj2.air
+sound    =gokussj2.snd
+pal1     =goku-ssj2-1.act
+pal2     =goku-ssj2-2.act
+pal3     =goku-ssj2-3.act
+st1=basico.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

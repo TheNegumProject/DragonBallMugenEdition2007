@@ -1,0 +1,30 @@
+; Definition file for Mistic Gohan
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Gohan Adult"        
+displayname ="Mistic Gohan" 
+versiondate =04,14,2002    
+mugenversion =04,14,2002   
+author ="Blaze"         
+pal.defaults =6,3,4,2      
+
+; Files for the player
+[Files]
+cmd     =Mistic_Gohan.cmd
+cns     =Mistic_Gohan.cns
+st      =Mistic_Gohan.cns
+st2     =Specials.cns
+st3     =AI.cns
+stcommon =Mistic_Gohan1.cns
+sprite  =Mistic_Gohan.sff
+anim    =Mistic_Gohan.air
+sound   =Mistic_Gohan.snd
+pal1=Mistic_Gohan.act
+
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard = 

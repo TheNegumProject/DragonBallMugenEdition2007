@@ -1,0 +1,169 @@
+ _    _                              _     _    ______   ______    ________
+| \__/ |_   _  ____  ____  ___   _  | |   | | |    __| |    __|  |___   __|
+|      | | | |/ ___|/ __ \|   \ | | | |   | | |   |__  |   |__       |  |  
+| |\/| | | | | |  _|  ___/| |\ \| | | |   | | |__    | |__    |  __  |  |
+| |  | | |_| | |_| | |___ | | \   | | |___| |  __|   |  __|   | |  |_|  |
+|_|  |_|_____|\____|\____||_|  \__| |_______| |______| |______| |_______|   
+----------------------http://www.mugenussj.rg3.net------------------------
+===LEIA-ME===
+
+Vegeta Extreme
+
+Leia-Me em português
+
+===ÍNDICE===
+
+1)Ficha
+2)Desenvolvimento
+3)Créditos
+4)Instalação
+5)O Que falta
+6)O Que tem
+7)Novidades
+8)Biografia
+9)Modos
+10)Comandos
+11)Final
+12)Agradecimentos
+13)Conclusão
+
+===FICHA===
+
+Nome : Vegeta Extreme
+Jogo : Editado do Dragonball Z 2 & 3
+Baseado no: Vegeta 
+Versão do Mugen : 2001.14.04
+Versão : 3.0
+Completo : 100%
+Data de Lançamento : 02/02/2002
+
+===DESENVOLVIMENTO===
+
+Ripagem de Imagens : Master Sabrewolf
+Ripagem de Sons : Master Sabrewolf e Lip Ultra SSJ
+Edição de imagens: Lip Ultra SSJ
+Conversão para MUGEN : Master Sabrewolf
+Emulador : Zsnes
+Testadores : Lip Ultra SSJ e Junior USSJ (desconhecido no mundo mugen)
+
+===CRÉDITOS===
+
+Autor: Lip Ultra SSJ
+Site: http://www.mugenussj.rg3.net
+E-mail: felipeobn@ligbr.com.br
+
+
+===INSTALAÇÃO===
+
+Para colocar Vegeta Extreme no seu M.U.G.E.N. primeiro tenha certeza de que há espaço
+no seu System.def abrindo-o com um editor de texto(como Wordpad)e aumentando
+o número de Columns e Rows se necessário.
+Se já tiver espaço,bom.
+Mande todos os arquivos para uma pasta de nome Vegeta Extreme e coloque-a na pasta
+CHARS de seu M.U.G.E.N.
+Agora, entre no arquivo Select.def e procure por uma parte com [Characters]
+escrito.
+Logo embaixo escreva:
+Vegeta Extreme (se quiser que ele esteja no seu jogo)
+Vegeta Extreme, stages/estagio.def (se quiser que ele tenha uma fase própria no ArcadeMode) 
+Vegeta Extreme, stages/estagio.def, music=sound/nomedamusica.def (se quiser que a fase do modoArcade tenha música própria) 
+Se quiser que ele seja o último chefe de seu jogo, acrescente , order=10 logo
+após a música ou o estágio(vindo em últmo lugar),senão, coloque :, order=9
+para que esteja num nível anterior a último chefe.
+
+===O QUE FALTA===
+
+Acho que nada
+
+===O QUE TEM===
+.3 Transformações
+.15 supers
+.5 especiais
+.Sistema de combos
+.Air Combos
+.Extras
+.3 poses de vitória (para cada transformão)
+.Carregamento de ki
+.Muitos sons
+.12 Paletas
+===NOVIDADES===
+
+versão 3.0
+
+===Vegeta Extreme===
+
+Raça : Saiya-Jin
+Familiares : Rei Vegeta(pai),???(mãe),Bulma(esposa),Trunks(filho),Bra(filha),
+Olhos : pretos
+Cabelo : preto
+Séries : DBZ, DBGT e filmes
+Técnicas : Todas
+ 
+===MODOS DE JOGO===
+
+1)Normal
+2)SSJ
+3)SSJ2
+4)SSJ4
+5)Fly
+
+------
+Normal
+------
+Modo comum, terrestre com todos os golpes básicos.
+------
+SSJ
+------
+Modo comum, terrestre com todos os golpes básicos. más com o poder e velocidade  maior de que o normal
+------
+SSJ2
+------
+Modo comum, terrestre com todos os golpes básicos. más com o poder e velocidade  maior de que o SSJ
+------
+SSj4
+------
+Modo comum, terrestre com todos os golpes básicos, más com o poder e velocidade  maior de que o SSJ4
+---
+FLY
+---
+Vegeta voa pela tela e consegue da qualquer tipo de poder no ar.
+
+===COMANDOS===
+
+vá no CMD
+
+===AGRADECIMENTOS===
+
+*Elecbyte - Por ter criado o mugen
+*Bandai - Por ter criado os jogos de DBZ apesar de so o HD prestar
+*OverMind - Por esse modelo de Leia-me e por causa do Majin Vegeta dele que eu me lembre foi o meu primeiro char com transformação
+*Kakaroto - Porque quando eu peguei o Kakaroto eu fiquei muito empolgado pra fazer este char.
+*Master Sabrewolf - por ter feito o Ultimate Gohan
+*A todos que eu esqueci (foi mal ae)
+
+;--------Aos que eu não pedi permissão para usar alguns arquivos e edits de seus chars-------
+
+*Master Sabrewolf - Eu usei a metade dos arquivos do Ultimate Gohan
+*Kurihan - Eu usei algumas imagens de carregamento do gokugt e poderes do Vegeta Classic
+*Spawnicar - Usei os edits do Vegeta Normal
+*Simon - Usei as imagens do Super Vegeta com armadura dele.
+*Dexter - Usei as imagens do Super Vegeta dele.
+*ReDSpideR4k e Goten88 - Usei as imagens do Vegeta SSJ4 que ficou d+
+*Pocket_Danyell e SLAYER - Usei os Kamehameha do Gogeta SSJ4 e do GokuNEX
+*A todos que eu esqueci (foi mal)
+
+===CONCLUSÃO===
+Espero que tenham gostado, essa foi uma das minhas melhores criações até o momento!
+Vegeta Extreme by Lip Ultra SSJ
+Para mais chars e minhas criações vá em
+http://www.mugenussj.rg3.net
+
+ _    _                              _     _    ______   ______    ________
+| \__/ |_   _  ____  ____  ___   _  | |   | | |    __| |    __|  |___   __|
+|      | | | |/ ___|/ __ \|   \ | | | |   | | |   |__  |   |__       |  |  
+| |\/| | | | | |  _|  ___/| |\ \| | | |   | | |__    | |__    |  __  |  |
+| |  | | |_| | |_| | |___ | | \   | | |___| |  __|   |  __|   | |  |_|  |
+|_|  |_|_____|\____|\____||_|  \__| |_______| |______| |______| |_______|   
+----------------------http://www.mugenussj.rg3.net------------------------
+
+				FIM!!!!!

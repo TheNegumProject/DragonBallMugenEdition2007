@@ -1,0 +1,860 @@
+;================================
+;"Piccolo", from Super Boutuden 2
+;================================
+;Just a place for Piccolo's helpers...
+;I like helpers... :P
+
+;----------------------------------------
+;Author:	The Necromancer
+;		necromancer@zipmail.com
+;----------------------------------------
+;CNS file for Piccolo
+;Used for Helper's States
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================
+
+;---------------------------------------------------------------------------
+;Kikou Ha Shoot Effect
+[Statedef 901]
+type 			= S
+movetype		= I
+physics		= N
+anim			= IfElse((Parent,Var(17)<=50),901,902)
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 901:		AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= Invisible
+flag2			= NoShadow
+
+[State 901:		NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 901:		PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 901:		MakeDust]
+type			= MakeDust
+trigger1		= Parent, Pos Y >= 0
+pos 			= 0,72
+spacing 		= 3
+
+[State 901:		VelSet]
+type			= VelSet
+trigger1		= Time = 0
+x			= 4
+y			= 0
+
+[State 901:		VelMul]
+type			= VelMul
+trigger1		= Time > 0
+x			= 1.1
+y			= 1
+
+[State 901: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 20
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100, 100, 100
+trans 		= add
+
+[State 901:		DestroySelf]
+type			= DestroySelf
+trigger1 		= Parent, ProjContactTime(0) <= 5
+
+;---------------------------------------------------------------------------
+;Charge (Wind Effect)
+[Statedef 8162]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 8162
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 8162:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 8162:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 1
+
+[State 8162:	VelSet]
+type			= VelSet
+trigger1		= Time = 0
+x			= 10
+
+[State 8162:	DestroySelf]
+type			= DestroySelf
+trigger1		= Time = 40
+
+;---------------------------------------------------------------------------
+;Custom Music Creator
+[Statedef 9700]
+type 			= S
+movetype		= I
+physics		= N
+anim			= -1
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= -5
+
+[State 9700:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= Invisible
+flag2			= NoShadow
+
+[State 9700:	AssertSpecial]
+type			= AssertSpecial
+triggerall		= Parent, Var(14) = 1
+trigger1		= (P2Name = "Kung Fu Man") || (P2Name = "[Necromancer's] Freeman")
+trigger2		= (P2Name = "Piccolo") || (P2Name = "[Necromancer's] Piccolo") || (P2Name = "[Necromancer's] Nail")
+trigger3		= (P2Name = "Goku") || (P2Name = "Willoughby Jackson's Son-Goku") || (P2Name = "Goku Super Sayajin 2 by ribeiro")
+trigger4		= (P2Name = "SON GOKU") || (P2Name = "Goku-n-hd by EmuBoarding")
+trigger5		= (P2Name = "[Necromancer's] The Necromancer") || (P2Name = "[Necromancer's] Intangir")
+trigger6		= (P2Name = "Broli") || (P2Name = "Broli Remix ver1.2") || (P2Name = "Broli ver1.2")
+flag			= NoMusic
+
+[State 9700:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9700:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+;Piccolo's Theme music
+[State 9700:	PlaySnd]
+type			= PlaySnd
+triggerall		= (RoundState = 2) && (Parent, Var(14) = 1)
+trigger1		= (P2Name = "Kung Fu Man") || (P2Name = "[Necromancer's] Freeman")
+trigger2		= (P2Name = "Piccolo") || (P2Name = "[Necromancer's] Piccolo") || (P2Name = "[Necromancer's] Nail")
+value			= S0,22
+loop			= 1
+abspan		= 0
+persistent		= 0
+
+;Broli's Theme music
+[State 9700:	PlaySnd]
+type			= PlaySnd
+triggerall		= (RoundState = 2) && (Parent, Var(14) = 1)
+trigger1		= (P2Name = "[Necromancer's] The Necromancer") || (P2Name = "[Necromancer's] Intangir")
+trigger2		= (P2Name = "Broli") || (P2Name = "Broli Remix ver1.2") || (P2Name = "Broli ver1.2")
+value			= S0,23
+loop			= 1
+abspan		= 0
+persistent		= 0
+
+;Goku's Theme music (Temporarely using Piccolo's)
+[State 9700:	PlaySnd]
+type			= PlaySnd
+triggerall		= (RoundState = 2) && (Parent, Var(14) = 1)
+trigger1		= (P2Name = "Goku") || (P2Name = "Willoughby Jackson's Son-Goku") || (P2Name = "Goku Super Sayajin 2 by ribeiro")
+trigger2		= (P2Name = "SON GOKU") || (P2Name = "Goku-n-hd by EmuBoarding")
+value			= S0,22
+loop			= 1
+abspan		= 0
+persistent		= 0
+
+;---------------------------------------------------------------------------
+;Cape Effect
+[Statedef 9710]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9710
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 5
+
+[State 9710:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= NoShadow
+
+[State 9710:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9710:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9710:	DestroySelf]
+type			= DestroySelf
+trigger1		= AnimTime = 0
+
+;---------------------------------------------------------------------------
+;AdvGuard (Pusher)
+[Statedef 9720]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9720
+;velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 9720: 	VelSet]
+type 			= VelSet
+trigger1 		= Time = 0
+x 			= 30
+
+[State 9720: 	PlayerPush]
+type 			= PlayerPush
+trigger1 		= 1
+value 		= 1
+
+[State 9720: 	NotHitBy]
+type 			= NotHitBy
+trigger1 		= 1
+value 		= SCA
+time 			= 1
+
+[State 9720: 	DestoySelf]
+type 			= DestroySelf
+trigger1 		= Time = 20
+
+;---------------------------------------------------------------------------
+;Flame Effect
+[Statedef 9730]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9730
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 1
+
+[State 9730:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= NoShadow
+flag2			= Invisible
+
+[State 9730:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9730:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9730:	BindToParent]
+type			= BindToParent
+trigger1		= 1
+time			= 1
+pos			= 0,0
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power < 1000
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100,100,100
+trans 		= add1
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [1000,1999]
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 110,110,110
+trans 		= add1
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [2000,2999]
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 120, 120, 120
+trans 		= add1
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [3000,3999]
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 130, 130, 130
+trans 		= add1
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [4000,4999]
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 140, 140, 140
+trans 		= add1
+
+[State 9730: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power >= 5000
+time 			= 5
+framegap 		= 1
+length 		= 2
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 150, 150, 150
+trans 		= add1
+
+[State 9730:	DestroySelf]
+type			= DestroySelf
+trigger1		= ((IsHelper(8160)) && (Parent, StateNo != 8160)) || ((IsHelper(6030)) && (Time > 200)) || ((IsHelper(3000)) && (Parent, StateNo != 3000))
+trigger2		= ((IsHelper(8240)) && (Time > 65)) || ((IsHelper(3010)) && (Parent, StateNo != 3010))
+
+;---------------------------------------------------------------------------
+;Kakikesu Barrier
+[Statedef 9740]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9740
+;velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 9740:	HitOverride]
+type			= HitOverride
+trigger1		= 1
+slot			= 0
+attr			= SCA, AA, AP, AT
+stateno		= 9740
+time			= 1
+forceair		= 0
+
+[State 9740:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 1
+
+[State 9740:	VelSet]
+type			= VelSet
+trigger1		= Time = 0
+x			= 10
+
+[State 9740:	DestroySelf]
+type			= DestroySelf
+trigger1		= Time = 40
+
+;---------------------------------------------------------------------------
+;Sonic Boom
+[Statedef 9750]
+type 			= A
+movetype		= I
+physics		= N
+anim			= 9750
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 3
+
+[State 9750:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= NoShadow
+
+[State 9750:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9750:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9750: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 15
+framegap 		= 2
+length 		= 10
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 70, 70, 70
+trans 		= add
+
+[State 9750:	DestroySelf]
+type			= DestroySelf
+trigger1		= AnimTime = 0
+
+;---------------------------------------------------------------------------
+;Energy Charge Effect
+[Statedef 9760]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9760
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 3
+
+[State 9760:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= NoShadow
+
+[State 9760:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9760:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9760:	BindToParent]
+type			= BindToParent
+trigger1		= (IsHelper(3000)) && (Parent, StateNo = 3000)
+time			= 1
+pos			= -14,-65
+
+[State 9760:	BindToParent]
+type			= BindToParent
+trigger1		= (IsHelper(3010)) && (Parent, StateNo = 3010)
+time			= 1
+pos			= 10,-55
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power < 1000
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100,100,100
+trans 		= add1
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [1000,1999]
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 110,110,110
+trans 		= add1
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [2000,2999]
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 120, 120, 120
+trans 		= add1
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [3000,3999]
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 130, 130, 130
+trans 		= add1
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power = [4000,4999]
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 140, 140, 140
+trans 		= add1
+
+[State 9760: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Parent, Power >= 5000
+time 			= 15
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 150, 150, 150
+trans 		= add1
+
+[State 9760:	DestroySelf]
+type			= DestroySelf
+trigger1		= ((IsHelper(3000)) && (Parent, StateNo != 3000)) || (IsHelper(3010)) && (Parent, StateNo != 3010)
+
+;---------------------------------------------------------------------------
+;Makankosappo (Head) - Effects creator
+[Statedef 9770]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 907
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 9770:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= Invisible
+flag2			= NoShadow
+
+[State 9770:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9770:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9770:	MakeDust]
+type			= MakeDust
+trigger1		= Parent, Pos Y >= 0
+pos 			= 0,72
+spacing 		= 3
+
+[State 9770:	VelSet]
+type			= VelSet
+trigger1		= Time = 0
+x			= 8
+y			= 0
+
+[State 9770: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 20
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100, 100, 100
+trans 		= add
+
+[State 9770:	DestroySelf]
+type			= DestroySelf
+trigger1 		= Parent, ProjContactTime(3001) <= 5
+
+;---------------------------------------------------------------------------
+;Makankosappo (Screw) - Effects creator
+[Statedef 9771]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 906
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 9771:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= Invisible
+flag2			= NoShadow
+
+[State 9771:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9771:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 1
+
+[State 9771:	VelSet]
+type			= VelSet
+trigger1		= Time = 0
+x			= 8
+y			= 0
+
+[State 9771: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 100
+framegap 		= 5
+length 		= 60
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100, 100, 100
+trans 		= add
+
+[State 9771:	DestroySelf]
+type			= DestroySelf
+trigger1 		= Parent, NumProjID(3001) = 0
+
+;---------------------------------------------------------------------------
+;Makankosappo Shoot Effect
+[Statedef 9780]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9780
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 1
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 3
+
+[State 9780:	AssertSpecial]
+type			= AssertSpecial
+trigger1		= 1
+flag			= NoShadow
+
+[State 9780:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9780:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9780:	BindToParent]
+type			= BindToParent
+trigger1		= (IsHelper(3001)) && (Parent, StateNo = 3001)
+time			= 1
+pos			= 52,-61
+
+[State 9780:	DestroySelf]
+type			= DestroySelf
+trigger1		= (IsHelper(3001)) && (Parent, StateNo != 3001)
+
+;---------------------------------------------------------------------------
+;Horizontal Kick - Flame Effect
+[Statedef 9790]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9790
+velset		= 0,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 4
+
+[State 9790:	AssertSpecial]
+type			= AssertSpecial
+trigger1 		= 1
+flag			= NoShadow
+
+[State 9790:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9790:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9790:	BindToParent]
+type			= BindToParent
+trigger1		= (IsHelper(1040)) && (Parent, StateNo = 1040)
+time			= 1
+pos			= 41,-62
+
+[State 9790: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 100
+framegap 		= 2
+length 		= 60
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 150, 150, 150
+trans 		= add
+
+[State 9790:	DestroySelf]
+type			= DestroySelf
+trigger1 		= (Parent, AnimElem = 3) || (Parent, AnimElem = 6) || (Parent, StateNo != 1040)
+
+;---------------------------------------------------------------------------
+;Gekiretsukodan Shoot Effect
+[Statedef 9800]
+type 			= S
+movetype		= I
+physics		= N
+anim			= 9800
+velset		= 12,0
+ctrl			= 0
+poweradd		= 0
+juggle		= 0
+facep2		= 0
+hitdefpersist	= 0
+movehitpersist	= 0
+hitcountpersist	= 0
+sprpriority		= 2
+
+[State 9800:	AssertSpecial]
+type			= AssertSpecial
+trigger1 		= 1
+flag			= Invisible
+flag2			= NoShadow
+
+[State 9800:	NotHitBy]
+type			= NotHitBy
+trigger1		= 1
+value			= SCA
+
+[State 9800:	PlayerPush]
+type			= PlayerPush
+trigger1		= 1
+value			= 0
+
+[State 9800:	MakeDust]
+type			= MakeDust
+trigger1		= Parent, Pos Y >= 0
+pos 			= 0,64
+spacing 		= 3
+
+[State 901: 	AfterImage]
+type 			= AfterImage
+trigger1 		= Time = 0
+time 			= 20
+framegap 		= 2
+length 		= 15
+paladd 		= 0, 0, 0
+palmul 		= .50, .50, .50
+palcontrast 	= 100, 100, 100
+trans 		= add
+
+[State 9800:	DestroySelf]
+type			= DestroySelf
+trigger1 		= Parent, ProjContactTime(0) <= 5
+
+;--------------------
+;"Hidden" Disclaimer:
+;--------------------
+
+;========================================================================
+;If you bought this character from an auction, or from any person 
+;whosoever, you've been ripped off. As far as I'm concerned, Mugen 
+;is 100% free. 
+;Mugen can be downloaded from Elecbyte: http://www.elecbyte.com
+;========================================================================

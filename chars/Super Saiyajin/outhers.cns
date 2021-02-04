@@ -1,0 +1,214 @@
+; LOSE (Time over)
+[Statedef 170]
+type = S
+ctrl = 0
+anim = 5300
+velset = 0,0,0
+
+[State 170, 1]
+type = NotHitBy
+trigger1 = Time >= 0
+value = SCA
+time = 1
+
+[State 170, 2]
+type = playsnd
+trigger1 = time = 0
+value = 170, 0
+
+;---------------------------------------------------------------------------
+; WIN
+[Statedef 180]
+type = S
+
+[State 180, 1] ;Vitoria Normal 
+type = ChangeState
+triggerall = var(1) = 0 
+trigger1 = Time = 0 
+trigger1 = Win = 1 
+value = 181 ; Estado da Pose de Vitoria 
+
+[State 180, 1] ;Vitoria Normal 
+type = ChangeState
+triggerall = var(1) = 1
+trigger1 = Time = 0 
+trigger1 = Win = 1 
+value = 181 ; Estado da Pose de Vitoria 
+
+[State 180, 1] ;Vitoria Normal 
+type = ChangeState
+triggerall = var(1) = 2
+trigger1 = Time = 0 
+trigger1 = Win = 1 
+value = 183 ; Estado da Pose de Vitoria 
+
+[State 180, 1] ;Vitoria Normal 
+type = ChangeState
+triggerall = var(1) = 3
+trigger1 = Time = 0 
+trigger1 = Win = 1 
+value = 1833 ; Estado da Pose de Vitoria 
+
+[State 180, 1] ;Final 
+type = ChangeState 
+trigger1 = Time = 0 
+trigger1 = Win = 0 
+value = 182 ; Estado do Final 
+
+;---------------------------------------------------------------------------
+; WIN1
+[Statedef 181]
+type = S
+ctrl = 0
+velset = 0,0,0
+
+[State 181, 1]
+type = changeanim
+triggerall = var(1) = 0
+trigger1 = time = 0
+value = 181
+
+[State 181, 1]
+type = changeanim
+triggerall = var(1) = 1
+trigger1 = time = 0
+value = 181
+
+[State 181, 2]
+type = velset
+trigger1 = time > 10
+y = -4
+
+[State 181, 3]
+type = velset
+trigger1 = time = [33, 93]
+y = 0
+
+[State 181, 3]
+type = velset
+trigger1 = time > 93
+y = 4
+
+[State 181, 0]
+type = AssertSpecial
+trigger1 = time = [0,250]
+flag = roundnotover
+
+[State 181, 4]
+type = velset
+trigger1 = vel y > 0
+trigger1 = pos y = 0
+y = 0
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = Time >= 0
+value = SCA
+time = 1
+
+;---------------------------------------------------------------------------
+; WIN3
+[Statedef 183]
+type = S
+ctrl = 0
+velset = 0,0,0
+anim = 183
+
+[State 183, 0]
+type = AssertSpecial
+trigger1 = time = [0,350]
+flag = roundnotover
+
+[State 183, 1]
+type = NotHitBy
+trigger1 = Time >= 0
+value = SCA
+time = 1
+
+[State 183, 2]
+type = varset
+trigger1 = time >= 0
+v = 1
+value = 2
+
+; WIN4
+[Statedef 1833]
+type = S
+ctrl = 0
+velset = 0,0,0
+anim = 1833
+
+[State 183, 0]
+type = AssertSpecial
+trigger1 = time = [0,350]
+flag = roundnotover
+
+[State 183, 1]
+type = NotHitBy
+trigger1 = Time >= 0
+value = SCA
+time = 1
+
+[State 183, 2]
+type = varset
+trigger1 = time >= 0
+v = 1
+value = 2
+
+;---------------------------------------------------------------------------
+; INTRO
+[Statedef 191]
+type = S
+ctrl = 0
+anim = 190
+velset = 0,0,0
+
+[State 191, 1] ;Freeze animation until PreIntro is over
+type = ChangeAnim
+trigger1 = RoundState = 0
+value = 190
+
+[State 191, 2] ;Assert this until you want "round 1, fight" to begin
+type = AssertSpecial
+trigger1 = time = [0, 200]
+flag = Intro
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9201
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9202
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9220
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9221
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9230
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9222
+
+[State 191, 3]
+type = removeexplod
+trigger1 = time > 0
+id = 9231
+
+[State 191, 3]
+type = powerset
+trigger1 = time = 0
+value = 500

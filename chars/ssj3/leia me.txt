@@ -1,0 +1,157 @@
++====================================================+
+|   _    _                    _    _		     |
+|  | \__/ |_   _  ____  ____ | \  | |                |
+|  |      | | | |/ ___|/ __ \|  \ | |                |               
+|  | |\/| | | | | |  _|  ___/| \ \| |                |
+|  | |  | | |_| | |_| | |___ | |\ \ |                |
+|  |_|  |_|\____|\____|\____||_| \__|                |
+|						     |
+|  =============--- Dragon Ball Z ---==============  |
+| 						     |
++====================================================+
+| Dragon Ball Z - Personagens para o M.U.G.E.N.      |
++====================================================+
+| NOME: GokuSSJ3 tamanho reduzido                    |
++====================================================+
+| VERSÃO: 1.4 - 95.5% BR Version (BETA-2)            |
++====================================================+
+| VERSÃO do M.U.G.E.N.: WINMUGEN                     |
++====================================================+
+| Data da Versão: 04 de jANEIRO de 2006              |
++====================================================+
+| Produzido por NARIGÂO&DG                           |
+| Riped: NARIGÂO                                     |
+| Edit Sprites: DG                                   |
+| Edit New Sprites DG                                |
+| Riped Game: Based in Goku SSJ3 fom DBZUB 27 (PSX)  |
+| Sound Riped: DG                                    |
+| Edição de Imagens: DG                              |
+| Programação: Narigão                               |
+| Programação Final e Revisão:DG                     |
++====================================================+
+| Agradecimentos: 				     |
+| 					             |
+| 1ª A Bandai por ter feito os jogos da série DBZ.   |
+| 2ª A Elecbyte (c)2000 por desenvolvimento do       |
+| incomparavel M.U.G.E.N.			     |
+| 3º BARDOCK - Pelo movimento de vôo. 		     |
+| 4º BARDOCK - Pelo belo Magin Vegeta,  e o Gojussj2 |		     |
+| 5º E pra galera do Forum Free & Oarugoten          |
+| 7º Ao Warusaki3 e Big Eli Kingque está fazendo     |
+| vários golpes que                                  |
+| servem para vários chars de DBZ! Valeu pessoal!    |
++====================================================+
+| Como instalar o Goku ssj3???	             |
++""""""""""""""""""""""""""""""""""""""""""""""""""""+
+|						     |
+| É Fácil, apenas descompacte os arquivos para a sua |
+| pasta "CHARS". O própio Win Zip 8 vai criar a      |
+| pasta ssj3, se ele não criar crie e coloque os     | 
+| arquivos dento da pasta ssj3   depois va na pasta  |
+| "DATA" e| edite o arquivo "select.def"com o NotPad |
+| do Windows hehehe. Logo de cara você vai           |   |
+| ver uma linha -> "[CHARACTERS]", logo abaixo dela  |
+| adicione a linha:		   		     |			     
+|						     | 
+| ssj3, stages\nome_do_cenário.def                   |
+|                                                    |
+| "OU APENAS"                                        |
+|                                                    |
+| ssj3,	                                             |
+|                                                    |			             
+|não se esqueça o mugen ignora o ";"ponto e virgula  |
+|então tudo que for ser ignorado coloque o ponto e   |
+|virgula";" antes da frase, se deixar ponto e virgula|
+|antes do ssj3 ele será ignorado e não será instalado|						     
++-------------------------------- -------------------+ 
+| Então deve ficar assim com cenário embutido:       |
++""""""""""""""""""""""""""""""""""""""""""""""""""""+ 
+| [CHARACTERS]	                                     |
+|					             |
+| ssj3,stages\nome_do_cenário.def		     |
+| 					             |
++----------------------------------------------------+ 
+| Ou assim com cenário aléatorio:		     |
++""""""""""""""""""""""""""""""""""""""""""""""""""""+
+| [CHARACTERS]					     |
+|						     |
+| ssj3,					             |
+|			                             |
++----------------------------------------------------+
+| Fácil não?                                         | 
++====================================================+
+| Golpes do Goku Normal HD: 		             |
++""""""""""""""""""""""""""""""""""""""""""""""""""""+
+| SIGLAS:					     |		
+| 						     |
+| B   = Baixo					     |
+| DIE = Diagonal Inferior Esquerda		     |
+| DID = Diagonal Inferior Direita		     |
+| E   = Esquerda			             |
+| D   = Direita					     |
+| C   = Cima					     |
+| DSE = Diagonal Superior Esquerda		     |
+| DSD = Diagonal Superior Direita		     |
+|						     |
+| * Golpes que podem ser executados durante o vôo.   |
+| **Golpes que só podem ser executados durante o vôo.|
++""""""""""""""""""""""""""""""""""""""""""""""""""""+ 
+| GOLPES NORMAIS:				     |
+|						     |
+| *Soco Fraco: a     				     |
+| *Soco Médio: b        		             |
+| *Soco Forte: c   				     |
+| *Chute Fraco: x    				     |
+| *Chute Medio: y   				     |
+| *Chute Forte: z  	                             |
+|   				                     | 
+| *Carregar Power Bar: a + x    		     |
+| *Voar: b + y                                       |
+| *teleport pra Frente: D, D                         |
+| *telepor pra Traz: E, E                            |
+| **Corrida pra Cima: C, C 			     |
+| **Corrida pra Baixo: B, B 			     |
+| teletransporte: Start + qualquer diração	     |
++""""""""""""""""""""""""""""""""""""""""""""""""""""+ 
+| ESPECIAIS:					     |
+|  						     |
+|quase tudo dá para emendar, por ex bbb,aaa,zzz,...  |
+|xxzzyyzz como no mk3                                |
+| Sequencias : D, DF, F, b                           |
+| Sequencia de dbz : D, DB, B, x                     |
+| Sequencia de porrada seguida de soco : D, DB, B, c |
+| fireballcima: E, D, aou b ouc                      |
+| Fireball frente: E, D x ou y ou z aperete o botão  |
+| para continuar                                     |  
+| Descubram o resto sozinhos                         | 
++""""""""""""""""""""""""""""""""""""""""""""""""""""+
+| SUPERS:					     |
+|						     |
+| *Kamehame-Ha: B, DID, B, DID, + c ou b ou a+b      |
+| *Cho Kamehame-Ha: B, DIE, E, D, + a ou b ou c      |
+| *Jink Dami: segure c+z não solte até ouvir um som  |
+| então aperte x,x,x rapidamente para ataca-lá       |
+| Ultra combo: B, DID, B, DID x ou y ou z            |
+| Ultra combo2 : B, DIE, B, DIE x ou y ou z          | 
+| Descubram o resto sozinhos                         |
++====================================================+
+| Proxima versão:				     |
+|				                     |
+| Não tem não farei mais nenhum acabou minhas férias |                    |
+| e tenho que trabalhar...a menos queeu ganhe na Mega| 
+| Sena hehehehheheehehehehehehe                      |
++====================================================+
+| Comentários:					     |
+|para colocar no tamanho original edite ssj3.cns     |
+|com o bloco de notas do windows e edite as primeiras|
+|linas localizando-as alterando-as                   |
+|[Size]                                              |
+|xscale = .87           ;Horizontal scaling factor.  |
+|yscale = .87       ;Vertical scaling factor.        |
+|                                                    |
+|e ao invés de ".87" coloque "1"                     |
++=================================+==================+
+				  |TXT By Narigão    |
+				  +==================+
+
+faltou 2 golpes, paletas e uma catada..	

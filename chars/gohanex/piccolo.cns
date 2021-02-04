@@ -1,0 +1,271 @@
+; Piccolo by ...???... Helper constants.
+; Format (case insensitive):
+; [groupname]        
+; constname = "value"
+
+;---------------------------------------------------------------------------
+; Piccolo Vem 
+[Statedef 10020]
+type = S
+movetype = I
+physics = N
+anim = 9020
+velset = 4.5,0 
+ctrl = 0
+ 
+[State 9500, 1]
+type = HitOverride
+trigger1 = time = 0
+time = -1
+attr = SCA, AA, AT, AP
+slot = 0
+stateno = 10023
+ 
+[State 9500, 2]
+type = sprpriority
+trigger1 = Time = 0
+value = 2
+ 
+[State 9500, 4]
+type = ChangeState
+trigger1 = RootDist X <= 30
+value = 10022
+
+[State 9500, 5]
+type = VelSet
+trigger1 = RootDist X <= 30
+x = 0
+y = 0
+
+;---------------------------------------------------------------------------
+; Piccolo solta Special Beam Cannon
+[Statedef 10022]
+type = S
+movetype = A
+physics = S
+anim = 9022
+velset = 0,0
+ctrl = 0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 1001,0
+
+[State 9500, 1] 
+type = Explod
+trigger1 = AnimElem = 1
+anim = F101
+pos = -10,-60
+postype = P1
+sprpriority = 5
+removeongethit = 1
+bindtime = 1
+supermove = 1
+ownpal = 1
+
+[State 3000, 1];fundo  
+type = Explod
+trigger1 = AnimElem = 1
+id = 9002
+anim = 9002
+pos = 0,0
+postype = back
+sprpriority = -999
+removeongethit = 1
+removetime = -1
+bindtime = -1
+supermove = 1
+ownpal = 1
+
+[State 3000, 1] 
+type = RemoveExplod
+trigger1 = AnimElem = 2
+ID = 9002
+
+[State 9500, 1]
+type = HitOverride
+trigger1 = time = 0
+time = -1
+attr = SCA, AA, AT, AP
+slot = 0
+stateno = 10023
+ 
+[State 9501, 2]
+type = sprpriority
+trigger1 = Time = 0
+value = 2
+
+[State 3000, 4]
+type = Projectile
+trigger1 = AnimElem = 3
+projanim = 6996
+projhitanim = 6996
+projhits = 20
+projmisstime = 4
+projremanim = 6996
+projshadow = -1
+projpriority = 30
+projremovetime = 150
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projid = 6996
+velocity = 0.001,0.001
+offset = 60,-59
+attr = S, HP
+damage   = 10,10
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 1,5
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -10,-2
+air.animtype = Back
+air.velocity = -10,-2
+air.recover = 0
+air.fall = 1
+down.velocity = -10
+down.hittime = 30
+down.bounce = 1
+fall = 1
+fall.recover = 0
+
+[State 9501, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 10021
+
+;---------------------------------------------------------------------------
+; PIccolo Vaza após o Special Beam Cannon
+[Statedef 10021]
+type = S
+movetype = I
+physics = N
+anim = 9021
+velset = -4.5,0
+
+[State 3000, power]
+type = VarAdd
+trigger1 = time = 1
+v = 11
+value = -3000
+
+[State 9507, 3]
+type = Veladd
+trigger1 = Time > 0
+x = 0
+y = 0
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = win = 1
+value = 10026
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = Lose = 1
+value = 10026
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = lose = 1
+value = 10027
+
+[State 9507, 3]
+type = DestroySelf
+trigger1 = BackEdgeBodyDist < -35
+
+;---------------------------------------------------------------------------
+; Piccolo é acertado
+[Statedef 10023]
+type = A
+movetype = I
+physics = N
+anim = 9023
+velset = -4,-4,0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 12,2
+ 
+[State 9506, 1]
+type = Gravity
+trigger1 = time >= 0
+ 
+[State 9506, 2]
+type = ChangeState
+trigger1 = Pos Y >= -1
+trigger1 = Pos Y > 0
+value = 10024
+
+;---------------------------------------------------------------------------
+; Piccolo morto 
+[Statedef 10024]
+type = S
+movetype = I
+physics = N
+anim = 9024
+velset = 0,0
+
+[State 9507, 1]
+type = Gravity
+trigger1 = Time >= 32
+
+[State 9506, 2]
+type = ChangeState
+trigger1 = animTime = 0
+value = 10025
+
+;---------------------------------------------------------------------------
+; Piccolo levanta e sai
+[Statedef 10025]
+type = S
+movetype = I
+physics = N
+anim = 9025
+velset = 0,0
+
+[State 9506, 2]
+type = ChangeState
+trigger1 = animTime = 0
+value = 10021
+
+;---------------------------------------------------------------------------
+; Piccolo vence 
+[Statedef 10026]
+type = S
+movetype = I
+physics = N
+anim = 9027
+velset = 0,0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 111,2
+ 
+[State 9507, 3]
+type = DestroySelf
+trigger1 = animTime = 0
+
+;---------------------------------------------------------------------------
+; Piccolo perde
+[Statedef 10027]
+type = S
+movetype = I
+physics = N
+anim = 9026
+velset = 0,0
+
+[State 9507, 3]
+type = DestroySelf
+trigger1 = animTime = 0
+
+

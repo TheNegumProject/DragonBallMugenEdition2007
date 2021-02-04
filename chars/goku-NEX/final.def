@@ -1,0 +1,112 @@
+
+;---------------------------------------------------------------------------
+; Goku NEX final file by Slayer (rossisambrana@yahoo.com.br)
+;	come to "http://www.mugenable.f2s.com"
+;              "http://www.rpgen.f2s.com"
+;---------------------------------------------------------------------------
+
+
+[SceneDef]
+spr = final.sff
+startscene = 0         ;Starting scene number (for debugging)
+
+[Scene 0]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 0
+bgm = 
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 1]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 1
+bgm = 
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 2]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 2
+bgm =
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 3]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 3
+bgm = 
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 4]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 4
+bgm = 
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 3]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 5
+bgm = 
+bgm.loop = 0                                          
+end.time = 300
+
+[Scene 4]
+fadein.time = 90
+fadein.col = 0,0,0
+fadeout.time = 50
+fadeout.col = 0,0,0
+layer0.offset = 163,-10
+layer0.anim = 6
+bgm = 
+bgm.loop = 0                                          
+end.time = 900
+
+
+[Begin Action 0]
+0,0, 0,0, 300
+
+[Begin Action 1]
+0,1, 0,0, 300
+
+[Begin Action 2]
+0,2, 0,0, 300
+
+[Begin Action 3]
+0,3, 0,0, 300
+
+[Begin Action 4]
+0,4, 0,0, 300
+
+[Begin Action 5]
+0,5, 0,0, 300
+
+[Begin Action 6]
+0,6, 0,0, 900
+
+

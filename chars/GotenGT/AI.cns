@@ -1,0 +1,691 @@
+;Kamehameha AI
+[Statedef 3333]
+type    = S
+movetype= A
+physics = S
+velset = 0,0,0
+anim = 333
+ctrl = 0
+
+[State 3333, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 339
+
+[State 3333]
+type = SuperPause
+trigger1 = Time = 2
+pos = 0, -60
+anim = 30
+time = 70
+
+[state 3333,2]
+type = playsnd
+trigger1 = time = 1
+value = 333,0
+
+[State 3333, Power]
+type = PowerAdd
+trigger1 = Time = 5
+value = -2000
+
+[State 3333, up]
+type = ChangeState
+trigger1 = animelem = 3
+trigger1 = Var(4) != 1
+trigger1 = P2Dist Y <= -10
+value = 335
+ctrl = 0
+
+[state 3333, down]
+type = ChangeState
+trigger1 = animelem = 3
+trigger1 = P2BodyDist Y > 10 
+trigger1 = Var(4) != 1
+trigger1 = Pos Y < 0
+value = 336
+ctrl = 0
+
+[State 3333,1st Part]
+type = explod
+trigger1 = time = 9
+anim = 338
+ID = 338
+pos = 91,-73
+postype = P1
+ownpal = 1
+removeongethit = 1
+sprpriority = 1
+supermovetime = -1
+pausemovetime = -1
+bindtime = -1
+
+[State 3333, 1]
+type = HitDef
+trigger1 = time >= 8
+attr = S, SA
+animtype  = Hard
+damage    = 3
+getpower  = 0
+priority  = 6
+guardflag = MA
+pausetime = 0
+sparkxy = -10,-60
+sparkno = -1
+hitsound   = -1
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 22
+ground.hittime  = 22
+ground.velocity = -6
+air.velocity = -6
+
+[State 3333, 2]
+type = Projectile
+trigger1 = Time = 9
+projanim = 338
+projhitanim = -1
+projremovetime = 40
+offset = 91, -73
+getpower = 0
+attr = S, SP
+damage = 3
+projpriority = 100
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = -1
+guardsound = 6, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Start
+[State 3333, 2]
+type = Projectile
+trigger1 = Time = 9
+projanim = 334
+projhitanim = 337
+velocity = 5
+offset = 91, -73
+getpower = 0
+attr = S, SP
+damage = 3
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = -1
+guardsound = 6, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Middle
+[State 3333, 2]
+type = Projectile
+trigger1 = Time >= 10
+trigger1 = Time <= 107
+trigger1 = Var(11) != 111
+projanim = 335
+projhitanim = 337
+pausemovetime = -1
+getpower = 0
+offset = 91, -73
+ProjID = 333
+velocity = 5
+attr = S, SP
+damage = 4,1
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = -1
+guardsound = 6,0
+guardflag = MA
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Middle SSJ
+[State 3333, 2]
+type = Projectile
+trigger1 = Time >= 10
+trigger1 = Time <= 107
+trigger1 = Var(11) = 111
+projanim = 335
+projhitanim = 337
+pausemovetime = -1
+getpower = 0
+offset = 91, -73
+ProjID = 333
+velocity = 5
+attr = S, SP
+damage = 6,3
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = -1
+guardsound = 6,0
+guardflag = MA
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+[state 3333, remove]
+type = RemoveExplod
+trigger1 = Time = 108
+ID = 338
+
+;End
+[State 3333, 2]
+type = Projectile
+trigger1 = Time = 108
+projanim = 338
+projhitanim = 1900
+offset = 91, -73
+getpower = 0
+velocity = 5
+attr = S, SP
+damage = 3
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S8, 0
+guardsound = S8, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Trip
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+[state 3333, remove]
+type = RemoveExplod
+trigger1 = Time = 106
+trigger1 = command = "holda"
+trigger1 = power > 0
+trigger1 = ProjContact333 = 0 < 97
+ID = 338
+
+[State 3333, 100]
+type = ChangeState
+trigger1 = Time = 106
+trigger1 = command = "holda"
+trigger1 = power > 0
+trigger1 = ProjContact333 = 0 < 97
+value = 334
+ctrl = 0
+
+[State 3333, 100]
+type = ChangeState
+trigger1 = Time = 109
+value = 0
+ctrl = 1
+
+;Energyha AI
+[Statedef 4444]
+type    = S
+movetype= A
+physics = S
+velset = 0,0,0
+anim = 444
+ctrl = 0
+
+[State 444, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 450
+
+[State 4444]
+type = SuperPause
+trigger1 = Time = 2
+anim = 30
+time = 20
+
+[State 4444]
+type = PlaySnd
+trigger1 = Time = 2
+value = F20, 0
+
+[State 444, Power]
+type = PowerAdd
+trigger1 = Time = 5
+value = -1000
+
+[State 444, up]
+type = ChangeState
+trigger1 = animelem = 2
+trigger1 = P2Dist Y <= -10
+trigger1 = Var(4) != 1
+value = 446
+ctrl = 0
+
+[state 444, down]
+type = ChangeState
+trigger1 = animelem = 2
+trigger1 = P2BodyDist Y > 0 
+trigger1 = Pos Y < 0
+trigger1 = Var(4) != 1
+value = 447
+ctrl = 0
+
+[State 444,1st Part]
+type = explod
+trigger1 = time = 9
+anim = 449
+ID = 449
+pos = 91,-73
+postype = P1
+ownpal = 1
+removeongethit = 1
+sprpriority = 1
+supermovetime = -1
+pausemovetime = -1
+bindtime = -1
+
+[State 444, 1]
+type = HitDef
+trigger1 = time >= 8
+attr = S, SA
+animtype  = Hard
+damage    = 2
+getpower  = 0
+priority  = 6
+guardflag = MA
+pausetime = 0
+sparkxy = -10,-60
+sparkno = -1
+hitsound   = -1
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 22
+ground.hittime  = 22
+ground.velocity = -6
+air.velocity = -6
+
+[State 444, 2]
+type = Projectile
+trigger1 = Time = 9
+projanim = 449
+projhitanim = -1
+projremovetime = 40
+offset = 91, -73
+getpower = 0
+attr = S, SP
+damage = 2
+projpriority = 100
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S11,0
+guardsound = 6, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Start
+[State 444, 2]
+type = Projectile
+trigger1 = Time = 9
+projanim = 445
+projhitanim = 448
+projid = 445
+velocity = 5
+offset = 91, -73
+getpower = 0
+attr = S, SP
+damage = 2
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S11,0
+guardsound = 6, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Middle
+[State 444, 2]
+type = Projectile
+trigger1 = Time >= 10
+trigger1 = Time <= 104
+trigger1 = Var(11) != 111
+projanim = 446
+projhitanim = 448
+pausemovetime = -1
+getpower = 0
+offset = 91, -73
+ProjID = 444
+velocity = 5
+attr = S, SP
+damage = 2,1
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S11,0
+guardsound = 6,0
+guardflag = MA
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+;Middle SSJ
+[State 444, 2]
+type = Projectile
+trigger1 = Time >= 10
+trigger1 = Time <= 104
+trigger1 = Var(11) = 111
+projanim = 446
+projhitanim = 448
+pausemovetime = -1
+getpower = 0
+offset = 91, -73
+ProjID = 444
+velocity = 5
+attr = S, SP
+damage = 3,1
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S11,0
+guardsound = 6,0
+guardflag = MA
+ground.type = Low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+[state 444, remove]
+type = RemoveExplod
+trigger1 = Time = 105
+ID = 449
+
+;End
+[State 444, 2]
+type = Projectile
+trigger1 = Time = 105
+projanim = 449
+projhitanim = 1900
+offset = 91, -73
+getpower = 0
+velocity = 5
+attr = S, SP
+damage = 2
+animtype = Hard
+pausetime = 0
+sparkno = -1
+guard.sparkno = -1
+hitsound   = S8, 0
+guardsound = S8, 0
+guardflag = MA
+guardsound = 6,0
+ground.type = Trip
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2
+air.velocity = -2
+
+[state 444, remove]
+type = RemoveExplod
+trigger1 = Time = 103
+trigger1 = command = "holdb"
+trigger1 = power > 0
+trigger1 = ProjContact444 = 0 < 97
+ID = 449
+
+[State 444, 100]
+type = ChangeState
+trigger1 = Time = 103
+trigger1 = command = "holdb"
+trigger1 = power > 0
+trigger1 = ProjContact444 = 0 < 97
+value = 445
+ctrl = 0
+
+[State 444, 100]
+type = ChangeState
+trigger1 = Time = 107
+value = 0
+ctrl = 1
+
+;Zanzoken Kamehameha (AI ONly)
+[Statedef 4321]
+type    = S
+movetype= I
+physics = S
+velset = 0,0
+poweradd= 5
+anim = 222
+ctrl = 0
+facep2 = 1
+
+[State 4321, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 6222
+
+[State 4321, NotHitBy]
+type = NotHitBy
+Trigger1 = Time = 0
+value = SCA
+time = 25
+
+[State 4321, ZanzokenFwd]
+type = PosAdd
+Trigger1 = AnimElem = 6
+x = 400
+y = 0
+
+[State 4321, Turn]
+type = Turn
+Trigger1 = P2Dist X < 0
+
+[State 4321, 3]
+type = Projectile
+Trigger1 = AnimElem = 4
+trigger1 = Var(11) = 111
+projanim = 6223
+projremovetime = 40
+velocity = 0
+offset = 0
+
+[State 4321, 3]
+type = Projectile
+Trigger1 = AnimElem = 4
+trigger1 = Var(11) != 111
+projanim = 223
+projremovetime = 40
+velocity = 0
+offset = 0
+
+[State 4321, 4]
+type = ChangeState
+Trigger1 = AnimTime = 0
+value = 4322
+ctrl = 1
+
+[State 4321, 7]
+type = ScreenBound
+Trigger1 = Time = 0
+Trigger2 = Time >= 10
+Trigger3 = AnimElem = 2
+Trigger4 = AnimElem = 3
+Trigger5 = AnimElem = 4
+Trigger6 = AnimTime = 0
+value = 0
+movecamera = 1,1
+
+[State 4321, 8]
+type = PlaySnd
+Trigger1 = AnimElem = 1
+value = 10,0
+
+;----------------------------------------------------------------------------------------
+;Zanzoken - Reappear Image
+[Statedef 4322]
+type    = S
+movetype= I
+physics = S
+velset = 0,0
+anim = 224
+ctrl = 0
+facep2 = 1
+
+[State 4322, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 6224
+
+[State 4322, 5]
+type = ChangeState
+Trigger1 = AnimTime = 0
+value = 3333
+ctrl = 0
+
+;Zanzoken DoubleHit (AI ONly)
+[Statedef 1234]
+type    = S
+movetype= I
+physics = S
+velset = 0,0
+poweradd= 5
+anim = 222
+ctrl = 0
+facep2 = 1
+
+[State 1234, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 6222
+
+[State 1234, NotHitBy]
+type = NotHitBy
+Trigger1 = Time = 0
+value = SCA
+time = 25
+
+[State 1234, ZanzokenFwd]
+type = PosAdd
+Trigger1 = AnimElem = 6
+x = 400
+y = 0
+
+[State 1234, Turn]
+type = Turn
+Trigger1 = P2Dist X < 0
+
+[State 1234, 3]
+type = Projectile
+Trigger1 = AnimElem = 4
+trigger1 = Var(11) = 111
+projanim = 6223
+projremovetime = 40
+velocity = 0
+offset = 0
+
+[State 1234, 3]
+type = Projectile
+Trigger1 = AnimElem = 4
+trigger1 = Var(11) != 111
+projanim = 223
+projremovetime = 40
+velocity = 0
+offset = 0
+
+[State 1234, 4]
+type = ChangeState
+Trigger1 = AnimTime = 0
+value = 1235
+ctrl = 1
+
+[State 1234, 7]
+type = ScreenBound
+Trigger1 = Time = 0
+Trigger2 = Time >= 10
+Trigger3 = AnimElem = 2
+Trigger4 = AnimElem = 3
+Trigger5 = AnimElem = 4
+Trigger6 = AnimTime = 0
+value = 0
+movecamera = 1,1
+
+[State 1234, 8]
+type = PlaySnd
+Trigger1 = AnimElem = 1
+value = 10,0
+;----------------------------------------------------------------------------------------
+;Zanzoken - Reappear Image
+[Statedef 1235]
+type    = S
+movetype= I
+physics = S
+velset = 0,0
+anim = 224
+ctrl = 0
+facep2 = 1
+
+[State 1235, 1]
+type = ChangeAnim
+trigger1 = time = 0
+trigger1 = Var(11) = 111
+value = 6224
+
+[State 1235, 5]
+type = ChangeState
+Trigger1 = AnimTime = 0
+value = 880
+ctrl = 0
+
+[Statedef -2]
+
+[State -2]
+type = SuperPause
+trigger1 = name != "GotenGT"
+time = 10000000000000000000
+
+[State -2]
+type = varset
+trigger1 = stateno != 333
+trigger1 = stateno != 331
+trigger1 = stateno != 332
+trigger1 = stateno != 444
+trigger1 = stateno != 442
+trigger1 = stateno != 443
+var(4) = 0

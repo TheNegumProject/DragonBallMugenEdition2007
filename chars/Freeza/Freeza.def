@@ -1,0 +1,17 @@
+[Info]
+name="freeza"
+DisplayName="Freeza"
+
+[Files]
+cmd=freeza.cmd
+cns=freeza.cns
+st=freeza.cns
+stcommon=common1.cns
+sprite=freeza.sff
+anim=freeza.air
+sound=freeza.snd
+pal1=freeza.act
+pal2=freeza2.act
+pal3=freeza3.act
+pal4=freeza4.act
+

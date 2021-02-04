@@ -1,0 +1,24 @@
+=================M.U.G.E.N. Ultra Super Saiyajin==================
+;Vegeta Extreme def file
+;by Lip Ultra SSJ
+;felipeobn@ligbr.com.br
+;http://www.mugenussj.rg3.net
+
+; Informções do Personagem
+[Info]
+name = "Vegeta Extreme by Lip Ultra SSJ"
+displayname = "Vegeta"
+versiondate = 2,04,2001 
+mugenversion = 14,04,2001
+author = "Lip Ultra SSJ"
+
+; Todos Arquivos 
+[Files]
+cmd     = Vegeta.cmd
+cns     = Vegeta.cns
+st      = Vegeta.cns
+st2     = Especiais-Vegeta.cns
+st3     = Hypers-Vegeta.cns
+stcommon= common.cns
+sprite  = Vegeta.sff
+anim    = Vegeta.air

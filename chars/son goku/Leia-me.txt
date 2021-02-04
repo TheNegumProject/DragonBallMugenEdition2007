@@ -1,0 +1,68 @@
+##########################################################################
+# M #                   WWW.MUGENLIVE.HPG.COM.BR                     # M #
+# U ###########################BY_METAL-MIND########################## U #
+# G #                     O MELHOR "GOKU" JA FEITO                   # G #
+# E #COM TODOS OS NIVEIS EXISTENTE EM DB (NORMAL,SSJ,SSJ2,SSJ3,SSJ4) # E #
+# N ################################################################## N #
+#   #                          DESCRIÇÃO                             #   #
+# L ################################################################## L #
+# I #1 - Ficha                                                       # I #
+# V #2 - Golpes                                                      # V #
+# E #3 - Novidades                                                   # E #
+#   #4 - Agradecimento                                               #   #
+# - ################################################################## - #
+#   # 1 - FICHA                                                      #   #
+# B ################################################################## B #
+# Y #NOME      = Son Goku By Metal-Mind                              # Y #
+#   #DISPLAY   = Son Goku                                            #   #
+# M #VERSÂO    = 85%  - Beta                                         # M #
+# E #AUTOR     = METAL-MIND                                          # E #
+# T #HOME PAGE = WWW.MUGENLIVE.HPG.COM.BR ou WWW.MUGENLIVE.RG3.NET   # T #
+# A ################################################################## A #
+# L # 2 - GOLPES                                                     # L #
+#   ##################################################################   #
+# M #                                                                # M #
+# I #F  = Frente                                                     # I #
+# N #                                                                # N #
+# D #D  = Baixo                                                      # D #
+#   #                                                                #   #
+# - #B  = Traz                                                       # - #
+#   #                                                                #   #
+#   #U  = Pulo                                                       #   #
+# w #                                                                # w #
+# w #DF = Baixo e Frente                                             # w #
+# w #                                                                # w #
+# . #DB = Baixo e Traz                                               # . #
+# m #                                                                # m #
+# u #UB = Pulo e Traz                                                # u #
+# g #                                                                # g #
+# e #UF = Pulo e Frente                                              # e #
+# n #                                                                # n #
+# l #obs: os botões te de ser apertados juntos                       # l #
+# i #                                                                # i #
+# v #a, b, c, x, y, z, start = Botões...                             # v #
+# e ################################################################## e #
+# . #3 - NOVIDADES                                                   # . #
+# r ################################################################## r #
+# g #Fiz alguns golpes a mais e são eles:                            # g #
+# 3 #                                                                # 3 #
+# . #-GOlPES DE DBZHD                                                # . #
+# n #-OS NIVEIS                                                      # n #
+# e #-UMA APELAÇÃO COM DIFICULDADE 20 NO MUGEN                       # e #
+# t #                                                                # t #
+#   ##################################################################   #
+#   #4 - AGRADECIMENTO                                               #   #
+#   ##################################################################   #
+#   #MCM - por ter me possibilitado a fazer meu char                 #   #
+#   #MUGENERATOR - por ter ajudado a fazer meu char                  #   #
+#   #ELECBYTE - por ter criado o mugen                               #   #
+#   #HPG - pela Hospedagem                                           #   #
+#   #DENIS FERRO - por testar o Son Goku                             #   #
+#   #PHEMAS SAJ - por testar o Son Goku                              #   #
+#   #VEGETTO SSJ6 - por testar o Son Goku                            #   #
+#   ##################################################################   #
+#   #                     O MELHOR "GOKU" JA FEITO                   #   #
+#   #COM TODOS OS NIVEIS EXISTENTE EM DB (NORMAL,SSJ,SSJ2,SSJ3,SSJ4) #   #
+#   ##################################################################   #
+#   #                    WWW.MUGENLIVE.HPG.COM.BR                    #   #
+##########################################################################

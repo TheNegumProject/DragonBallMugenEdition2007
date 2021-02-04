@@ -1,0 +1,59 @@
+|-Chiaotzu's Moves------------------------------------------------------------------
+Version 3.1
+Character made by Goten88 a.k.a. Pextin www.goten88.shorturl.com
+|-Basics----------------------------------------------------------------------------
+
+a   = Punch
+b   = Punch
+c   = Ki Blast(hold up or down for it to move in directions)
+x   = Kick
+y   = High Kick
+z   = Uppercut
+
+|-Specials--------------------------------------------------------------------------
+
+Fly or Land        - a+x
+Charge Ki          - x+y
+Zanzoken           - y+z - (Hold it and press any direction.)
+Deflection         - a+b  (Stops any projectile}
+Beam Counter       - b+y - After doing counter hold a to make beam longer
+Ki Rush            - B,F,x
+Dodonpa            - D,DF,F, x (Need 1000 Power,If and only if in a Beam War. Hold a to go longer
+1 2 Combo          - B,F,y  (Uppercut & Takedown)
+Trip               - F,B,y
+Small Combo        - D,DB,B, c
+Backround Jump     - F,B,a
+Spinning HeadButt  - D,DF,F, a (Need 1000 Power)
+Dashing Punch      - D,DB,B, a
+Psychic Smash      - B,F,b (Need 1000 Power)
+Psychic Seek Ball  - D,DF,F, b
+Combo 1            - D,DB,B, z
+
+|-Supers Moves---------------------------------------------------------------------
+
+Self Destruct     - D, DF, F, D, DF, F, c  (Need 3000 Power)
+
+
+Special thanks to:
+
+Akira Toriyama - For creating Dragonball Z
+
+Bandai - For the Cell Jr sprites from Super Butouden 2 that I edited into Chiaotzu
+
+Elecbyte - For making Mugen
+
+Detah - For help
+
+Necro - For help
+ 
+Insydious - For help on new sprites, fx & hidden stuff
+
+DBZPD - For assisting me on sprites
+
+Mystic Piccolo - For nice effects, that I may have or not have used 
+
+Trigga - For helpin to think of moves 
+
+3Libras - For giving me some sweet sounds
+
+and anyone else I can't think of who helped me.

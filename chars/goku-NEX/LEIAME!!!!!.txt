@@ -1,0 +1,146 @@
+ _    _                    _    _		    
+| \__/ |_   _  ____  ____ | \  | |
+|      | | | |/ ___|/ __ \|  \ | |
+| |\/| | | | | |  _   ___/| \ \| |
+| |  | | |_| | |_| | |___ | |\ \ |
+|_|  |_|\____|\____|\____||_| \__|
+
+					-=Character=-
+				       -=Personagem=-
+
+IRC: brasnet
+nick: {_Slayer_}
+
+
+BY SLAYER  rossisambrana@yahoo.com.br
+http://www.mugenable.cjb.net
+http://www.paodemugen.cjb.net
+
+Personagem :
+
+					Goku NEX 100%  BETA
+
+
+Autor do Personagem para mugen :
+
+                                  Slayer
+
+
+Ripado por :
+
+                                  Emuboarding
+
+
+Edição de imagens :
+                                  Emuboarding
+
+Ripado de :
+                              Dragon Ball Z Hyper Dimension
+
+Emulador usado :
+
+                                      ZNES
+
+
+===========================================Comentário==========================================
+
+
+Ñ reparem as intro é que eu ñ sou tão viciado em DBZ :P
+
+o final tb tá meio rebinha!!..
+
+4ª e "talvez" a ultima versão do Goku NEX
+
+
+===============================================================================================
+
+
+-=========================================o que falta?=============================================-
+
+- Alguns detalhes :P
+- AI
+- + intros
+- Final ( faze um + decente :P ) 
+- BUGS
+
+-=========================================Novidade??============================================-
+
+SSJ2, helpers com vegeta trunks,
+e aquele modo q o pc controla o 3º player que pode ser o Piccolo e o Mystic Gohan :) Arrumei isso
+tava muito apelão com eles eu mudei pra eles sairem automaticamente após a power bar ficar =0
+
+Fiz uma tranformação + decente!!
+
+arrumei aqueles bugs do som quando ele apanha!!
+
+SSJ3 
+
+Kaioken
+
+-=========================================Supers?==============================================-
+
+SSJ2: D, B, F, x 
+
+Kamehameha SSJ2: D, DF, F, x 
+
+UltimateCombo: D, B, DB, z      *rox*
+
+Mestre-Kame: D, B, DB, y
+
+Gohan: D, B, DB, x
+
+Genki Dama : D, F, DF, z     SSJ2 tb
+
+Agilidade : D, F, DF, y
+
+Kamehameha: D, F, DF, x
+
+Trunks: D, B, DB, z ( com modo SSJ2) 
+
+Vegeta: D, F, DF, z (no modo SSJ2) 
+
+Kaioken: D, F, DF, b        *NEW
+
+-=======================================Especiais==============================================-
+
+-Piccolo: D, F, DF, a ( com modo normal)   
+
+-Mistyc Gohan: b+y (no modo SSJ2)  
+
+- Teleporte: x+y (modo normal)
+
+- teleport: a ( modo ssj2)
+
+-atack 3D: y+b (no mdo normal)
+
+- Atack 3D: b (modo ssj2)
+
+- voar: c
+
+- Triple Firaball: D, F, y
+
+- Kamehameha : D, F, z
+
+- kamehameha (forte) : D, F, z (segura o z)
+
+- Goku sequencia : D, B, y
+
+===========================Creditos============================================================
+
+- ao Emuboarding pelas img
+- ao reibeiro pelo codigo do ki :P o meu naum tava dandu :D
+
+================================================================================================
+| | Agradecimentos | |
+
+a toda Galera do #mugen
+da Mugenable
+Pão De Mugen
+e a vc!
+
+http://mugen4all.fws1.com
+www.mugenable.f2s.com
+www.paodemugen.cjb.net
+
+_________________________________________________________________________________________________
+	

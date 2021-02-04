@@ -1,0 +1,79 @@
+Vegeta SS4 beta 0.7 by Kratos				11/12/06
+
+Vegeta has a lot of combo possibilities, it's up to you to find them.
+This version is incomplete, so expect updates in the future.
+This is the first char made by me. I started vegeta in July of 06.
+I wanted to give back to the mugen community that has given to me for
+so long. I hope this inspires people to get up one day and give
+programming a try. The mugen community sure needs them.
+
+*Specials*
+
+Force Field - Down Back X --- A forcefield surrounds vegeta's body,
+protecting him for a short instance. Requires 230 power.
+
+Ki Laser - Down Back C --- Vegeta shoots a fast laser from his finger,
+stunning the opponent for a short time. Requires 230 power.
+
+Super Ki Ball - Down Back Z --- Vegeta thrust a powerful force of ki 
+at the opponent, exploding on contact. Requires 230 power.
+
+
+
+*Supers*
+
+Big Bang Attack - Down DownForward Forward(x2) A+B - One of vegeta's
+Signature attacks. Vegeta stands with one hand out and generates an 
+incredibly powerful ball of ki, and blast it at the opponent. Requires
+2000 power.
+
+Final Flash - Down DownForward Forward(x2) X+Z --- One of vegeta's most
+powerful attacks. Vegeta puts his hands together creating a very 
+powerful force of ki and shoots it out in a beam. Obliterating the
+opponent. Requires 3000 power.
+
+*other*
+
+ki blast - Y. No need to explain. Can be done until power has run out.
+but be careful, when power reaches 0, vegeta gets tired and must regain
+strength, leaving you open for attack. Can also be done when the
+oppenent is above you. Vegeta will automatically start shooting up.
+
+fly - A+Z. No need to explain what this is.
+
+Throw - A+B. Incomplete, but works.
+
+Super Jump - hold Down, Up. A high jump as well as a long jump. Good
+to get out of messy situations.
+
+Air Dash - Forward Forward or Back Back in the air. Lets you get
+distance from the opponent and gets you out of sticky situations.
+
+
+
+* There are many more moves, it's up to you to find them*
+
+
+
+*Special Thanks*
+
+Pextin - For giving me guidance in coding and being a cool bud.
+chrono_Strife - For giving me advice and being a cool bud.
+Roken - An inspiration to all coders & spriters. And being a good pal.
+Goncalo - For releasing his uber vegeta ss4 sheet. =p
+Neocide - for the force field fx and move tips.
+MV - Betatester and made me some custom sprites. 
+MSSJ - For practically all vegeta's fx.
+DooM - for vegeta's big por and his aura. 
+Zgteam forum - For giving me a place to release =p and for being a cool
+forum over the years.
+
+*extra thanks*
+
+Elecbyte - well duh!
+Atari - For vegeta's sounds which I ripped from BT.
+Akira Toriyama - For being the father of DBZ. Kudos man.
+Virtual Tek - for making fighter factory. Quite possibly the best mugen
+development tool ever.
+
+*If I forgot to mention you, sorry, e-mail me and I'll put you in!*

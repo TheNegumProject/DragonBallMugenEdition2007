@@ -1,0 +1,33 @@
+;CELL 1.5 BY SAWWEN
+
+[Info]
+
+name ="Cell"
+displayname ="Cell"
+versiondate =1.5 
+mugenversion = 
+author ="SaWWeN"
+pal.defaults =1,2
+
+
+[Files]
+
+cns =cell.cns
+cmd =cell.cmd
+stcommon =common1.cns
+sprite =cell.sff
+anim =cell.air
+st =cell.cns
+sound =cell.snd
+pal1=Cell.act
+pal2=Cell1.act
+pal3=Aquaman.act
+pal4=Dark.act
+pal5=PinkPanther.act
+pal6=Violet.act
+
+
+[Arcade]
+
+intro.storyboard =intro.def
+ending.storyboard=

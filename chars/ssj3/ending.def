@@ -1,0 +1,56 @@
+; Final do personagem by: OzaleM narigão
+; Final do Gokussj3
+; narigão
+
+[SceneDef]
+spr = ending.sff
+startscene = 0
+
+;------------------------------------
+[Scene 0]
+; Fade
+fadein.time = 60
+fadein.col = 0,0,0
+fadeout.time = 15
+fadeout.col = 0,0,0
+; Cor do fundo
+clearcolor = 0,0,0
+; Layers
+layerall.pos = 0,0
+layer1.anim =  1
+layer1.offset = 0,0
+; Musica
+bgm = sound\batlez.mid
+bgm.loop = 1
+; Tempo Total
+end.time = 800
+
+;------------------------------------
+[Scene 1]
+; Fade
+fadein.time = 15
+fadein.col = 0,0,0
+fadeout.time = 15
+fadeout.col = 0,0,0
+; Layers
+layer0.anim = 2
+layer0.offset = 0,0
+layer0.starttime = 0
+layer1.anim = 1
+layer1.offset = 0,0
+; Tempo Total
+end.time =2500
+
+; Animação
+
+[Begin Action 1]
+200,1, 0,0,500
+200,2, 0,0,500
+200,3, 0,0,500
+200,4, 0,0,200
+200,5, 0,0,500
+200,6, 0,0,-1
+
+;ufa deu um trabalhão fazer isso!!!!!!
+
+

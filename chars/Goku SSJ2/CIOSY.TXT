@@ -1,0 +1,119 @@
+g                                                                              _______________________
+                                                                             /                      ,'
+ __                                                                         /      ___            ,'
+|  ""--.--.._                                             __..    ,--.     /   _.-'  ,'        ,-'   /
+|       `.   "-.'""\_...-----..._   ,--. .--..-----.._.""|   |   /   /    / ,-' ,--.'        ,'   .'/
+|_   _    \__   ).  \           _/_ |   \|  ||  ..    >  `.  |  /   /    /.'     `.         '.  ,' /
+  | | `.   ._)  /|\  \ .-"""":-"   "-.   `  ||  |.'  ,'`. |  |_/_  /    /      ,-'       ,"--','  /
+  | |_.'   |   / ""`  \  ===/  ..|..  \     ||      < ""  `.  "  |/__        ,'        ,'  ,'    /
+  `.      .    \ ,--   \-..-\   /"\   /     ||  |>   )--   |    /    |      ,-'      ,' .-'     /
+   |__..-'__||__\   |___\ __.:-.._..-'_|\___||____..-/  |__|--""____/    ,-'                   /
+                                                                       ,:_____________________/
+                             .-.   .-.   .-.   .-.   .-.   .-.   .-.
+                            ( * ) ( : ) ('*.) (: :) (:-:) (:::) ((-))
+                             `-'   `-'   `-'   `-'   `-'   `-'   `-'
+
+
+Goku ssj2
+200% - versja Final
+autor - bprulez(Z-fight)
+
+Legenda:
+D-dó³
+G-góra
+T-ty³
+P-przód
+
+a,b,c,x,y,z - klawisze ataków
+
+;-| Super ciosy|------------------------------------------------------
+
+ kamehameha ssj3
+command = D, P, T, z
+ki >= 7000
+¿ycie <= 700
+
+Wch³onienie energii genki damy
+command = D, P, T, y
+ki >= 7000
+¿ycie <= 300
+
+combo i piêœæ smoka
+command = D, P, D, P, x
+ki >= 6000
+¿ycie <= 700
+
+teleport kamehameha
+command = D, P, T, c
+ki >= 5000
+
+kienzan
+command = D, T, a
+ki >= 500
+
+fireball attack
+command = D, P, a
+ki >= 2000
+
+kamehameha
+command = D, T, P, c
+ki >= 1000
+
+Goku,Gohan,Goten kamehameha - œmiertelne
+command = D, P, x
+ki >= 7000
+¿ycie <= 250
+
+ShunGokuSatsu
+command = D, T, P, x
+ki >= 4000
+
+genki dama - œmiertelne
+command = D, T, x
+ki >= 7000
+¿ycie <= 370
+
+
+;-| Specialne ciosy|------------------------------------------------------
+
+fireball
+command = D, P, c
+
+latanie
+command = a+x
+
+combo
+command = D, T, b
+
+combo2
+command = D, P, b
+
+combo3
+command = T, P, b
+
+kiaiho
+command = T, P, c
+
+kolanko
+command= P, D, P, a
+
+trzy fireball'e
+command = D, T, c
+
+teleport
+command = y+z (kieruj strza³k¹)
+
+kop w dó³
+command = D, T, y
+
+kop w górê
+command = D, P, y
+
+ma³a kamehameha
+command = D, P, z (przytrzymaj ¿eby na³adowaæ)
+
+ma³a kamehameha w górê lub w dó³
+command = D, T, z
+
+rozprysk ki 
+command = b+c

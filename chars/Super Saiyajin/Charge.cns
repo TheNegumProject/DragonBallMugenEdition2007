@@ -1,0 +1,633 @@
+;------------------------------------------CHARGE POWER--------------------------
+[Statedef 730]
+type = S
+physics = S
+ctrl = 0
+velset = 0,0,0
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 0
+trigger1 = time = 0
+value = 730
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 1
+trigger1 = time = 0
+value = 730
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 2
+trigger1 = time = 0
+value = 733
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 3
+trigger1 = time = 0
+value = 7333
+
+[State 730, 2]
+type = changestate
+trigger1 = animtime = 0
+value = 731
+
+[State 2999, 2]
+type = playsnd
+triggerall = var(1) = 2 || var(1) = 3
+trigger1 = time = 0
+value = 730,2
+channel = 7
+
+[State 2999, 2]
+type = playsnd
+triggerall = var(1) != 3
+trigger1 = time = 0
+value = 730,2
+channel = 7
+
+[Statedef 731]
+type = S
+physics = S
+ctrl = 0
+velset = 0,0,0
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 0
+trigger1 = time = 0
+value = 731
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 1
+trigger1 = time = 0
+value = 732
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 2
+trigger1 = time = 0
+value = 734
+
+[State 730, 1]
+type = changeanim
+triggerall = var(1) = 3
+trigger1 = time = 0
+value = 7343
+
+[State 2999, 3]
+type = poweradd
+trigger1 = time > 0
+value = 5
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 60,1
+anim = 740
+id = 740
+pos = -120,0
+removetime = -1
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 30,1
+anim = 741
+id = 741
+pos = 20,0
+removetime = -1
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 10,1
+anim = 742
+id = 742
+pos = 50,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 20,1
+anim = 743
+id = 743
+pos = 0,0
+removetime = 120
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 32,1
+anim = 740
+id = 740
+pos = 0,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 30,1
+anim = 741
+id = 741
+pos = 85,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 40,1
+anim = 742
+id = 742
+pos = -50,0
+removetime = 120
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 42,1
+anim = 743
+id = 743
+pos = -30,0
+removetime = 120
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 42,1
+anim = 740
+id = 740
+pos = 82,0
+removetime = -1
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 32,1
+anim = 741
+id = 741
+pos = -72,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 22,1
+anim = 742
+id = 742
+pos = -50,0
+removetime = 120
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 18,1
+anim = 743
+id = 743
+pos = 220,0
+removetime = 62
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 60,1
+anim = 740
+id = 740
+pos = 120,0
+removetime = -1
+vel = 0,-4
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 50,1
+anim = 741
+id = 741
+pos = 20,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 30,1
+anim = 742
+id = 742
+pos = 150,0
+removetime = 120
+vel = 0,-4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 2
+trigger1 = power > 1000
+trigger1 = timemod = 60,1
+anim = 743
+id = 743
+pos = 210,0
+removetime = 120
+vel = 0,-4
+sprpriority = 7
+
+[State 731, 3]
+type = changestate
+trigger1 = command != "holda"
+trigger1 = command != "holdb"
+trigger2 = power = 3000
+value = 735
+
+[State 1999, 1]
+type = envshake
+triggerall = var(1) = 2 || var(1) = 3 
+trigger1 = power = [1000, 2000]
+trigger1 = timemod = 6, 2
+time = 10
+freq = 78
+ampl = -10
+phase = 10
+
+[State 1999, 1]
+type = envshake
+triggerall = var(1) = 2 || var(1) = 3 
+trigger1 = power > 2000
+trigger1 = timemod = 4, 2
+time = 10
+freq = 88
+ampl = -20
+phase = 10
+
+[State 2999, 2]
+type = playsnd
+triggerall = var(1) = 0 || var(1) = 1
+trigger1 = timemod = 30,0
+value = 730,0
+channel = 8
+
+[State 2999, 2]
+type = playsnd
+triggerall = var(1) = 2 || var(1) = 3
+trigger1 = timemod = 21,0
+value = 730,1
+channel = 8
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 10
+anim = 2991
+id = 2991
+pos = -70,0
+supermovetime = 7
+removetime = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 16
+anim = 2991
+id = 2991
+pos = -30,0
+supermovetime = 7
+removetime = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 18
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 32
+anim = 2991
+id = 2991
+pos = 30,0
+supermovetime = 7
+removetime = 7
+sprpriority = 4
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 40
+anim = 2991
+id = 2991
+pos = 20,0
+supermovetime = 7
+removetime = 7
+sprpriority = -3
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 70
+anim = 2991
+id = 2991
+pos = 50,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 88
+anim = 2991
+id = 2991
+pos = -50,0
+supermovetime = 7
+removetime = 7
+sprpriority = -2
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 182
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 252
+anim = 2991
+id = 2991
+pos = 10,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 253
+anim = 2991
+id = 2991
+pos = -5,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 255
+anim = 2991
+id = 2991
+pos = -3,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 259
+anim = 2991
+id = 2991
+pos = -1,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 302
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 304
+anim = 2991
+id = 2991
+pos = 2,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 306
+anim = 2991
+id = 2991
+pos = 5,0
+supermovetime = 7
+removetime = 7
+sprpriority = -1
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 382
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 395
+anim = 2991
+id = 2991
+pos = 50,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 405
+anim = 2991
+id = 2991
+pos = 20,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 415
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = -1
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 432
+anim = 2991
+id = 2991
+pos = -10,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 451
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 462
+anim = 2991
+id = 2991
+pos = -30,0
+supermovetime = 7
+removetime = 7
+sprpriority = -1
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 473
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 481
+anim = 2991
+id = 2991
+pos = -10,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 482
+anim = 2991
+id = 2991
+pos = -5,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 483
+anim = 2991
+id = 2991
+pos = 0,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 484
+anim = 2991
+id = 2991
+pos = 5,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[State 735, 4]
+type = explod
+triggerall = var(1) = 3
+trigger1 = time = 485
+anim = 2991
+id = 2991
+pos = 10,0
+supermovetime = 7
+removetime = 7
+sprpriority = 7
+
+[Statedef 735]
+type = S
+physics = S
+velset = 0,0,0
+ctrl = 0
+
+[State 735, 1]
+type = stopsnd
+trigger1 = time = 0
+channel = 8
+
+[State 735, 2]
+type = changestate
+trigger1 = time = 10
+value = 0
+ctrl = 1

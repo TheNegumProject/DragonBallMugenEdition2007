@@ -1,0 +1,38 @@
+
+; Informções da Personagem
+[Info]
+name = "Ultimate-Gohan by Master Sabrewolf"  
+displayname = "Son-Gohan"
+versiondate = 2,04,2001 
+mugenversion = 04,01,2000   
+author = "Master Sabrewolf"   
+pal.defaults = 1,2,3,4,5,6
+
+; Todos Arquivos 
+[Files]
+cmd     = Ultimate-Gohan.cmd    ;Comandos dos golpes
+cns     = Ultimate-Gohan.cns    ;Constantes
+st      = Ultimate-Gohan.cns    ;States
+st2     = Especiais.cns
+st3     = Hypers.cns
+stcommon= common1.cns   ;Common states
+sprite  = Ultimate-Gohan.sff    ;Sprites 
+anim    = Ultimate-Gohan.air    ;Animações
+sound   = Ultimate-Gohan.snd    ;Som
+pal1    = gokudbz2.act
+pal2    = gohan.act
+pal3    = bonina.act
+pal4    = g-sayaman.act
+pal5    = black.act
+pal6    = cinza.act
+pal7    = apagao.act
+pal8    = cruzeiro.act
+pal9    = dbz-3.act
+pal10   = vegetto.act
+pal11   = yelow.act
+pal12   = white.act
+
+; Arcade mode
+[Arcade]
+intro.storyboard  = ;intro.def
+ending.storyboard = ;final.def

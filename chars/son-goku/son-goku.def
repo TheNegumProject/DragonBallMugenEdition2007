@@ -1,0 +1,29 @@
+[Info]
+name = "Son Goku By Metal-Mind"
+displayname = "Son Goku"
+versiondate = 26,03,2002
+mugenversion = 14,04,2001
+author = "Metal-Mind"
+pal.defaults  = 2,4,6,8,10,12
+
+[Files]
+cmd = Son_Goku.cmd
+cns = Son_Goku.cns
+st = Son_Goku.cns
+st2 = AI-Son_Goku.cns
+stcommon = common1.cns
+sprite = Son_Goku.sff
+anim = Son_Goku.air
+sound = Son_Goku.snd
+pal1 = Son_Goku.act
+pal2 = Son_Goku2.act
+pal3 = Son_Goku.act
+pal4 = Son_Goku2.act
+pal5 = Son_Goku.act
+pal6 = Son_Goku2.act
+pal7 = Son_Goku.act
+pal8 = Son_Goku2.act
+pal9 = Son_Goku.act
+pal10 = Son_Goku2.act
+pal11 = Son_Goku.act
+pal12 = Son_Goku2.act

@@ -1,0 +1,17 @@
+[Info]
+name 			= "Super Gogeta by Jedistardust & Sniper85"	
+displayname 	= "Super Gogeta" 		
+versiondate 	= 21,07,2004    		
+mugenversion 	= 14,04,2001 		
+author 		= "Jedistardust & Sniper85"     
+pal.defaults 	= 0,1,1,1  		
+
+[Files]
+cmd     = fusion.cmd
+cns     = fusion.cns
+st      = fusion.cns
+stcommon = fusion1.cns
+sprite  = fusion.sff
+anim    = fusion.air
+sound   = fusion.snd
+pal1 = fusion.act

@@ -1,0 +1,56 @@
+===============================
+Piccolo's Features: (When Completed)
+===============================
+
+Estimated:
+
+Misc:
+-10 Intros
+-10 Win Poses
+-2 Lose Poses
+-2 Taunts
+
+
+Moves:
+-All moves from Super Boutuden 2
+-Gatai Kousen
+-Kikou Ha
+-Kakusan Yuudou Kikou Ha
+-Kochi kara Kikou Ha
+-Tsuibi Kikou Ha
+-Yubisaki kara no Kikou Ha
+-Renzokou Kikou Ha
+-Ki no Jyouto
+-Kousengan
+-Saisei
+-Zanzouken
+-Shyougeki Ha
+-Chou Baku Retsu Ma Ha
+-Tsu no Beam
+-Nobiru Ude
+-Buku Jyutsu
+-Bushitsu Shyutsu Gen Majyutsu
+-Bunshin
+-Makkankosappo
+-Makousen
+-Mafuba Gaeshi
+-Yuugou
+
+Systems:
+-Battle Experience System
+-Dizzy System
+-Special Recovery System
+-Guard Crush System
+-Guard Push System
+-Just Defended System
+-Move Interrupt System
+-Critical Hit System
+-Custom AI
+-Proj Critical Hit System
+
+Modes:
+-Expert Training Mode
+-Nail Fusion Form
+-Kame Fusion Form
+-Balance, Variable, and Combination fighting styles
+-Tag Team

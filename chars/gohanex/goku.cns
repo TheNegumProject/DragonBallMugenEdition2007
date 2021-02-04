@@ -1,0 +1,266 @@
+; SSj Goku by YamchaZ Helper constants.
+; Format (case insensitive):
+; [groupname]        
+; constname = "value"
+
+;---------------------------------------------------------------------------
+; Goku Vem 
+[Statedef 10010]
+type = S
+movetype = I
+physics = N
+anim = 9010
+velset = 4.5,0 
+ctrl = 0
+ 
+[State 9500, 1]
+type = HitOverride
+trigger1 = time = 0
+time = -1
+attr = SCA, AA, AT, AP
+slot = 0
+stateno = 10013
+ 
+[State 9500, 2]
+type = sprpriority
+trigger1 = Time = 0
+value = 2
+ 
+[State 9500, 4]
+type = ChangeState
+trigger1 = RootDist X <= 30
+value = 10012
+
+[State 9500, 5]
+type = VelSet
+trigger1 = RootDist X <= 30
+x = 0
+y = 0
+
+;---------------------------------------------------------------------------
+; Goku solta KameHameHa
+[Statedef 10012]
+type = S
+movetype = A
+physics = S
+anim = 9012
+velset = 0,0
+ctrl = 0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 1000,0
+
+[State 9500, 1] 
+type = Explod
+trigger1 = AnimElem = 1
+anim = F101
+pos = -10,-40
+postype = P1
+sprpriority = 5
+removeongethit = 1
+bindtime = 1
+supermove = 1
+ownpal = 1
+
+[State 9500, 1]
+type = HitOverride
+trigger1 = time = 0
+time = -1
+attr = SCA, AA, AT, AP
+slot = 0
+stateno = 10013
+ 
+[State 9501, 2]
+type = sprpriority
+trigger1 = Time = 0
+value = 2
+ 
+[State 1700, ball]
+type = Explod
+trigger1 = AnimElem = 1
+anim = 9990
+pos = -10,-40
+bindtime = 3
+sprpriority = 4
+removetime = 50
+supermove = 1
+
+[State 3000, 4]
+type = Projectile
+trigger1 = AnimElem = 3
+projanim = 6998
+projhitanim = 6998
+projhits = 20
+projmisstime = 4
+projremanim = 6998
+projshadow = -1
+projpriority = 30
+projremovetime = 150
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projid = 6998
+velocity = 0.001,0.001
+offset = 23,-54
+attr = S, HP
+damage   = 10,5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 1,5
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -10,-2
+air.animtype = Back
+air.velocity = -10,-2
+air.recover = 0
+air.fall = 1
+down.velocity = -10
+down.hittime = 30
+down.bounce = 1
+fall = 1
+fall.recover = 0
+
+[State 3000] 
+type = explod
+trigger1 = projcontact(6998) = 1
+anim = 6021
+pos = 0,-60
+postype = p2
+sprpriority = 999
+bindtime = 1
+ownpal = 1
+
+[State 9501, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 10011
+
+;---------------------------------------------------------------------------
+; Goku Vaza após o KameHameHa
+[Statedef 10011]
+type = S
+movetype = I
+physics = N
+anim = 9011
+velset = -4.5,0
+
+[State 9507, 3]
+type = Veladd
+trigger1 = Time > 0
+x = 0
+y = 0
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = win = 1
+value = 10016
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = Lose = 1
+value = 10016
+
+[State 3000, 1]
+type = ChangeState
+trigger1 = lose = 1
+value = 10017
+
+[State 9507, 3]
+type = DestroySelf
+trigger1 = BackEdgeBodyDist < -35
+
+;---------------------------------------------------------------------------
+; Goku é acertado
+[Statedef 10013]
+type = A
+movetype = I
+physics = N
+anim = 9013
+velset = -4,-4,0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 12,0
+ 
+[State 9506, 1]
+type = Gravity
+trigger1 = time >= 0
+ 
+[State 9506, 2]
+type = ChangeState
+trigger1 = Pos Y >= -1
+trigger1 = Pos Y > 0
+value = 10014
+
+;---------------------------------------------------------------------------
+; Goku morto 
+[Statedef 10014]
+type = S
+movetype = I
+physics = N
+anim = 9014
+velset = 0,0
+
+[State 9507, 1]
+type = Gravity
+trigger1 = Time >= 32
+
+[State 9506, 2]
+type = ChangeState
+trigger1 = animTime = 0
+value = 10015
+
+;---------------------------------------------------------------------------
+; Goku levanta e sai
+[Statedef 10015]
+type = S
+movetype = I
+physics = N
+anim = 9015
+velset = 0,0
+
+[State 9506, 2]
+type = ChangeState
+trigger1 = animTime = 0
+value = 10011
+
+;---------------------------------------------------------------------------
+; Goku vence 
+[Statedef 10016]
+type = S
+movetype = I
+physics = N
+anim = 9017
+velset = 0,0
+
+[State 9500, 1] 
+type = playsnd
+trigger1 = AnimElem = 1
+value = 111,0
+
+[State 9507, 3]
+type = DestroySelf
+trigger1 = animTime = 0
+
+;---------------------------------------------------------------------------
+; Goku perde
+[Statedef 10017]
+type = S
+movetype = I
+physics = N
+anim = 9016
+velset = 0,0
+
+[State 9507, 3]
+type = DestroySelf
+trigger1 = animTime = 0
+
+

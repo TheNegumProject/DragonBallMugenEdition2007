@@ -1,0 +1,59 @@
++====================================================+
+|   _    _                    _    _		     |
+|  | \__/ |_   _  ____  ____ | \  | | ___  _     _   |
+|  |      | | | |/ ___|/    \|  \ | |/ _ \| |   | |  |
+|  | |\/| | | | | |  _|  ___/| \ \| | | | | |/\\| |  |
+|  | |  | | |_| | |_| | |___ | |\ \ | |_| | / /\  |  |
+|  |_|  |_|\____|\____|\____||_| \__|\___/|__/  |_|  |
+|						     |
+|  =============--- Dragon Ball Z ---==============  |
+|  ============--- M.U.G.E.N. PAGE ---=============  | 
+| 						     |
++====================================================+
+| Dragon Ball Z - Personagens para o M.U.G.E.N.      |
++====================================================+
+| NOME: Freeza ver 27.06.2000       		     |
++====================================================+
+| Produzido por _Vision                              |
+| Riped: _Vision                                     |
+| Riped Game: Dragon Ball Z HYPER DIMENSION          |
+| Edite Imagens: _Vision                             |
+| Logos: EmuBoarding    		             |
+| Emulador usado: ZSNES (The Best)		     |
++====================================================+
+| Agradecimentos: A Bandai por ter feito os jogos da |
+| série DBZ e a Elecbyte (c)2000 por desenvolvimento |
+| do incomparavel M.U.G.E.N.  			     |
++====================================================+
+| Nossas HP's:       				     |
+| http://www.mugenow.cjb.net - MugeNow - Home Page   |
+| htt://garounow.hpg.com.br - Link 2 for MugeNow HP  |
+| http://www.mugen11.com - Mugen Eleven - Home Page  |
++====================================================+
+| E-Mail da MugeNow snowlennon@zipmail.com.br ou     |
+| emuboarding@zipmail.com.br			     |
++====================================================+
+| Como instalar???				     |
+|						     |
+| É Fácil, apenas descompacte os arquivos para a sua |
+| pasta "chars" com uma nova pasta "freeza" ex:      |
+| "chars\freeza" depois entre na pasta "data e edite |
+| o arquivo "select.def" e em "CHARACTERS" adicione  |
+| a linha:					     |
+|						     | 
+| freeza, stages\????.def                            |
+| ou						     |
+| freeza,        				     |
+|       	                                     |
+| Fácil não? :)			  	             | 
++====================================================+
+| Comentários:					     |
+|						     |
+| Galera ta muito massa!!! Valeu _Vision             |
++====================================================+
+| Mugen RulezForever!!!!! :)			     |
+| Dragon Ball's RulezForever!!! :D 		     |
+| KOF '91 SuxForever!!! :|			     |
++=================================+==================+
+				  |TXT By EmuBoarding|
+				  +==================+		

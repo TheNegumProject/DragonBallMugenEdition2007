@@ -1,0 +1,33 @@
+; Character information
+[Info]
+name    = "Super Saiyajin By Chuck Toy";<-- Replace with a real name
+displayname = "Super Saiyajin";<-- Replace with name to display
+versiondate = 11,29,2000    ;Version date of character
+mugenversion = 11,29,2000   ;Version of M.U.G.E.N character works on
+author = "Chuck Toy"         ;Character author name
+pal.defaults = 1,2
+
+; Files for the character
+[Files]
+cmd     = Goku.cmd     ;Command set
+cns     = Value.cns     ;Constants
+st      = Value.cns     ;States1
+st1     = Power.cns     ;States2
+st2     = helpers.cns     ;States3
+st3     = trans.cns     ;States4
+st4     = outhers.cns     ;States5
+st5     = charge.cns     ;States6
+st6     = ssj3trans.cns   ;States7
+stcommon = common1.cns   ;Common states
+sprite  = Goku.sff     ;Sprite
+anim    = Goku.air     ;Animation
+pal1    = Goku.act     ;Palettes
+pal2    = Goku2.act
+
+
+
+
+
+
+
+
